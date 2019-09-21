@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~css-reset/reset.css';
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}

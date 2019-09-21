@@ -1,0 +1,83 @@
+.user {
+  $avatar-size: 68px;
+  $avatar-padding: 1rem;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: calc(#{$avatar-size} + #{$avatar-padding * 2}) auto fit-content(100%);
+  grid-template-areas:
+    'avatar name connection'
+    'avatar last-message unread-messages';
+
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px 0;
+  transition: box-shadow 150ms ease-out;
+
+  &__avatar {
+    grid-area: avatar;
+    padding: $avatar-padding;
+
+    img {
+      width: $avatar-size;
+      height: $avatar-size;
+      object-fit:cover;
+      border-radius: 50px;
+    }
+  }
+
+  &__name {
+    grid-area: name;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    font-weight: 700;
+    padding-bottom: .7rem;
+
+  }
+
+  &__last-message {
+    grid-area: last-message;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__unread-messages {
+    grid-area: unread-messages;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+      display: block;
+      font-size: 10px;
+      font-weight: 900;
+      color: white;
+      background-color: red;
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  &__connection {
+    grid-area: connection;
+    font-size: 10px;
+    font-weight: 300;
+
+    margin: 0 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+  }
+}
