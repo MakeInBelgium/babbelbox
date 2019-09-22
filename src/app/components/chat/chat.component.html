@@ -1,43 +1,41 @@
 <div class="chat">
 
-  <div class="chat__message">
-    <div class="chat__message__avatar">
-      <img src="https://everydaynutrition.co.uk/wp-content/uploads/2015/01/default-user-avatar.png" alt="">
-    </div>
-    <div class="chat__message__content">
-      <p>foo message</p>
-    </div>
-    <p class="chat__message__time">
-      10:34
-    </p>
-  </div>
+  <div class="chat__conversation">
+    <div *ngFor="let msg of messages; trackBy:msg?.time" [@message]>
+      <div class="chat__message"
+           [ngClass]="{'--from-me': msg.fromMe}"
+           *ngIf="msg.type === 'message'">
+        <div class="chat__message__avatar">
+          <img src="https://everydaynutrition.co.uk/wp-content/uploads/2015/01/default-user-avatar.png" alt="">
+        </div>
+        <div class="chat__message__content">
+          <p>{{ msg.text }}</p>
+        </div>
+        <p class="chat__message__time">
+          {{ msg.userName }} at {{ msg.time | date:'shortTime' }}
+        </p>
+      </div>
 
-  <div class="chat__message --from-me">
-    <div class="chat__message__avatar">
-      <img src="https://everydaynutrition.co.uk/wp-content/uploads/2015/01/default-user-avatar.png" alt="">
-    </div>
-    <div class="chat__message__content">
-      <p>foo message</p>
-    </div>
-    <p class="chat__message__time">
-      10:34
-    </p>
-  </div>
+      <div class="chat__message-user --join" *ngIf="msg.type === 'user_join'">
+        <p class="chat__message-user__content">
+          <span>{{ msg.userName }}</span> join to us at {{ msg.time | date:'shortTime' }}
+        </p>
+      </div>
 
-  <div class="chat__message">
-    <div class="chat__message__avatar">
-      <img src="https://everydaynutrition.co.uk/wp-content/uploads/2015/01/default-user-avatar.png" alt="">
+      <div class="chat__message-user --leave" *ngIf="msg.type === 'user_leave'">
+        <p class="chat__message-user__content">
+          <span>{{ msg.userName }}</span> leave from room at {{ msg.time | date:'shortTime' }}
+        </p>
+      </div>
     </div>
-    <div class="chat__message__content">
-      <p>foo message</p>
-    </div>
-    <p class="chat__message__time">
-      10:34
-    </p>
   </div>
 
   <div class="chat__sent">
-    <input class="chat__sent__field" type="text" placeholder="press enter to sent a message...">
+    <input class="chat__sent__field"
+           [formControl]="fieldControl"
+           type="text"
+           (keyup.enter)="sendMessage.emit(fieldControl.value); fieldControl.reset()"
+           placeholder="press enter to sent a message...">
   </div>
 
 </div>

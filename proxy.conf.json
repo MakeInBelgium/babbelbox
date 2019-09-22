@@ -1,0 +1,8 @@
+{
+  "/jitsi": {
+    "target": "http://localhost:8000/",
+    "pathRewrite": {"^/jitsi" : ""},
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

@@ -3,15 +3,15 @@
     <img src="https://everydaynutrition.co.uk/wp-content/uploads/2015/01/default-user-avatar.png" alt="">
   </div>
   <div class="user__name">
-    Matheus Ale
+    {{ user.getDisplayName() }}
   </div>
   <div class="user__last-message">
-    Hello!
+
   </div>
   <div class="user__connection">
-    20 Set
+    {{ user.getProperty('connectedAt') | date:'shortTime' }}
   </div>
   <div class="user__unread-messages">
-    <span>4</span>
+<!--    <span>4</span>-->
   </div>
 </div>

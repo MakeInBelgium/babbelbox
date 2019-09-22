@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Track} from '../../../../core/jitsi';
 
 @Component({
   selector: 'app-user-list-item',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-list-item.component.scss']
 })
 export class UserListItemComponent implements OnInit {
+
+  @Input() user: Track;
 
   constructor() { }
 

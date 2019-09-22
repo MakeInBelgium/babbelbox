@@ -2,15 +2,8 @@
     <h1 class="app__title">
       Chat
     </h1>
-  <section class="app__users">
-    <h2>Connected Users</h2>
-
-    <app-users-connected-list></app-users-connected-list>
-
-  </section>
   <section class="app__chat">
-    <h2>Conversation</h2>
+    <app-chat [messages]="messages" (sendMessage)="sendMessage($event)" [disabled]="!chat"></app-chat>
 
-    <app-chat></app-chat>
   </section>
 </main>

@@ -1,37 +1,9 @@
 <div class="users">
 
   <ul class="users_list">
-    <li>
-      <app-user-list-item></app-user-list-item>
+    <li *ngFor="let item of users;trackBy:item?._id" [@user]>
+      <app-user-list-item [user]="item"></app-user-list-item>
     </li>
-    <li>
-      <app-user-list-item></app-user-list-item>
-    </li>
-    <li>
-      <app-user-list-item></app-user-list-item>
-    </li>
-    <li>
-      <app-user-list-item></app-user-list-item>
-    </li>
-    <li>
-      <app-user-list-item></app-user-list-item>
-    </li>
-    <li>
-      <app-user-list-item></app-user-list-item>
-    </li>
-    <li>
-      <app-user-list-item></app-user-list-item>
-    </li>
-    <li>
-      <app-user-list-item></app-user-list-item>
-    </li>
-    <li>
-      <app-user-list-item></app-user-list-item>
-    </li>
-    <li>
-      <app-user-list-item></app-user-list-item>
-    </li>
-
   </ul>
 
 </div>
