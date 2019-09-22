@@ -7,13 +7,15 @@ import {Message} from './Message';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnDestroy {
   public chat: Conference;
   public self: Track;
+  public name: string;
   public messages: Message[] = [];
 
-  async ngOnInit() {
-    JitsiMeet.setLogLevel(LogLevel.ERROR);
+  async connect(name) {
+    this.name = name;
+    JitsiMeet.setLogLevel(LogLevel.INFO);
 
     JitsiMeet.init({
       disableAudioLevels: true,
@@ -25,22 +27,23 @@ export class AppComponent implements OnInit, OnDestroy {
 
     const connection = JitsiMeet.connection(null, null, {
       hosts: {
-        domain: 'meet.jitsi',
-        muc: `muc.meet.jitsi`,
+        domain: 'meet.jit.si',
+        muc: `conference.meet.jit.si`,
+        focus: `focus.meet.jit.si`,
       },
-      bosh: '/jitsi/http-bind',
+      bosh: 'https://meet.jit.si/http-bind',
       clientNode: 'http://jitsi.org/jitsimeet'
     });
 
     await connection.connect();
 
-    const chat = connection.initConference('chat-lob', {
+    this.chat = connection.initConference('angular-jitsi-chat', {
       openBridgeChannel: 'websocket'
     });
 
-    chat.setDisplayName(`Matheus ${Date.now()}`);
+    this.chat.setDisplayName(name);
 
-    chat.addEventListener(ConferenceEvent.USER_JOINED, (id, participant) => {
+    this.chat.addEventListener(ConferenceEvent.USER_JOINED, (id, participant) => {
       this.messages.push({
         type: 'user_join',
         userName: participant.getDisplayName(),
@@ -48,7 +51,7 @@ export class AppComponent implements OnInit, OnDestroy {
       });
     });
 
-    chat.addEventListener(ConferenceEvent.USER_LEFT, (id, participant) => {
+    this.chat.addEventListener(ConferenceEvent.USER_LEFT, (id, participant) => {
       this.messages.push({
         type: 'user_leave',
         userName: participant.getDisplayName(),
@@ -56,20 +59,18 @@ export class AppComponent implements OnInit, OnDestroy {
       });
     });
 
-    this.self = await chat.join();
+    this.self = await this.chat.join();
 
-    chat.addEventListener(ConferenceEvent.MESSAGE_RECEIVED, (id, message) => {
+    this.chat.addEventListener(ConferenceEvent.MESSAGE_RECEIVED, (id, message) => {
       const msg = JSON.parse(message);
       this.messages.push({
         type: 'message',
         userName: msg.userName,
         time: new Date(),
         text: msg.text,
-        fromMe: msg.userId === this.self.getId()
+        fromMe: msg.userId === this.chat.myUserId()
       });
     });
-
-    this.chat = chat;
   }
 
   ngOnDestroy(): void {
@@ -81,18 +82,12 @@ export class AppComponent implements OnInit, OnDestroy {
     const msg: Message = {
       text,
       type: 'message',
-      userId: this.self.getId(),
-      userName: this.self.getDisplayName(),
+      userId: this.chat.myUserId(),
+      userName: this.name,
       time: new Date(),
     };
 
     this.chat.sendTextMessage(JSON.stringify(msg));
-
-    // this.messages.push({
-    //   ...msg,
-    //   time: new Date(),
-    //   fromMe: true,
-    // });
   }
 
   @HostListener('window:beforeunload', ['$event'])

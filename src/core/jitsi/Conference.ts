@@ -50,7 +50,10 @@ export class Conference {
         resolve(new Track(selfTrack));
       });
 
-      const joinErrorListener = this.addEventListener(ConferenceEvent.CONFERENCE_FAILED, () => {
+      const joinErrorListener = this.addEventListener(ConferenceEvent.CONFERENCE_FAILED, (err, arg) => {
+        if (err !== ConferenceEvent.CONFERENCE_FAILED) {
+          return;
+        }
         joinListener();
         joinErrorListener();
         reject(new Error('can\'t join'));

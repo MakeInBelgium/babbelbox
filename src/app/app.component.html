@@ -4,6 +4,6 @@
     </h1>
   <section class="app__chat">
     <app-chat [messages]="messages" (sendMessage)="sendMessage($event)" [disabled]="!chat"></app-chat>
-
   </section>
 </main>
+<app-request-name (setName)="connect($event)" *ngIf="!name"></app-request-name>

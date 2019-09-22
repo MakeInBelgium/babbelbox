@@ -1,0 +1,7 @@
+<div class="name">
+  <input class="name__field"
+         [formControl]="fieldControl"
+         type="text"
+         (keyup.enter)="setName.emit(fieldControl.value); fieldControl.reset()"
+         placeholder="Your name">
+</div>

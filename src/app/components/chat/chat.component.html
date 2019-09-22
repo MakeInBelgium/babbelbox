@@ -18,7 +18,7 @@
 
       <div class="chat__message-user --join" *ngIf="msg.type === 'user_join'">
         <p class="chat__message-user__content">
-          <span>{{ msg.userName }}</span> join to us at {{ msg.time | date:'shortTime' }}
+          <span>{{ msg.userName }}</span> joined at {{ msg.time | date:'shortTime' }}
         </p>
       </div>
 

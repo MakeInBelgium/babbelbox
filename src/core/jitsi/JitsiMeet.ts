@@ -26,6 +26,7 @@ export interface ConnectionOptions {
   hosts: {
     domain: string,
     muc?: string,
+    focus?: string,
     anonymousdomain?: string,
   };
   useStunTurn?: boolean;
