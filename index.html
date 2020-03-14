@@ -14,27 +14,34 @@
         display: flex;
         flex-direction: column;
       }
-      input{
-            width: 300px;
-            height: 40px;
-            font-size:xx-large;
-            margin: 32px;
-        }
-        button{
-            height: 50px;
-            width: 300px;;
-            margin: 32px;
-            font-size: xx-large;
-            
-        }
-        .generated-url{
-            border-radius: 5px;
-            border-style: dashed;
-            background: #619465;
-            width: auto;
-            padding: 32px;
-            font-size: xx-large;;
-        }
+      input {
+        width: 300px;
+        height: 40px;
+        font-size: xx-large;
+        margin: 32px;
+      }
+      button {
+        height: 50px;
+        width: 300px;
+        margin: 32px;
+        font-size: xx-large;
+      }
+      .generated-url {
+        border-radius: 5px;
+        border-style: dashed;
+        background: #619465;
+        width: auto;
+        padding: 32px;
+        font-size: xx-large;
+      }
+      #used-password {
+        border-radius: 5px;
+        border-style: dashed;
+        background: #619465;
+        width: auto;
+        padding: 32px;
+        font-size: xx-large;
+      }
     </style>
   </head>
   <body>
@@ -50,6 +57,7 @@
         <span><a href="" id="url"></a></span>
       </div>
     </div>
+    <div id="password"></div>
     <script>
       var domain = "meet.jit.si";
       var options = {
@@ -58,6 +66,8 @@
 
         interfaceConfigOverwrite: {}
       };
+      var passworddiv = document.getElementById("used-password");
+      inputdiv.style.display = "none";
       function generateRoom() {
         var room = document.getElementById("room").value;
         var password = document.getElementById("password").value;
@@ -66,8 +76,11 @@
         a.innerText = url;
         a.setAttribute("href", url);
         options.roomName = room;
+        options.onload = function() {
+          console.log("loaded");
+          api.executeCommand("password", password);
+        };
         var api = new JitsiMeetExternalAPI(domain, options);
-        api.executeCommand("password", password);
       }
       function getParameterByName(name, url) {
         if (!url) url = window.location.href;
@@ -85,6 +98,8 @@
       if (room && password) {
         var inputdiv = document.getElementById("generate-room");
         inputdiv.style.display = "none";
+        var passworddiv = document.getElementById("used-password");
+        passworddiv.innerText = password;
 
         options.roomName = room;
         var api = new JitsiMeetExternalAPI(domain, options);
