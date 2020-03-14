@@ -7,103 +7,77 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <style type="text/css">
-      #generate-room {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-      input {
-        width: 300px;
-        height: 40px;
-        font-size: xx-large;
-        margin: 32px;
-      }
-      button {
-        height: 50px;
-        width: 300px;
-        margin: 32px;
-        font-size: xx-large;
-      }
-      .generated-url {
-        border-radius: 5px;
-        border-style: dashed;
-        background: #619465;
-        width: auto;
-        padding: 32px;
-        font-size: xx-large;
-      }
-      #used-password {
-        border-radius: 5px;
-        border-style: dashed;
-        background: #619465;
-        width: auto;
-        padding: 32px;
-        font-size: xx-large;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+  <title>Babbelbox</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
   </head>
   <body>
-    <script src="https://meet.jit.si/external_api.js"></script>
-    <div id="generate-room">
-      <input type="text" id="room" value="Naam" />
-      <input type="text" id="password" value="Wachtwoord" />
-      <button type="button" value="Maak babbelbox" onclick="generateRoom()">
-        Maak babbelbox
-      </button>
+    <script src="https://meet.jit.si/external_api.js"></script>	
 
-      <div class="generated-url">
-        <span><a href="" id="url"></a></span>
-      </div>
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <img src="babbelbox_logo.svg" class="img-fluid" alt="Babbelbox" style="width: 50%;">
+        <br/> <br/>
+        <div id="roomdata" class="roomdata">
+          <div class="form-row">
+            <div class="col-auto">              
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Kanaalnaam</span>
+                </div>
+                <input type="text" class="form-control" id="room" placeholder=""  aria-label="Username" aria-describedby="basic-addon1" required>
+              </div>  
+              
+            </div>
+            <div class="col-auto">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Paswoord</span>
+                </div>
+                <input type="text" class="form-control" id="password" placeholder="" aria-label="Username" aria-describedby="basic-addon1" required>
+              </div>
+            </div>
+            <div class="col-auto">
+              <button onclick="GenerateRoom()" value="Start de babbelbox" class="btn btn-primary mb-2">Start de babbelbox</button>
+            </div>
+          </div>
+        </div>
     </div>
-    <div id="password"></div>
+</div>    
+    </div>
+    <div class="meet" id="meet"></div>
+  
     <script>
-      var domain = "meet.jit.si";
-      var options = {
-        parentNode: undefined,
-        configOverwrite: {},
 
-        interfaceConfigOverwrite: {}
-      };
-      var passworddiv = document.getElementById("used-password");
-      inputdiv.style.display = "none";
-      function generateRoom() {
+      function GenerateRoom() {
+
+        const domain = 'meet.jit.si';
         var room = document.getElementById("room").value;
-        var password = document.getElementById("password").value;
-        var url = window.location + "?room=" + room + "&password=" + password;
-        var a = document.getElementById("url");
-        a.innerText = url;
-        a.setAttribute("href", url);
-        options.roomName = room;
-        options.onload = function() {
-          console.log("loaded");
-          api.executeCommand("password", password);
+        var pw = document.getElementById("password").value;
+
+        if(room.value != '' && pw.value != ''){
+          const options = {
+            roomName: room,
+            parentNode: document.getElementById("meet")
         };
+        
         var api = new JitsiMeetExternalAPI(domain, options);
-      }
-      function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-          results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return "";
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
+        
+        api.executeCommand('password', pw);
+        $(".roomdata").hide(500);
+        }        
       }
 
-      var room = getParameterByName("room");
-      var password = getParameterByName("password");
-
-      if (room && password) {
-        var inputdiv = document.getElementById("generate-room");
-        inputdiv.style.display = "none";
-        var passworddiv = document.getElementById("used-password");
-        passworddiv.innerText = password;
-
-        options.roomName = room;
-        var api = new JitsiMeetExternalAPI(domain, options);
-      }
     </script>
+      <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
