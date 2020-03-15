@@ -29,6 +29,8 @@ $(document).ready(function () {
 		$("#wrd_disp_b").html(getParameterByName("wrd_b"));
 		$("#wrd_disp_c").html(getParameterByName("wrd_c"));
 
+		$("#roomurl").val( "https://www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c")) );
+
 		var api = new JitsiMeetExternalAPI(domain, options);
 	} else {
 		rnd_id = Math.floor($('#c option').length * Math.random());
@@ -109,6 +111,49 @@ function getParameterByName(name, url) {
 	return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+$("#linkbtn").click(
+	function() {
+		let link = "https://www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"));
+		$("#roomurl").select();
+
+		const el = document.createElement('textarea');
+		el.value = link;
+		document.body.appendChild(el);
+		el.select();
+		document.execCommand('copy');
+		document.body.removeChild(el);
+
+		$(this).addClass("clicked");
+		$(this).html("Link gekopieerd");
+	}
+);
+
+function generateName(firstInputField, secondInputField, thirdInputField) {
+	firstInputField = removeCharacters(firstInputField);
+	secondInputField = removeCharacters(secondInputField);
+	thirdInputField = removeCharacters(thirdInputField);
+	return firstInputField + secondInputField + thirdInputField;
+}
+
+function removeCharacters(inputField) {
+	const invalidChars = ['?', '&', ':', '\'', '%', '#'];
+	invalidChars.forEach(element => {
+		inputField.replace(element, '');
+	});
+	return inputField.trim()
+}
+
+function generatePraatboxURL(a,b,c){
+	if (
+		a !== null &&
+		b !== null &&
+		c !== null
+	) {
+		const roomName = generateName(a, b, c);
+		return "?kamer=" + roomName + "&wrd_a=" + removeCharacters(a) + "&wrd_b=" + removeCharacters(b) + "&wrd_c=" + removeCharacters(c);
+	}
+}
+
 function redirectToRoom() {
 	var firstInputField = document.getElementById("a").value;
 	var secondInputField = document.getElementById("b").value;
@@ -141,4 +186,28 @@ function redirectToRoom() {
 		return inputField.trim()
 
 	}
+}
+
+function checkIfInput(){
+	if ($('#a').val()!=="" && $('#b').val()!=="") {
+		$('.enableOnInput').removeClass( "hidden" );
+	} else {
+		$('.enableOnInput').addClass( "hidden" );
+	}
+}
+
+function autoToggleButtons() {
+	checkIfInput();
+
+	$('#a').keyup(function(){
+		checkIfInput();
+	});
+	$('#b').keyup(function(){
+		checkIfInput();
+	});
+}
+
+function sendWhatsapp(){
+	let link = "https://www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"));
+	window.open("https://api.whatsapp.com/send?text="+escape(link), '_blank');
 }

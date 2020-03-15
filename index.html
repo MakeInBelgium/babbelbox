@@ -162,7 +162,7 @@
     <div class="row my-md-1">
 
       <div class="col-lg-8 mx-auto">
-        <button onclick="redirectToRoom()" value="Start de praatbox" class="btn btn-primary mb-2">Start de
+        <button onclick="redirectToRoom()" value="Start de praatbox" class="enableOnInput btn btn-primary mb-2 hidden">Start de
           praatbox</button>
       </div>
     </div>
@@ -184,7 +184,9 @@
         Vul op <strong>www.praatbox.be</strong> 
         <span
         class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp"
-        id="wrd_disp_c"></span> in om mee te doen
+        id="wrd_disp_c"></span> in om mee te doen. 
+        <button class="btn btn-sm btn-copy btn-info mb-2" id="linkbtn">Kopieer link</button>
+        <button onclick="sendWhatsapp()" class="btn btn-sm btn-whatsapp btn-info mb-2">Whatsapp</button>
       </div>
     </div>
     <div class="meet" id="meet"></div>

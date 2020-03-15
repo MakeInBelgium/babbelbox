@@ -72,3 +72,21 @@ body {
 	font-size: 10px;
 	color:rgb(150,150,150)
 }
+
+.btn-whatsapp::before {
+	font-family: "Font Awesome 5 Brands"; 
+	font-weight: 900; 
+	content:"\f232";
+	margin-right:5px;
+}
+
+.btn-copy::before {
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: 900; 
+	content:"\f0ea";
+	margin-right:5px;
+}
+
+.btn-copy.clicked::before {
+	content: "\f00c";
+}
