@@ -44,8 +44,21 @@ function redirectToRoom() {
     secondInputField !== null &&
     thirdInputField !== null
   ) {
-    window.location =
-      "?kamer=" + firstInputField + secondInputField + thirdInputField;
+		const roomName = generateName(firstInputField, secondInputField, thirdInputField);
+    window.location = "?kamer=" + roomName;
     $(".roomdata").hide(500);
+  }
+  function generateName(firstInputField, secondInputField, thirdInputField) {
+	  removeCharacters(firstInputField);
+	  removeCharacters(secondInputField);
+	  removeCharacters(thirdInputField);
+	  return firstInputField.trim() + secondInputField.trim() + thirdInputField.trim();
+  }
+  function removeCharacters(inputField) {
+	  const invalidChars = ['?', '&', ':', '\'', '%', '#'];
+	  invalidChars.forEach(element => {
+		  inputField.replace(element, '');
+	  });
+
   }
 }
