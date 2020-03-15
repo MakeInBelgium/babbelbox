@@ -11,6 +11,7 @@
   <meta name="author" content="">
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link href="./assets/style.css" rel="stylesheet">
 
 </head>
@@ -35,16 +36,13 @@
           <p>Met Praatbox kan je videobellen met iemand waar je geen fysiek contact mee mag hebben.</p>
           <h2>Hoe gebruik je de Praatbox?</h2>
           <ol>
-            <li>Geef je praatbox een naam. Vul dit in het eerste veld in.</li>
-            <li>Geef je praatbox een locatie. Vul dit in het tweede veld in.</li>
-            <li>Bedenk een willekeurig woord. Dit mag een bestaand woord zijn, maar ook een verzonnen woord. Wees dus
-              creatief!</li>
+            <li>Geef je praatbox een naam. Bedenk een naam en vul die in het eerste veld in, of vul de naam in die je hebt gekregen.</li>
+            <li>Geef je praatbox een locatie. Vul dit in het tweede veld in, of vul hier de locatie in die je hebt gekregen.</li>
+            <li>Kies een willekeurig woord, of hou de automatisch gemaakte keuze. Wil je deelnemen aan een bestaande Praatbox, kies dan het woord dat je hebt gekregen.</li>
             <li>Als je de vorige stappen hebt ondernomen, klik je op "Start de praatbox"</li>
             <li>De praatbox start op!</li>
-            <li>De je kan deze praatbox nu delen op allerlei verschillende manieren, het enige wat je moet doen is de link
-              kopiëren</li>
+            <li>Je kan deze praatbox nu delen op allerlei verschillende manieren, het enige wat je moet doen is de link kopiëren. </li>
           </ol>
-
           <p>Opgelet!</p>
           <ul>
             <li>Gebruik enkel cijfers en letters in de velden</li>
@@ -162,14 +160,14 @@
     <div class="row my-md-1">
 
       <div class="col-lg-8 mx-auto">
-        <button onclick="redirectToRoom()" value="Start de praatbox" class="btn btn-primary mb-2">Start de
+        <button onclick="redirectToRoom()" value="Start de praatbox" class="enableOnInput btn btn-primary mb-2 hidden">Start de
           praatbox</button>
       </div>
     </div>
     <div class="row my-md-1">
 
-      <div class="col-lg-3">
-       <p class="version">v. 2020.03.15.1</p>
+      <div class="col-lg-8 mx-auto">
+       <p class="version">v. 2020.03.15.3</p>
       </div>
     </div>
   </div>
@@ -184,7 +182,9 @@
         Vul op <strong>www.praatbox.be</strong> 
         <span
         class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp"
-        id="wrd_disp_c"></span> in om mee te doen
+        id="wrd_disp_c"></span> in om mee te doen. 
+        <button class="btn btn-sm btn-copy btn-info mb-2" id="linkbtn">Kopieer link</button>
+        <button onclick="sendWhatsapp()" class="btn btn-sm btn-whatsapp btn-info mb-2">Whatsapp</button>
       </div>
     </div>
     <div class="meet" id="meet"></div>
