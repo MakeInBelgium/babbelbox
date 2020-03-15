@@ -13,7 +13,13 @@ function GenerateRoom() {
 	var b = document.getElementById("b").value;
 	var c = document.getElementById("c").value;
 
+	$("#wrd_disp_a").html(document.getElementById("a").value);
+	$("#wrd_disp_b").html(document.getElementById("b").value);
+	$("#wrd_disp_c").html(document.getElementById("c").value);
+
 	if( a.value != '' && b.value != '' ) {
+		$("#chan").removeClass('hidden');
+
 		const options = {
 			roomName: a + b + c ,
 			parentNode: document.getElementById("meet")
@@ -21,7 +27,7 @@ function GenerateRoom() {
 
 		var api = new JitsiMeetExternalAPI(domain, options);
 
-		$(".roomdata").hide(500);
+		$("#roomdata").hide(500);
 	}
 
 }
