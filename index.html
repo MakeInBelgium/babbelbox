@@ -21,30 +21,40 @@
 
   <!-- Page Content -->
   <div class="container">
-    <div class="row my-md-1">
+    <div class="roomdata" id="roomdata">
+    <div class="row my-md-1" >
       <div class="col py-lg-12 text-center">
-        <img src="./assets/babbelbox_logo.svg" class="p-3 img-fluid" alt="Babbelbox" style="width: 70%;">
+        <img src="./assets/babbelbox_logo.svg" class="p-3 img-fluid" alt="Babbelbox" style="width: 50%;">
 
-        <div id="roomdata" class="roomdata">
           <div class="form-row">
             <div class="col-auto">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">Kanaalnaam</span>
                 </div>
-                <input type="text" class="form-control" id="room" placeholder=""  aria-label="Username" aria-describedby="basic-addon1" required>
+                <input type="text" class="form-control" id="a" placeholder="" aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"  title="bv.: Oma-Gent" required>
               </div>
-
             </div>
+
             <div class="col-auto">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">Paswoord</span>
+                  <span class="input-group-text" id="basic-addon1">Gemeente</span>
                 </div>
-                <input type="text" class="form-control" id="password" placeholder="" aria-label="Username" aria-describedby="basic-addon1" required>
+                <input type="text" class="form-control" id="b" placeholder="" aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom" title="bv.: Sint-Niklaas, Gent,  ..." required>
               </div>
             </div>
+
             <div class="col-auto">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Instrument</span>
+                </div>
+                <input type="text" class="form-control" id="c" placeholder="" aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"  title="bv.:harp, gitaar, banjo, ..." required>
+              </div>
+            </div>
+
+            <div class="col-auto">          
               <button onclick="GenerateRoom()" value="Start de babbelbox" class="btn btn-primary mb-2">Start de babbelbox</button>
             </div>
           </div>
@@ -52,25 +62,27 @@
     </div>
 </div>
     </div>
+    
+  </div>
     <div class="meet" id="meet"></div>
 
-    <script>
-
+    <script type="text/javascript">
+     
       function GenerateRoom() {
 
         const domain = 'meet.jit.si';
-        var room = document.getElementById("room").value;
-        var pw = document.getElementById("password").value;
-
-        if(room.value != '' && pw.value != ''){
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c").value;
+        
+        if(a.value != '' && b.value != ''){
           const options = {
-            roomName: room,
+            roomName: a + b + c ,
             parentNode: document.getElementById("meet")
         };
 
         var api = new JitsiMeetExternalAPI(domain, options);
-
-        api.executeCommand('password', pw);
+        
         $(".roomdata").hide(500);
         }
       }
@@ -79,5 +91,12 @@
       <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();         
+    });
+ </script>
+
   </body>
 </html>
