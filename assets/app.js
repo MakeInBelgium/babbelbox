@@ -111,11 +111,12 @@ function getParameterByName(name, url) {
 }
 
 function copy() {
-	navigator.clipboard.writeText("www.praatbox.be/"+generatePraatboxURL()).then(function(){
+	let link = "www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"));
+	navigator.clipboard.writeText(link).then(function(){
 		//copying succeeded
 	}, function (){
 		//workaround if the Permissions API is not available.
-		$('#praatboxlink').val("www.praatbox.be/"+generatePraatboxURL());
+		$('#praatboxlink').val(link);
 		$('#praatboxlink').select();
 		document.execCommand("copy");
 	});
@@ -136,26 +137,25 @@ function removeCharacters(inputField) {
 	return inputField.trim()
 }
 
-function generatePraatboxURL(){
-	var firstInputField = document.getElementById("a").value;
-	var secondInputField = document.getElementById("b").value;
-	var thirdInputField = document.getElementById("c").value;
-
+function generatePraatboxURL(a,b,c){
 	if (
-		firstInputField !== null &&
-		secondInputField !== null &&
-		thirdInputField !== null
+		a !== null &&
+		b !== null &&
+		c !== null
 	) {
-		const roomName = generateName(firstInputField, secondInputField, thirdInputField);
-		return "?kamer=" + roomName + "&wrd_a=" + removeCharacters(firstInputField) + "&wrd_b=" + removeCharacters(secondInputField) + "&wrd_c=" + removeCharacters(thirdInputField);
+		const roomName = generateName(a, b, c);
+		return "?kamer=" + roomName + "&wrd_a=" + removeCharacters(a) + "&wrd_b=" + removeCharacters(b) + "&wrd_c=" + removeCharacters(c);
 	}
 }
 
 function redirectToRoom() {
-		window.location = generatePraatboxURL();
+	var firstInputField = document.getElementById("a").value;
+	var secondInputField = document.getElementById("b").value;
+	var thirdInputField = document.getElementById("c").value;
+	window.location = generatePraatboxURL(firstInputField, secondInputField, thirdInputField);
 
-		$("#chan").removeClass("hidden");
-		$("#roomdata").addClass("hidden");
+	$("#chan").removeClass("hidden");
+	$("#roomdata").addClass("hidden");
 }
 
 function autoToggleButtons() {
