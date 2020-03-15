@@ -6,7 +6,10 @@ body {
 }
 body {
 	height: 100vh;
-	overflow: hidden;
+}
+
+.fullscreen {
+	overflow:hidden;
 }
 
 .bb-logo {
@@ -16,26 +19,45 @@ body {
 	margin-bottom: 10px;
 }
 
-.bb-mini-logo {
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-	height: 20px;
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-top:3px;
+.meethead {
+	display: grid;
+	grid-template-columns: 120px auto;
+}
+
+.meethead__logo {
+	padding:2px;
+}
+
+.meethead__logoimg {
+	width: 100%;
+	max-height: 30px;
+	height: auto;
+}
+
+.meethead__body {
+	padding:2px;
 }
 
 #chan {
-	display: grid;
-	grid-template-rows: 30px auto;
+	display: flex;
+	align-items: stretch;
+	flex-direction: column;
 	height: 100%;
 	width: 100%;
+}
+
+.meet {
+	flex-grow: 1;
 }
 
 #chan.hidden {
 	display: none;
 }
+
+.hidden {
+	display: none;
+}
+
 .wrd_disp {
 	display: inline-block;
 	background-color: rgb(255,255,100);
@@ -43,4 +65,10 @@ body {
 	padding-left: 5px;
 	padding-right: 5px;
 	border-radius: 2px;
+}
+
+.version {
+	text-align: right;
+	font-size: 10px;
+	color:rgb(150,150,150)
 }
