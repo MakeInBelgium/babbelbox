@@ -73,6 +73,7 @@ $(document).ready(function () {
 		$("#alert_rtc .alert").html(alerttext);
 		$("#alert_rtc").removeClass("hidden");
 	}
+	autoToggleButtons();
 
 });
 
