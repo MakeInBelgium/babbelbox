@@ -49,10 +49,23 @@ function redirectToRoom() {
     secondInputField !== null &&
     thirdInputField !== null
   ) {
-	
-    window.location =
-      "?kamer=" + firstInputField + secondInputField + thirdInputField + "&wrd_a="+firstInputField+"&wrd_b="+firstInputField+"&wrd_c="+thirdInputField;
+		const roomName = generateName(firstInputField, secondInputField, thirdInputField);
+    window.location = "?kamer=" + roomName + "&wrd_a="+firstInputField+"&wrd_b="+firstInputField+"&wrd_c="+thirdInputField;;
+   
 	$("#chan").removeClass("hidden");
     $("#roomdata").hide(500);
+  }
+  function generateName(firstInputField, secondInputField, thirdInputField) {
+	  removeCharacters(firstInputField);
+	  removeCharacters(secondInputField);
+	  removeCharacters(thirdInputField);
+	  return firstInputField.trim() + secondInputField.trim() + thirdInputField.trim();
+  }
+  function removeCharacters(inputField) {
+	  const invalidChars = ['?', '&', ':', '\'', '%', '#'];
+	  invalidChars.forEach(element => {
+		  inputField.replace(element, '');
+	  });
+
   }
 }

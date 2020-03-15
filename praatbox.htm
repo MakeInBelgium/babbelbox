@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/html">
+
 <head>
 
   <title>Praatbox</title>
@@ -24,14 +25,22 @@
         <div class="card-body">
           <h1 class="display-4"><img src="./assets/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
           </h1>
-          <p class="lead">Met de Praatbox kan je eenvoudig videobellen met iemand.</p>
-          <hr class="my-4">
-          <p>Kies drie woorden die makkelijk te onthouden zijn, en toch je Praatbox uniek maken.</p>
-          <p>Stuur degene met wie je wil praatboxen naar deze site en vraag ze dezelfde drie woorden in te vullen.</p>
-          <p>Als je de praatbox opstart, moet je toestemming geven om je microfoon en camera te gebruiken. Dat is
-            normaal.</p>
-          <p>Je kan degene met wie je wil praatboxen ook de link doorsturen die je rechts onderaan vindt eens je
-            praatbox is opgestart.</p>
+          <h2>Hoe gebruik ik de Praatbox?</h2>
+          <ol>
+            <li>Geef je praatbox een naam. Vul dit in het eerste veld in.</li>
+            <li>Geef je praatbox een locatie. Vul dit in het tweede veld in.</li>
+            <li>Bedenk een willekeurig woord. Dit mag een bestaand woord zijn, maar ook een verzonnen woord. Wees dus
+              creatief!</li>
+            <li>Als je de vorige stappen hebt ondernomen, klik je op "Start de praatbox"</li>
+            <li>De praatbox start op!</li>
+            <li>De je kan deze praatbox nu delen op allerlei verschillende manier, het enige wat je moet doen is de link
+              kopieren</li>
+          </ol>
+
+          <p>Opgelet!</p>
+          <ul>
+            <li>Gebruik alleen maar cijfers en letters in de velden</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -51,7 +60,7 @@
         <div class="col-auto">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Gemeente</span>
+              <span class="input-group-text" id="basic-addon1">Locatie van je praatbox</span>
             </div>
             <input type="text" class="form-control" id="b" placeholder="" aria-label="Username"
               aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
@@ -62,7 +71,7 @@
         <div class="col-auto">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Instrument</span>
+              <span class="input-group-text" id="basic-addon1">Willekeurig woord</span>
             </div>
             <input type="text" class="form-control" id="c" placeholder="" aria-label="Username"
               aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
@@ -74,11 +83,17 @@
           <button onclick="redirectToRoom()" value="Start de praatbox" class="btn btn-primary mb-2">Start de
             praatbox</button>
         </div>
+
       </div>
     </div>
+
+
+
   </div>
   <div id="chan" class="hidden">
-    <div class="meethead"><img src="./assets/praatbox_logo.svg" class="bb-mini-logo" alt="Praatbox"> <span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp" id="wrd_disp_c"></span></div>
+    <div class="meethead"><img src="./assets/praatbox_logo.svg" class="bb-mini-logo" alt="Praatbox"> <span
+        class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp"
+        id="wrd_disp_c"></span></div>
     <div class="meet" id="meet"></div>
   </div>
   <!-- Bootstrap core JavaScript -->
@@ -87,4 +102,5 @@
   <!-- Praatbox script -->
   <script src="./assets/app.js"></script>
 </body>
+
 </html>
