@@ -14,27 +14,27 @@
   <title>Babbelbox</title>
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+
   </head>
   <body>
-    <script src="https://meet.jit.si/external_api.js"></script>	
+    <script src="https://meet.jit.si/external_api.js"></script>
 
   <!-- Page Content -->
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <img src="babbelbox_logo.svg" class="img-fluid" alt="Babbelbox" style="width: 50%;">
-        <br/> <br/>
+    <div class="row my-md-1">
+      <div class="col py-lg-12 text-center">
+        <img src="./assets/babbelbox_logo.svg" class="p-3 img-fluid" alt="Babbelbox" style="width: 70%;">
+
         <div id="roomdata" class="roomdata">
           <div class="form-row">
-            <div class="col-auto">              
+            <div class="col-auto">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">Kanaalnaam</span>
                 </div>
                 <input type="text" class="form-control" id="room" placeholder=""  aria-label="Username" aria-describedby="basic-addon1" required>
-              </div>  
-              
+              </div>
+
             </div>
             <div class="col-auto">
               <div class="input-group mb-3">
@@ -50,10 +50,10 @@
           </div>
         </div>
     </div>
-</div>    
+</div>
     </div>
     <div class="meet" id="meet"></div>
-  
+
     <script>
 
       function GenerateRoom() {
@@ -67,12 +67,12 @@
             roomName: room,
             parentNode: document.getElementById("meet")
         };
-        
+
         var api = new JitsiMeetExternalAPI(domain, options);
-        
+
         api.executeCommand('password', pw);
         $(".roomdata").hide(500);
-        }        
+        }
       }
 
     </script>
