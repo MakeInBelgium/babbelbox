@@ -72,6 +72,7 @@ $(document).ready(function () {
 		$("#alert_rtc").removeClass("hidden");
 	}
 
+	autoToggleButtons();
 });
 
 function detectBrowser() {
@@ -83,7 +84,7 @@ function detectBrowser() {
 	else if (navigator.userAgent.search("Chrome") >= 0) {
 		return 'chrome';
 	}
-	//Check if browser is Firefox 
+	//Check if browser is Firefox
 	else if (navigator.userAgent.search("Firefox") >= 0) {
 		return 'firefox';
 	}
@@ -109,7 +110,33 @@ function getParameterByName(name, url) {
 	return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-function redirectToRoom() {
+function copy() {
+	navigator.clipboard.writeText("www.praatbox.be/"+generatePraatboxURL()).then(function(){
+		//copying succeeded
+	}, function (){
+		//workaround if the Permissions API is not available.
+		$('#praatboxlink').val("www.praatbox.be/"+generatePraatboxURL());
+		$('#praatboxlink').select();
+		document.execCommand("copy");
+	});
+}
+
+function generateName(firstInputField, secondInputField, thirdInputField) {
+	firstInputField = removeCharacters(firstInputField);
+	secondInputField = removeCharacters(secondInputField);
+	thirdInputField = removeCharacters(thirdInputField);
+	return firstInputField + secondInputField + thirdInputField;
+}
+
+function removeCharacters(inputField) {
+	const invalidChars = ['?', '&', ':', '\'', '%', '#'];
+	invalidChars.forEach(element => {
+		inputField.replace(element, '');
+	});
+	return inputField.trim()
+}
+
+function generatePraatboxURL(){
 	var firstInputField = document.getElementById("a").value;
 	var secondInputField = document.getElementById("b").value;
 	var thirdInputField = document.getElementById("c").value;
@@ -120,25 +147,32 @@ function redirectToRoom() {
 		thirdInputField !== null
 	) {
 		const roomName = generateName(firstInputField, secondInputField, thirdInputField);
-		window.location = "?kamer=" + roomName + "&wrd_a=" + removeCharacters(firstInputField) + "&wrd_b=" + removeCharacters(secondInputField) + "&wrd_c=" + removeCharacters(thirdInputField);
+		return "?kamer=" + roomName + "&wrd_a=" + removeCharacters(firstInputField) + "&wrd_b=" + removeCharacters(secondInputField) + "&wrd_c=" + removeCharacters(thirdInputField);
+	}
+}
+
+function redirectToRoom() {
+		window.location = generatePraatboxURL();
 
 		$("#chan").removeClass("hidden");
 		$("#roomdata").addClass("hidden");
-	}
+}
 
-	function generateName(firstInputField, secondInputField, thirdInputField) {
-		firstInputField = removeCharacters(firstInputField);
-		secondInputField = removeCharacters(secondInputField);
-		thirdInputField = removeCharacters(thirdInputField);
-		return firstInputField + secondInputField + thirdInputField;
-	}
+function autoToggleButtons() {
+	$('.enableOnInput').prop('disabled', true);
 
-	function removeCharacters(inputField) {
-		const invalidChars = ['?', '&', ':', '\'', '%', '#'];
-		invalidChars.forEach(element => {
-			inputField.replace(element, '');
-		});
-		return inputField.trim()
-
-	}
+	$('#a').keyup(function(){
+		if($('#a').val()!=="" && $('#b').val()!==""){
+			$('.enableOnInput').prop('disabled', false);
+		}else{
+			$('.enableOnInput').prop('disabled', true);
+		}
+	});
+	$('#b').keyup(function(){
+		if($('#a').val()!=="" && $('#b').val()!==""){
+			$('.enableOnInput').prop('disabled', false);
+		}else{
+			$('.enableOnInput').prop('disabled', true);
+		}
+	});
 }

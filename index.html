@@ -12,7 +12,7 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="./assets/style.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 
 <body>
@@ -162,8 +162,10 @@
     <div class="row my-md-1">
 
       <div class="col-lg-8 mx-auto">
-        <button onclick="redirectToRoom()" value="Start de praatbox" class="btn btn-primary mb-2">Start de
+        <button onclick="redirectToRoom()" value="Start de praatbox" class="enableOnInput btn btn-primary mb-2">Start de
           praatbox</button>
+        <input type="text" class="hidden" id="praatboxlink"></input>
+        <button onclick="copy()" value="Kopieer link" class="enableOnInput btn btn-info mb-2"><i class="fa fa-copy"></i> Kopieer link</button>
       </div>
     </div>
     <div class="row my-md-1">
