@@ -12,11 +12,16 @@ $(document).ready(function() {
   const domain = "meet.jit.si";
   var room = getParameterByName("kamer");
   if (room) {
-    $(".roomdata").hide(500);
+	$("#chan").removeClass("hidden");
+    $("#roomdata").hide(500);
     const options = {
       roomName: room,
       parentNode: document.getElementById("meet")
     };
+
+	$("#wrd_disp_a").html(getParameterByName("wrd_a"));
+	$("#wrd_disp_b").html(getParameterByName("wrd_b"));
+	$("#wrd_disp_c").html(getParameterByName("wrd_c"));
 
     var api = new JitsiMeetExternalAPI(domain, options);
   }
@@ -45,20 +50,23 @@ function redirectToRoom() {
     thirdInputField !== null
   ) {
 		const roomName = generateName(firstInputField, secondInputField, thirdInputField);
-    window.location = "?kamer=" + roomName;
-    $(".roomdata").hide(500);
+    window.location = "?kamer=" + roomName + "&wrd_a="+removeCharacters(firstInputField)+"&wrd_b="+removeCharacters(secondInputField)+"&wrd_c="+removeCharacters(thirdInputField);
+   
+	$("#chan").removeClass("hidden");
+    $("#roomdata").hide(500);
   }
   function generateName(firstInputField, secondInputField, thirdInputField) {
-	  removeCharacters(firstInputField);
-	  removeCharacters(secondInputField);
-	  removeCharacters(thirdInputField);
-	  return firstInputField.trim() + secondInputField.trim() + thirdInputField.trim();
+	  firstInputField = removeCharacters(firstInputField);
+	  secondInputField = removeCharacters(secondInputField);
+	  thirdInputField = removeCharacters(thirdInputField);
+	  return firstInputField + secondInputField + thirdInputField;
   }
   function removeCharacters(inputField) {
 	  const invalidChars = ['?', '&', ':', '\'', '%', '#'];
 	  invalidChars.forEach(element => {
 		  inputField.replace(element, '');
 	  });
+	  return inputField.trim()
 
   }
 }

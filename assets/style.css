@@ -1,4 +1,46 @@
+html, 
+body {
+    height: 100%;
+	padding: 0;
+	margin: 0;
+}
+body {
+	height: 100vh;
+	overflow: hidden;
+}
+
 .bb-logo {
 	height:80px;
 	width:auto;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+
+.bb-mini-logo {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	height: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top:3px;
+}
+
+#chan {
+	display: grid;
+	grid-template-rows: 30px auto;
+	height: 100%;
+	width: 100%;
+}
+
+#chan.hidden {
+	display: none;
+}
+.wrd_disp {
+	display: inline-block;
+	background-color: rgb(255,255,100);
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 2px;
 }
