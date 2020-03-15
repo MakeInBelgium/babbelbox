@@ -1,31 +1,28 @@
-<html
-  itemscope
-  itemtype="http://schema.org/Product"
-  prefix="og: http://ogp.me/ns#"
-  xmlns="http://www.w3.org/1999/html"
->
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html itemscope itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
   <title>Babbelbox</title>
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="./assets/style.css" rel="stylesheet">
 
-  </head>
-  <body>
-    <script src="https://meet.jit.si/external_api.js"></script>
+</head>
+
+<body>
+  <script src="https://meet.jit.si/external_api.js"></script>
 
   <!-- Page Content -->
   <div class="container">
     <div class="roomdata" id="roomdata">
-    <div class="row my-md-1" >
-      <div class="col py-lg-12 text-center">
-        <img src="./assets/babbelbox_logo.svg" class="p-3 img-fluid bb-logo" alt="Babbelbox">
+      <div class="row my-md-1">
+        <div class="col py-lg-12 text-center">
+          <img src="./assets/babbelbox_logo.svg" class="p-3 img-fluid bb-logo" alt="Babbelbox">
 
           <div class="form-row">
             <div class="col-auto">
@@ -33,7 +30,9 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">Kanaalnaam</span>
                 </div>
-                <input type="text" class="form-control" id="a" placeholder="" aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"  title="bv.: Oma-Gent" required>
+                <input type="text" class="form-control" id="a" placeholder="" aria-label="Username"
+                  aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom" title="bv.: Oma-Gent"
+                  required>
               </div>
             </div>
 
@@ -42,7 +41,9 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">Gemeente</span>
                 </div>
-                <input type="text" class="form-control" id="b" placeholder="" aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom" title="bv.: Sint-Niklaas, Gent,  ..." required>
+                <input type="text" class="form-control" id="b" placeholder="" aria-label="Username"
+                  aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
+                  title="bv.: Sint-Niklaas, Gent,  ..." required>
               </div>
             </div>
 
@@ -51,33 +52,37 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">Instrument</span>
                 </div>
-                <input type="text" class="form-control" id="c" placeholder="" aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"  title="bv.:harp, gitaar, banjo, ..." required>
+                <input type="text" class="form-control" id="c" placeholder="" aria-label="Username"
+                  aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
+                  title="bv.:harp, gitaar, banjo, ..." required>
               </div>
             </div>
 
-            <div class="col-auto">          
-              <button onclick="GenerateRoom()" value="Start de babbelbox" class="btn btn-primary mb-2">Start de babbelbox</button>
+            <div class="col-auto">
+              <button onclick="GenerateRoom()" value="Start de babbelbox" class="btn btn-primary mb-2">Start de
+                babbelbox</button>
             </div>
           </div>
         </div>
+      </div>
     </div>
-</div>
-    </div>
-    
   </div>
-    <div class="meet" id="meet"></div>
 
-    <script type="text/javascript">
-     
+  </div>
+  <div class="meet" id="meet"></div>
 
-    </script>
-      <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript">
+
+
+  </script>
+  <!-- Bootstrap core JavaScript -->
   <script src="./vendor/jquery/jquery.slim.min.js"></script>
   <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script src="./assets/app.js">
-   
- </script>
 
-  </body>
+  </script>
+
+</body>
+
 </html>
