@@ -17,11 +17,17 @@
 
 <body>
   <script src="https://meet.jit.si/external_api.js"></script>
-
+ <!-- sanity check -->
+  <div class="container hidden" id="alert_js">
+    <div class="alert alert-danger" role="alert">
+      Je hebt Javascript uitgeschakeld. Javascript is noodzakelijk voor Praatbox.
+    </div>
+  </div>
   <!-- Page Content -->
-  <div class="container" id="roomdata">
+  <div class="container hidden" id="roomdata">
     <div class="row my-md-1">
       <div class="col-lg-8 mx-auto">
+      
       <div class="card mb-5">
         <div class="card-body">
           <h1 class="display-4"><img src="./assets/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
@@ -46,6 +52,18 @@
         </div>
       </div>
       </div>
+    </div>
+    <div id="alert_rtc" class="row my-md-1 hidden">
+      <div class="col-lg-8 mx-auto">        
+        <div class="alert alert-warning" role="alert">
+          <p>Je hebt heel veel problemen</p>
+          <ul>
+            <li>Geen webcam</li>
+            <li>Geen microfoon</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
     <div class="row my-md-1">
       <div class="col-lg-8 mx-auto">
@@ -79,6 +97,7 @@
             <label class="input-group-text" for="c">Willekeurig woord</label>
           </div>
           <select class="custom-select" id="c">
+            <option value=""></option>
             <option value="kaars">kaars</option>
             <option value="kaart">kaart</option>
             <option value="kaas">kaas</option>
@@ -152,9 +171,17 @@
 
 
   <div id="chan" class="hidden">
-    <div class="meethead"><img src="./assets/praatbox_logo.svg" class="bb-mini-logo" alt="Praatbox"> <span
+    <div class="meethead">
+      <div class="meethead__logo">
+        <img src="./assets/praatbox_logo.svg" class="meethead__logoimg" alt="Praatbox"> 
+      </div>
+      <div class="meethead__body">
+        Vul op <strong>www.praatbox.be</strong> 
+        <span
         class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp"
-        id="wrd_disp_c"></span></div>
+        id="wrd_disp_c"></span> in om mee te doen
+      </div>
+    </div>
     <div class="meet" id="meet"></div>
   </div>
   <!-- jQuery JavaScript -->
