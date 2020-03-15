@@ -14,6 +14,7 @@
   <title>Babbelbox</title>
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/style.css" rel="stylesheet">
 
   </head>
   <body>
@@ -24,7 +25,7 @@
     <div class="roomdata" id="roomdata">
     <div class="row my-md-1" >
       <div class="col py-lg-12 text-center">
-        <img src="./assets/babbelbox_logo.svg" class="p-3 img-fluid" alt="Babbelbox" style="width: 50%;">
+        <img src="./assets/babbelbox_logo.svg" class="p-3 img-fluid bb-logo" alt="Babbelbox">
 
           <div class="form-row">
             <div class="col-auto">
@@ -68,35 +69,14 @@
 
     <script type="text/javascript">
      
-      function GenerateRoom() {
-
-        const domain = 'meet.jit.si';
-        var a = document.getElementById("a").value;
-        var b = document.getElementById("b").value;
-        var c = document.getElementById("c").value;
-        
-        if(a.value != '' && b.value != ''){
-          const options = {
-            roomName: a + b + c ,
-            parentNode: document.getElementById("meet")
-        };
-
-        var api = new JitsiMeetExternalAPI(domain, options);
-        
-        $(".roomdata").hide(500);
-        }
-      }
 
     </script>
       <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./vendor/jquery/jquery.slim.min.js"></script>
+  <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function() {      
-      if (location.protocol !== 'https:') {location.replace(`https:${location.href.substring(location.protocol.length)}`);}
-      $('[data-toggle="tooltip"]').tooltip();
-    });
+  <script src="./assets/app.js">
+   
  </script>
 
   </body>
