@@ -1,13 +1,13 @@
+<!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/html">
-
 <head>
+
+  <title>Praatbox</title>
   <meta charset="utf-8" />
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <title>Praatbox</title>
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="./assets/style.css" rel="stylesheet">
@@ -22,7 +22,7 @@
     <div class="row my-md-1">
       <div class="card">
         <div class="card-body">
-          <h1 class="display-4"><img src="./assets/babbelbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
+          <h1 class="display-4"><img src="./assets/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
           </h1>
           <p class="lead">Met de Praatbox kan je eenvoudig videobellen met iemand.</p>
           <hr class="my-4">
@@ -71,27 +71,20 @@
         </div>
 
         <div class="col-auto">
-          <button onclick="GenerateRoom()" value="Start de babbelbox" class="btn btn-primary mb-2">Start de
-            babbelbox</button>
+          <button onclick="redirectToRoom()" value="Start de praatbox" class="btn btn-primary mb-2">Start de
+            praatbox</button>
         </div>
       </div>
     </div>
   </div>
-
   <div id="chan" class="hidden">
-    <div class="meethead">Praatbox: <span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp" id="wrd_disp_c"></span></div>
+    <div class="meethead"><img src="./assets/praatbox_logo.svg" class="bb-mini-logo" alt="Praatbox"> <span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp" id="wrd_disp_c"></span></div>
     <div class="meet" id="meet"></div>
   </div>
-
   <!-- Bootstrap core JavaScript -->
   <script src="./vendor/jquery/jquery.slim.min.js"></script>
   <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
   <!-- Praatbox script -->
-  <script src="./assets/app.js">
-
-  </script>
-
+  <script src="./assets/app.js"></script>
 </body>
-
 </html>
