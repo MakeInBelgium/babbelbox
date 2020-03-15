@@ -24,7 +24,7 @@
     <div class="roomdata" id="roomdata">
     <div class="row my-md-1" >
       <div class="col py-lg-12 text-center">
-        <img src="./assets/babbelbox_logo.svg" class="p-3 img-fluid" alt="Babbelbox" style="width: 50%;">
+        <img src="./assets/praatbox_logo.svg" class="p-3 img-fluid" alt="Babbelbox" style="width: 50%;">
 
           <div class="form-row">
             <div class="col-auto">
@@ -54,7 +54,7 @@
               </div>
             </div>
 
-            <div class="col-auto">          
+            <div class="col-auto">
               <button onclick="GenerateRoom()" value="Start de babbelbox" class="btn btn-primary mb-2">Start de babbelbox</button>
             </div>
           </div>
@@ -62,19 +62,19 @@
     </div>
 </div>
     </div>
-    
+
   </div>
     <div class="meet" id="meet"></div>
 
     <script type="text/javascript">
-     
+
       function GenerateRoom() {
 
         const domain = 'meet.jit.si';
         var a = document.getElementById("a").value;
         var b = document.getElementById("b").value;
         var c = document.getElementById("c").value;
-        
+
         if(a.value != '' && b.value != ''){
           const options = {
             roomName: a + b + c ,
@@ -82,7 +82,7 @@
         };
 
         var api = new JitsiMeetExternalAPI(domain, options);
-        
+
         $(".roomdata").hide(500);
         }
       }
@@ -93,7 +93,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script type="text/javascript">
-    $(document).ready(function() {      
+    $(document).ready(function() {
       if (location.protocol !== 'https:') {location.replace(`https:${location.href.substring(location.protocol.length)}`);}
       $('[data-toggle="tooltip"]').tooltip();
     });
