@@ -66,3 +66,9 @@ body {
 	padding-right: 5px;
 	border-radius: 2px;
 }
+
+.version {
+	text-align: right;
+	font-size: 10px;
+	color:rgb(150,150,150)
+}

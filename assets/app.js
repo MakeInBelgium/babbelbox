@@ -40,7 +40,7 @@ $(document).ready(function () {
 
 	// detect whether user has webcam and microphone
 
-	/*DetectRTC.load(function () {
+	DetectRTC.load(function () {
 
 		if (false === DetectRTC.isWebRTCSupported) {
 			alerts.push('Je browswer ondersteunt videobellen niet. Je gebruikt best Chrome voor Praatbox.');
@@ -58,7 +58,7 @@ $(document).ready(function () {
 			}
 		}
 
-	});*/
+	});
 
 	let alerttext = '<p>Je praatbox werkt mogelijk niet goed:</p>';
 
