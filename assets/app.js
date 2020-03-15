@@ -199,13 +199,11 @@ function checkIfInput(){
 
 function autoToggleButtons() {
 	checkIfInput();
+	
+	$('#roomdata input[type=text]').on( "keyup change touchend", function(e){
+		checkIfInput();
+	});
 
-	$('#a').keyup(function(){
-		checkIfInput();
-	});
-	$('#b').keyup(function(){
-		checkIfInput();
-	});
 }
 
 function sendWhatsapp(){
