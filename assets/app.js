@@ -176,3 +176,8 @@ function autoToggleButtons() {
 		}
 	});
 }
+
+function sendWhatsapp(){
+	let link = "www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"));
+	window.open("https://api.whatsapp.com/send?text="+escape(link), '_blank');
+}
