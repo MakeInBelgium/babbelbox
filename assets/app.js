@@ -39,6 +39,7 @@ $(document).ready(function () {
 
 	$('[data-toggle="tooltip"]').tooltip();
 
+	
 
 	// detect whether user has webcam and microphone
 
@@ -61,6 +62,20 @@ $(document).ready(function () {
 		}
 
 	});
+
+	// Nakijken of we mobiel bezig zijn, en indien het Android of iOS is, meteen de juiste downloadlink meegeven.
+	if(isMobile.any()) {
+		var mobileWarning = 'Het lijkt erop dat je op een <strong>mobiel toestel</strong> werkt. Gelieve eerst te controleren of je de applicatie al ge&iuml;nstalleerd hebt.';
+		
+		mobileWarning += isMobile.Android() ?
+			'<p class="my-2"><a class="btn btn-info" href="https://play.google.com/store/apps/details?id=org.jitsi.meet&hl=nl" target="_blank" rel="noopener nofollow">Installeer de app</a></p>' :
+			isMobile.iOS() ?
+			'<p class="my-2"><a class="btn btn-info" href="https://apps.apple.com/be/app/jitsi-meet/id1165103905?l=nl" target="_blank" rel="noopener nofollow">Installeer de app</a></p>' :
+			''
+		;
+		
+		alerts.push(mobileWarning);
+	}
 
 	let alerttext = '<p>Je praatbox werkt mogelijk niet goed:</p>';
 
@@ -101,6 +116,31 @@ function detectBrowser() {
 
 	return 'unknown';
 }
+
+/**
+ * Detecting mobile browsers, a KISS way.
+ * @see https://www.abeautifulsite.net/detecting-mobile-devices-with-javascript
+ */
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
 
 function getParameterByName(name, url) {
 	if (!url) url = window.location.href;
