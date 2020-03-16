@@ -218,7 +218,7 @@ function redirectToRoom() {
 
 function checkIfInput(hasWarnings){
 	let inputLength = $('#a').val().length + $('#b').val().length
-	if (inputLength > 200 || inputLength < 5){
+	if (inputLength > 200 || (inputLength>1 && inputLength < 5)){
 		if (!hasWarnings){
 			$("#alert_rtc").removeClass("hidden");
 		}
