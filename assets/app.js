@@ -85,10 +85,11 @@ $(document).ready(function () {
 			alerttext += '<li>' + a + '</li>';
 		});
 		alerttext += '</ul>';
-		$("#alert_rtc .alert").html(alerttext);
+		$("#alert_rtc .alert-warning").html(alerttext);
+		$("#alert_rtc .alert-warning").removeClass("hidden");
 		$("#alert_rtc").removeClass("hidden");
 	}
-	autoToggleButtons();
+	autoToggleButtons(alerts.length > 0);
 
 });
 
@@ -181,11 +182,7 @@ function cleanInput(inputValue) {
 }
 
 function removeCharacters(inputField) {
-	const invalidChars = ['?', '&', ':', '\'', '%', '#'];
-	invalidChars.forEach(element => {
-		inputField.replace(element, '');
-	});
-	return inputField.trim()
+	return encodeURIComponent(inputField.trim());
 }
 
 function generatePraatboxURL(a,b,c){
@@ -219,19 +216,48 @@ function redirectToRoom() {
 
 }
 
-function checkIfInput(){
-	if ($('#a').val()!=="" && $('#b').val()!=="") {
-		$('.enableOnInput').removeClass( "hidden" );
-	} else {
+function showError(input, hasWarnings){
+	if (!hasWarnings){
+		$("#alert_rtc").removeClass("hidden");
+	}
+	$("#alert_rtc .alert-danger").html(input)
+	$("#alert_rtc .alert-danger").removeClass("hidden");
+	$('.enableOnInput').addClass( "hidden" );
+}
+
+function checkIfInput(hasWarnings){
+	let name = $('#a').val();
+	let location = $('#b').val();
+	// values too long
+	if (name.length + location.length > 200){
+		showError('<p>Gelieve de naam en locatie van je praatbox te beperken tot maximaal 100 letters of cijfers.</p>', hasWarnings)
+	}
+	// name too short
+	else if (name.length < 5 && location.length){
+		showError('<p>Gelieve voor de naam van je praatbox minstens 5 letters of cijfers te voorzien.</p>', hasWarnings)
+	}
+	// incomplete
+	else if (!name.length || !location.length) {
+		$("#alert_rtc .alert-danger").addClass("hidden");
 		$('.enableOnInput').addClass( "hidden" );
+		if (!hasWarnings){
+			$("#alert_danger").addClass("hidden");
+		}
+	// should show
+	} else {
+		$('.enableOnInput').removeClass( "hidden" );
+		$("#alert_rtc .alert-danger").addClass("hidden");
+		if (!hasWarnings){
+			$("#alert_danger").addClass("hidden");
+		}
 	}
 }
 
-function autoToggleButtons() {
-	checkIfInput();
+function autoToggleButtons(hasWarnings) {
+	checkIfInput(hasWarnings);
 	
 	$('#roomdata input[type=text]').on( "keyup change touchend", function(e){
-		checkIfInput();
+		checkIfInput(hasWarnings);
 	});
 
 }

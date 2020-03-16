@@ -27,14 +27,15 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link href="./assets/style.css" rel="stylesheet">
 
 </head>
 
 <body>
   <script src="https://meet.jit.si/external_api.js"></script>
- <!-- sanity check -->
+  <!-- sanity check -->
   <div class="container hidden" id="alert_js">
     <div class="alert alert-danger" role="alert">
       Je hebt Javascript uitgeschakeld. Javascript is noodzakelijk voor Praatbox.
@@ -65,19 +66,19 @@
           </ul>
         </div>
       </div>
-      </div>
-    </div>
     <div id="alert_rtc" class="row my-md-1 hidden">
-      <div class="col-lg-8 mx-auto">        
-        <div class="alert alert-warning" role="alert">
+      <div class="col-lg-8 mx-auto">
+        <div class="alert alert-warning hidden" role="alert">
           <p>Je hebt heel veel problemen</p>
           <ul>
             <li>Geen webcam</li>
             <li>Geen microfoon</li>
           </ul>
         </div>
+        <div class="alert alert-danger hidden" role="alert">
+          <p>Input te lang</p>
+        </div>
       </div>
-
     </div>
     <div class="row my-md-1">
       <div class="col-lg-8 mx-auto">
@@ -85,9 +86,9 @@
           <div class="input-group-prepend">
             <label class="input-group-text" id="basic-addon1" for="a">Naam van je praatbox</label>
           </div>
-          <input type="text" class="form-control" id="a" placeholder="Deze naam kan je helemaal zelf kiezen" aria-label="Username"
-            aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom" title="bv.: Oma-Gent"
-            required>
+          <input type="text" class="form-control" id="a" placeholder="Deze naam kan je helemaal zelf kiezen"
+            aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
+            title="bv.: Oma-Gent" required>
         </div>
       </div>
     </div>
@@ -97,8 +98,9 @@
           <div class="input-group-prepend">
             <label class="input-group-text" id="basic-addon1" for="b">Locatie van je praatbox</label>
           </div>
-          <input type="text" class="form-control" id="b" placeholder="Je gemeente of een andere verwijzing naar je locatie"
-            aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
+          <input type="text" class="form-control" id="b"
+            placeholder="Je gemeente of een andere verwijzing naar je locatie" aria-label="Username"
+            aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
             title="bv.: Sint-Niklaas, Gent,  ..." required>
         </div>
       </div>
@@ -168,7 +170,7 @@
             <option value="kruis">kruis</option>
             <option value="kuil">kuil</option>
             <option value="kunnen">kunnen</option>
-            <option value="kunst">kunst</option> 
+            <option value="kunst">kunst</option>
           </select>
         </div>
       </div>
@@ -176,14 +178,15 @@
     <div class="row my-md-1">
 
       <div class="col-lg-8 mx-auto">
-        <button onclick="redirectToRoom()" value="Start de praatbox" class="enableOnInput btn btn-primary mb-2 hidden">Start de
+        <button onclick="redirectToRoom()" value="Start de praatbox"
+          class="enableOnInput btn btn-primary mb-2 hidden">Start de
           praatbox</button>
       </div>
     </div>
     <div class="row my-md-1">
 
       <div class="col-lg-8 mx-auto">
-       <p class="version">v. 2020.03.16.3</p>
+        <p class="version">v. 2020.03.16.3</p>
       </div>
     </div>
   </div>
@@ -192,13 +195,12 @@
   <div id="chan" class="hidden">
     <div class="meethead">
       <div class="meethead__logo">
-        <img src="./assets/praatbox_logo.svg" class="meethead__logoimg" alt="Praatbox"> 
+        <img src="./assets/praatbox_logo.svg" class="meethead__logoimg" alt="Praatbox">
       </div>
       <div class="meethead__body">
-        Vul op <strong>www.praatbox.be</strong> 
-        <span
-        class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp"
-        id="wrd_disp_c"></span> in om mee te doen. 
+        Vul op <strong>www.praatbox.be</strong>
+        <span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span
+          class="wrd_disp" id="wrd_disp_c"></span> in om mee te doen.
         <button class="btn btn-sm btn-copy btn-info mb-2" id="linkbtn">Kopieer link</button>
         <button onclick="sendWhatsapp()" class="btn btn-sm btn-whatsapp btn-info mb-2">Whatsapp</button>
       </div>
@@ -218,7 +220,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52249571-4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-52249571-4');
