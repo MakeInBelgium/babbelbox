@@ -45,7 +45,7 @@ $(document).ready(function () {
 	DetectRTC.load(function () {
 
 		if (false === DetectRTC.isWebRTCSupported) {
-			alerts.push('Je browswer ondersteunt videobellen niet. Je gebruikt best Chrome voor Praatbox.');
+			alerts.push('Je browser ondersteunt videobellen niet. Je gebruikt best Chrome voor Praatbox.');
 		} else {
 			if ('chrome' === detectBrowser()) {
 				if (0 === DetectRTC.videoInputDevices.length) {
@@ -56,7 +56,7 @@ $(document).ready(function () {
 					alerts.push('Praatbox kan geen microfoon vinden. Je hebt een microfoon nodig om Praatbox te gebruiken.');
 				}
 			} else {
-				alerts.push('Je gebruikt een andere webbrowser dan Chrome. Praatbox werkt het best in Chrome.');
+				alerts.push('Je gebruikt een andere webbrowser dan <a href="https://www.google.com/intl/nl/chrome/">Chrome</a>. Praatbox werkt het best in <a href="https://www.google.com/intl/nl/chrome/">Chrome</a>.');
 			}
 		}
 
@@ -130,10 +130,14 @@ $("#linkbtn").click(
 );
 
 function generateName(firstInputField, secondInputField, thirdInputField) {
-	firstInputField = removeCharacters(firstInputField);
-	secondInputField = removeCharacters(secondInputField);
-	thirdInputField = removeCharacters(thirdInputField);
-	return firstInputField + secondInputField + thirdInputField;
+	let rawname = firstInputField + secondInputField + thirdInputField;
+	return cleanInput( rawname );
+}
+
+function cleanInput(inputValue) {
+	output = inputValue.toLowerCase();
+	output = output.replace( /[^a-zA-Z0-9]/g, '' );
+	return output;
 }
 
 function removeCharacters(inputField) {
@@ -166,27 +170,13 @@ function redirectToRoom() {
 		thirdInputField !== null
 	) {
 		const roomName = generateName(firstInputField, secondInputField, thirdInputField);
+
 		window.location = "?kamer=" + roomName + "&wrd_a=" + removeCharacters(firstInputField) + "&wrd_b=" + removeCharacters(secondInputField) + "&wrd_c=" + removeCharacters(thirdInputField);
 
 		$("#chan").removeClass("hidden");
 		$("#roomdata").addClass("hidden");
 	}
 
-	function generateName(firstInputField, secondInputField, thirdInputField) {
-		firstInputField = removeCharacters(firstInputField);
-		secondInputField = removeCharacters(secondInputField);
-		thirdInputField = removeCharacters(thirdInputField);
-		return firstInputField + secondInputField + thirdInputField;
-	}
-
-	function removeCharacters(inputField) {
-		const invalidChars = ['?', '&', ':', '\'', '%', '#'];
-		invalidChars.forEach(element => {
-			inputField.replace(element, '');
-		});
-		return inputField.trim()
-
-	}
 }
 
 function checkIfInput(){
