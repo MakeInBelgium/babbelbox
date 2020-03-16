@@ -216,34 +216,36 @@ function redirectToRoom() {
 
 }
 
-function showError(input){
+function showError(input, hasWarnings){
+	if (!hasWarnings){
+		$("#alert_rtc").removeClass("hidden");
+	}
 	$("#alert_rtc .alert-danger").html(input)
 	$("#alert_rtc .alert-danger").removeClass("hidden");
+	$('.enableOnInput').addClass( "hidden" );
 }
 
 function checkIfInput(hasWarnings){
 	let name = $('#a').val();
 	let location = $('#b').val();
+	// values too long
 	if (name.length + location.length > 200){
-		if (!hasWarnings){
-			$("#alert_rtc").removeClass("hidden");
-		}
-		showError('<p>Gelieve de naam en locatie van je praatbox te beperken tot maximaal 100 letters of cijfers.</p>')
+		showError('<p>Gelieve de naam en locatie van je praatbox te beperken tot maximaal 100 letters of cijfers.</p>', hasWarnings)
 	}
+	// name too short
 	else if (name.length < 5 && location.length){
-		if (!hasWarnings){
-			$("#alert_rtc").removeClass("hidden");
-		}
-		showError('<p>Gelieve voor de naam van je praatbox minstens 5 letters of cijfers te voorzien.</p>')
+		showError('<p>Gelieve voor de naam van je praatbox minstens 5 letters of cijfers te voorzien.</p>', hasWarnings)
 	}
-	else if (!name.length && !location.length) {
-		$('.enableOnInput').removeClass( "hidden" );
+	// incomplete
+	else if (!name.length || !location.length) {
 		$("#alert_rtc .alert-danger").addClass("hidden");
+		$('.enableOnInput').addClass( "hidden" );
 		if (!hasWarnings){
 			$("#alert_danger").addClass("hidden");
 		}
+	// should show
 	} else {
-		$('.enableOnInput').addClass( "hidden" );
+		$('.enableOnInput').removeClass( "hidden" );
 		$("#alert_rtc .alert-danger").addClass("hidden");
 		if (!hasWarnings){
 			$("#alert_danger").addClass("hidden");
