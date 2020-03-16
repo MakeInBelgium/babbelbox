@@ -85,7 +85,8 @@ $(document).ready(function () {
 			alerttext += '<li>' + a + '</li>';
 		});
 		alerttext += '</ul>';
-		$("#alert_rtc .alert").html(alerttext);
+		$("#alert_rtc .alert-warning").html(alerttext);
+		$("#alert_rtc .alert-warning").removeClass("hidden");
 		$("#alert_rtc").removeClass("hidden");
 	}
 	autoToggleButtons();
@@ -181,11 +182,7 @@ function cleanInput(inputValue) {
 }
 
 function removeCharacters(inputField) {
-	const invalidChars = ['?', '&', ':', '\'', '%', '#'];
-	invalidChars.forEach(element => {
-		inputField.replace(element, '');
-	});
-	return inputField.trim()
+	return encodeURIComponent(inputField.trim());
 }
 
 function generatePraatboxURL(a,b,c){
@@ -219,19 +216,34 @@ function redirectToRoom() {
 
 }
 
-function checkIfInput(){
-	if ($('#a').val()!=="" && $('#b').val()!=="") {
+function checkIfInput(hasWarnings){
+	if ($('#a').val().length + $('#b').val().length > 200){
+		if (!hasWarnings){
+			$("#alert_rtc").removeClass("hidden");
+		}
+		'<p>Gelieve voor de naam en locatie van je praatbox niet meer dan 100 letters of cijfers te voorzien.</p>'
+		$("#alert_rtc .alert-danger").removeClass("hidden");
+	}
+	else if ($('#a').val()!=="" && $('#b').val()!=="") {
 		$('.enableOnInput').removeClass( "hidden" );
+		$("#alert_rtc .alert-danger").addClass("hidden");
+		if (!hasWarnings){
+			$("#alert_danger").addClass("hidden");
+		}
 	} else {
 		$('.enableOnInput').addClass( "hidden" );
+		$("#alert_rtc .alert-danger").addClass("hidden");
+		if (!hasWarnings){
+			$("#alert_danger").addClass("hidden");
+		}
 	}
 }
 
-function autoToggleButtons() {
-	checkIfInput();
+function autoToggleButtons(hasWarnings) {
+	checkIfInput(hasWarnings);
 	
 	$('#roomdata input[type=text]').on( "keyup change touchend", function(e){
-		checkIfInput();
+		checkIfInput(hasWarnings);
 	});
 
 }
