@@ -217,11 +217,13 @@ function redirectToRoom() {
 }
 
 function checkIfInput(hasWarnings){
-	if ($('#a').val().length + $('#b').val().length > 200){
+	let inputLength = $('#a').val().length + $('#b').val().length
+	if (inputLength > 200 || inputLength < 5){
 		if (!hasWarnings){
 			$("#alert_rtc").removeClass("hidden");
 		}
-		'<p>Gelieve voor de naam en locatie van je praatbox niet meer dan 100 letters of cijfers te voorzien.</p>'
+		let alerttext = inputLength < 5 ? '<p>Gelieve voor de naam van je praatbox minstens 5 letters of cijfers te voorzien.</p>' :  '<p>Gelieve voor de naam en locatie van je praatbox minstens letters of cijfers te voorzien.</p>'
+		$("#alert_rtc .alert-danger").html(alerttext)
 		$("#alert_rtc .alert-danger").removeClass("hidden");
 	}
 	else if ($('#a').val()!=="" && $('#b').val()!=="") {
