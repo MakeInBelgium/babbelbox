@@ -89,7 +89,7 @@ $(document).ready(function () {
 		$("#alert_rtc .alert-warning").removeClass("hidden");
 		$("#alert_rtc").removeClass("hidden");
 	}
-	autoToggleButtons();
+	autoToggleButtons(alerts.length > 0);
 
 });
 
