@@ -11,14 +11,15 @@
   <meta name="author" content="">
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link href="./assets/style.css" rel="stylesheet">
 
 </head>
 
 <body>
   <script src="https://meet.jit.si/external_api.js"></script>
- <!-- sanity check -->
+  <!-- sanity check -->
   <div class="container hidden" id="alert_js">
     <div class="alert alert-danger" role="alert">
       Je hebt Javascript uitgeschakeld. Javascript is noodzakelijk voor Praatbox.
@@ -28,40 +29,47 @@
   <div class="container hidden" id="roomdata">
     <div class="row my-md-1">
       <div class="col-lg-8 mx-auto">
-      
-      <div class="card mb-5">
-        <div class="card-body">
-          <h1 class="display-4"><img src="./assets/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
-          </h1>
-          <p>Met Praatbox kan je videobellen met iemand waar je geen fysiek contact mee mag hebben.</p>
-          <h2>Hoe gebruik je de Praatbox?</h2>
-          <ol>
-            <li>Geef je praatbox een naam. Bedenk een naam en vul die in het eerste veld in, of vul de naam in die je hebt gekregen.</li>
-            <li>Geef je praatbox een locatie. Vul dit in het tweede veld in, of vul hier de locatie in die je hebt gekregen.</li>
-            <li>Kies een willekeurig woord, of hou de automatisch gemaakte keuze. Wil je deelnemen aan een bestaande Praatbox, kies dan het woord dat je hebt gekregen.</li>
-            <li>Als je de vorige stappen hebt ondernomen, klik je op "Start de praatbox"</li>
-            <li>De praatbox start op! <br/>(Daarna kan je eventueel je praatbox beveiligen met een paswoord. Zie &#x1f6c8; rechts onderaan)</li>
-            <li>Je kan deze praatbox nu delen op allerlei verschillende manieren, het enige wat je moet doen is de link kopiëren. </li>
-          </ol>
-          <p>Opgelet!</p>
-          <ul>
-            <li>Gebruik enkel cijfers en letters in de velden</li>
-          </ul>
+
+        <div class="card mb-5">
+          <div class="card-body">
+            <h1 class="display-4"><img src="./assets/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
+            </h1>
+            <p>Met Praatbox kan je videobellen met iemand waar je geen fysiek contact mee mag hebben.</p>
+            <h2>Hoe gebruik je de Praatbox?</h2>
+            <ol>
+              <li>Geef je praatbox een naam. Bedenk een naam en vul die in het eerste veld in, of vul de naam in die je
+                hebt gekregen.</li>
+              <li>Geef je praatbox een locatie. Vul dit in het tweede veld in, of vul hier de locatie in die je hebt
+                gekregen.</li>
+              <li>Kies een willekeurig woord, of hou de automatisch gemaakte keuze. Wil je deelnemen aan een bestaande
+                Praatbox, kies dan het woord dat je hebt gekregen.</li>
+              <li>Als je de vorige stappen hebt ondernomen, klik je op "Start de praatbox"</li>
+              <li>De praatbox start op! <br />(Daarna kan je eventueel je praatbox beveiligen met een paswoord. Zie
+                &#x1f6c8; rechts onderaan)</li>
+              <li>Je kan deze praatbox nu delen op allerlei verschillende manieren, het enige wat je moet doen is de
+                link kopiëren. </li>
+            </ol>
+            <p>Opgelet!</p>
+            <ul>
+              <li>Gebruik enkel cijfers en letters in de velden</li>
+            </ul>
+          </div>
         </div>
-      </div>
       </div>
     </div>
     <div id="alert_rtc" class="row my-md-1 hidden">
-      <div class="col-lg-8 mx-auto">        
-        <div class="alert alert-warning" role="alert">
+      <div class="col-lg-8 mx-auto">
+        <div class="alert alert-warning hidden" role="alert">
           <p>Je hebt heel veel problemen</p>
           <ul>
             <li>Geen webcam</li>
             <li>Geen microfoon</li>
           </ul>
         </div>
+        <div class="alert alert-danger hidden" role="alert">
+          <p>Input te lang</p>
+        </div>
       </div>
-
     </div>
     <div class="row my-md-1">
       <div class="col-lg-8 mx-auto">
@@ -69,9 +77,9 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Naam van je praatbox</span>
           </div>
-          <input type="text" class="form-control" id="a" placeholder="Deze naam kan je helemaal zelf kiezen" aria-label="Username"
-            aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom" title="bv.: Oma-Gent"
-            required>
+          <input type="text" class="form-control" id="a" placeholder="Deze naam kan je helemaal zelf kiezen"
+            aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
+            title="bv.: Oma-Gent" required>
         </div>
       </div>
     </div>
@@ -81,8 +89,9 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Locatie van je praatbox</span>
           </div>
-          <input type="text" class="form-control" id="b" placeholder="Je gemeente of een andere verwijzing naar je locatie"
-            aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
+          <input type="text" class="form-control" id="b"
+            placeholder="Je gemeente of een andere verwijzing naar je locatie" aria-label="Username"
+            aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
             title="bv.: Sint-Niklaas, Gent,  ..." required>
         </div>
       </div>
@@ -152,7 +161,7 @@
             <option value="kruis">kruis</option>
             <option value="kuil">kuil</option>
             <option value="kunnen">kunnen</option>
-            <option value="kunst">kunst</option> 
+            <option value="kunst">kunst</option>
           </select>
         </div>
       </div>
@@ -160,14 +169,15 @@
     <div class="row my-md-1">
 
       <div class="col-lg-8 mx-auto">
-        <button onclick="redirectToRoom()" value="Start de praatbox" class="enableOnInput btn btn-primary mb-2 hidden">Start de
+        <button onclick="redirectToRoom()" value="Start de praatbox"
+          class="enableOnInput btn btn-primary mb-2 hidden">Start de
           praatbox</button>
       </div>
     </div>
     <div class="row my-md-1">
 
       <div class="col-lg-8 mx-auto">
-       <p class="version">v. 2020.03.16.3</p>
+        <p class="version">v. 2020.03.16.3</p>
       </div>
     </div>
   </div>
@@ -176,13 +186,12 @@
   <div id="chan" class="hidden">
     <div class="meethead">
       <div class="meethead__logo">
-        <img src="./assets/praatbox_logo.svg" class="meethead__logoimg" alt="Praatbox"> 
+        <img src="./assets/praatbox_logo.svg" class="meethead__logoimg" alt="Praatbox">
       </div>
       <div class="meethead__body">
-        Vul op <strong>www.praatbox.be</strong> 
-        <span
-        class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp"
-        id="wrd_disp_c"></span> in om mee te doen. 
+        Vul op <strong>www.praatbox.be</strong>
+        <span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span
+          class="wrd_disp" id="wrd_disp_c"></span> in om mee te doen.
         <button class="btn btn-sm btn-copy btn-info mb-2" id="linkbtn">Kopieer link</button>
         <button onclick="sendWhatsapp()" class="btn btn-sm btn-whatsapp btn-info mb-2">Whatsapp</button>
       </div>
@@ -202,7 +211,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52249571-4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-52249571-4');
