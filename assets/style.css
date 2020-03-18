@@ -4,8 +4,6 @@ body {
     padding: 0;
     margin: 0;
     background-color: #E5E5E5;
-}
-body {
     height: 100vh;
 }
 h2{
@@ -57,21 +55,24 @@ body {
 
 .fullscreen {
     overflow:hidden;
+    padding: 0;
+    background-color: white;
 }
 .container{
     background-color:#fff;
-    width: 55%;
-    
 }
 .card{
     border: none;
 }
+
 .bb-logo {
-    height:80px;
-    width:auto;
-    margin-top:40px;
-    margin-bottom:100px;
+	height:10vw;
+	max-height: 80px;
+	width:auto;
+	margin-top:10px;
+	margin-bottom: 10px;
 }
+
 #intro{
     text-align: center;
     line-height: 1.5em;
@@ -150,4 +151,17 @@ body {
 }
 .btn-copy.clicked::before {
     content: "\f00c";
+}
+.summary {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.topnav__logoimg {
+	height:7vw;
+	max-height: 30px;
+}
+
+.responsive-h1 {
+	font-size: calc( 1.5rem + 1vw ) ;
 }
