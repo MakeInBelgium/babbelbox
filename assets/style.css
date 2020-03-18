@@ -42,18 +42,19 @@ ol{
     font-weight: bold;
     padding: 10px;
 }
+
+input-group > input{
+    
+}
 .form-control{
     font-size: 15px;
+    padding: 22px
 }
 body {
   padding: 1rem;
   font-family: sans-serif;
 }
 
-
-
-
-Resources1×0.5×0.25×Rerun
 .fullscreen {
     overflow:hidden;
 }
@@ -126,6 +127,11 @@ Resources1×0.5×0.25×Rerun
     padding: 15px;
     width: 250px;
 }
+
+.custom-select {
+    height: auto!important;
+}
+
 .btn-primary:hover{
    background-color: #25AB4B;
     border-color: #25AB4B;
