@@ -9,20 +9,20 @@
   <!-- Primary Meta Tags -->
   <title>Praatbox.be</title>
   <meta name="title" content="Praatbox.be">
-  <meta name="description" content="Eenvoudig, snel &eacute;n veilig beeldbellen voor iedereen!">
+  <meta name="description" content="Eenvoudig, snel én veilig beeldbellen voor iedereen!">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.praatbox.be/">
   <meta property="og:title" content="Praatbox.be">
-  <meta property="og:description" content="Eenvoudig, snel &eacute;n veilig beeldbellen voor iedereen!">
+  <meta property="og:description" content="Eenvoudig, snel én veilig beeldbellen voor iedereen!">
   <meta property="og:image" content="https://www.praatbox.be/assets/praatbox-og.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.praatbox.be/">
   <meta property="twitter:title" content="Praatbox.be">
-  <meta property="twitter:description" content="Eenvoudig, snel &eacute;n veilig beeldbellen voor iedereen!">
+  <meta property="twitter:description" content="Eenvoudig, snel én veilig beeldbellen voor iedereen!">
   <meta property="twitter:image" content="https://www.praatbox.be/assets/praatbox-og.jpg">
 
   <!-- Bootstrap core CSS -->
@@ -31,6 +31,9 @@
     integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link href="./assets/style.css?v{VERSION}" rel="stylesheet">
 
+  <!-- Localization -->
+  <script src="http://www.localeplanet.com/api/auto/icu.js"></script>
+  <script src="http://www.localeplanet.com/api/translate.js"></script>
 </head>
 
 <body>
@@ -53,12 +56,9 @@
             <p id="intro">Met Praatbox kan je videobellen met iemand waar je geen fysiek contact mee mag hebben.</p>
             <h2>Hoe gebruik je de Praatbox?</h2>
             <ol class="steps">
-              <li>Geef je praatbox een naam. Bedenk een naam en vul die in het eerste veld in, of vul de naam in die je
-                hebt gekregen.</li>
-              <li>Geef je praatbox een locatie. Vul dit in het tweede veld in, of vul hier de locatie in die je hebt
-                gekregen.</li>
-              <li>Kies een willekeurig woord, of hou de automatisch gemaakte keuze. Wil je deelnemen aan een bestaande
-                Praatbox, kies dan het woord dat je hebt gekregen.</li>
+              <li>Geef je praatbox een naam. Bedenk een naam en vul die in het eerste veld in, of vul de naam in die je hebt gekregen.</li>
+              <li>Geef je praatbox een locatie. Vul dit in het tweede veld in, of vul hier de locatie in die je hebt gekregen.</li>
+              <li>Kies een willekeurig woord, of hou de automatisch gemaakte keuze. Wil je deelnemen aan een bestaande Praatbox, kies dan het woord dat je hebt gekregen.</li>
               <li>Als je de vorige stappen hebt ondernomen, klik je op "Start de praatbox"</li>
               <li>De praatbox start op! <br />(Daarna kan je eventueel je praatbox beveiligen met een paswoord. Zie <i
                   class="fas fa-info-circle"></i> rechts onderaan)</li>
@@ -184,8 +184,7 @@
 
         <div class="col-lg-8 mx-auto">
           <button onclick="redirectToRoom()" value="Start de praatbox"
-            class="enableOnInput btn btn-primary mb-2 hidden">Start de
-            praatbox</button>
+            class="enableOnInput btn btn-primary mb-2 hidden">Start de praatbox</button>
         </div>
       </div>
       <div class="row my-md-1">

@@ -1,0 +1,663 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR makeinbelgium
+# This file is distributed under the same license as the praatbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: praatbox\n"
+"Report-Msgid-Bugs-To: https://github.com/MakeInBelgium/babbelbox/issues/\n"
+"POT-Creation-Date: 2020-03-19 00:43+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: assets\n"
+"X-Poedit-SearchPath-0: app.js\n"
+"X-Poedit-SearchPath-1: lang.js\n"
+
+#: app.js:53
+msgid ""
+"Je browser ondersteunt videobellen niet. Je gebruikt best Chrome voor "
+"Praatbox."
+msgstr ""
+
+#: app.js:57
+msgid ""
+"Praatbox kan geen camera (webcam) vinden. Je hebt een camera nodig om "
+"Praatbox te gebruiken."
+msgstr ""
+
+#: app.js:61
+msgid ""
+"Praatbox kan geen microfoon vinden. Je hebt een microfoon nodig om Praatbox "
+"te gebruiken."
+msgstr ""
+
+#: app.js:64
+msgid ""
+"Je gebruikt een andere webbrowser dan <a href=\"https://www.google.com/intl/"
+"nl/chrome/\">Chrome</a>. Praatbox werkt het best in <a href=\"https://www."
+"google.com/intl/nl/chrome/\">Chrome</a>."
+msgstr ""
+
+#: app.js:72
+msgid ""
+"Het lijkt erop dat je op een <strong>mobiel toestel</strong> werkt. Gelieve "
+"eerst te controleren of je de applicatie al ge&iuml;nstalleerd hebt."
+msgstr ""
+
+#: app.js:75 app.js:77
+msgid "Installeer de app"
+msgstr ""
+
+#: app.js:84
+msgid "Je praatbox werkt mogelijk niet goed:"
+msgstr ""
+
+#: app.js:173
+msgid "Link gekopieerd"
+msgstr ""
+
+#: app.js:237
+msgid ""
+"Gelieve de naam en locatie van je praatbox te beperken tot maximaal 100 "
+"letters of cijfers."
+msgstr ""
+
+#: app.js:241
+msgid ""
+"Gelieve voor de naam van je praatbox minstens 5 letters of cijfers te "
+"voorzien."
+msgstr ""
+
+#: lang.js:1
+msgid "Praatbox.be"
+msgstr ""
+
+#: lang.js:2
+msgid ""
+"Je hebt Javascript uitgeschakeld. Javascript is noodzakelijk voor Praatbox."
+msgstr ""
+
+#: lang.js:3
+msgid ""
+"Met Praatbox kan je videobellen met iemand waar je geen fysiek contact mee "
+"mag hebben."
+msgstr ""
+
+#: lang.js:4
+msgid "Hoe gebruik je de Praatbox?"
+msgstr ""
+
+#: lang.js:5
+msgid ""
+"Geef je praatbox een naam. Bedenk een naam en vul die in het eerste veld "
+"in, of vul de naam in die je hebt gekregen."
+msgstr ""
+
+#: lang.js:6
+msgid ""
+"Geef je praatbox een locatie. Vul dit in het tweede veld in, of vul hier de "
+"locatie in die je hebt gekregen."
+msgstr ""
+
+#: lang.js:7
+msgid ""
+"Kies een willekeurig woord, of hou de automatisch gemaakte keuze. Wil je "
+"deelnemen aan een bestaande Praatbox, kies dan het woord dat je hebt "
+"gekregen."
+msgstr ""
+
+#: lang.js:8
+msgid ""
+"Als je de vorige stappen hebt ondernomen, klik je op \"Start de praatbox\""
+msgstr ""
+
+#: lang.js:9
+msgid ""
+"De praatbox start op! (Daarna kan je eventueel je praatbox beveiligen met "
+"een paswoord. Zie <i class=\"fas fa-info-circle\"> rechts onderaan)"
+msgstr ""
+
+#: lang.js:10
+msgid ""
+"Je kan deze praatbox nu delen op allerlei verschillende manieren, het enige "
+"wat je moet doen is de link kopiëren."
+msgstr ""
+
+#: lang.js:11
+msgid ""
+"Heb je nog vragen? Misschien vind je ze terug bij de veelgestelde vragen. "
+"Start een Praatbox"
+msgstr ""
+
+#: lang.js:12
+msgid "Opgelet! Gebruik enkel cijfers en letters in de velden"
+msgstr ""
+
+#: lang.js:13
+msgid "Input te lang"
+msgstr ""
+
+#: lang.js:14
+msgid "Naam van je praatbox"
+msgstr ""
+
+#: lang.js:15
+msgid "Deze naam kan je helemaal zelf kiezen"
+msgstr ""
+
+#: lang.js:16
+msgid "bv.: Oma-Gent"
+msgstr ""
+
+#: lang.js:17
+msgid "Locatie van je praatbox"
+msgstr ""
+
+#: lang.js:18
+msgid "Verwijzing naar je locatie"
+msgstr ""
+
+#: lang.js:19
+msgid "bv.: Sint-Niklaas, Gent, ..."
+msgstr ""
+
+#: lang.js:20
+msgid "Willekeurig woord"
+msgstr ""
+
+#: lang.js:21
+msgid "kaars"
+msgstr ""
+
+#: lang.js:22
+msgid "kaart"
+msgstr ""
+
+#: lang.js:23
+msgid "kaas"
+msgstr ""
+
+#: lang.js:24
+msgid "kamer"
+msgstr ""
+
+#: lang.js:25
+msgid "kans"
+msgstr ""
+
+#: lang.js:26
+msgid "kant"
+msgstr ""
+
+#: lang.js:27
+msgid "kantoor"
+msgstr ""
+
+#: lang.js:28
+msgid "kap"
+msgstr ""
+
+#: lang.js:29
+msgid "kast"
+msgstr ""
+
+#: lang.js:30
+msgid "kasteel"
+msgstr ""
+
+#: lang.js:31
+msgid "kat"
+msgstr ""
+
+#: lang.js:32
+msgid "kennen"
+msgstr ""
+
+#: lang.js:33
+msgid "kennis"
+msgstr ""
+
+#: lang.js:34
+msgid "keuken"
+msgstr ""
+
+#: lang.js:35
+msgid "keus"
+msgstr ""
+
+#: lang.js:36
+msgid "kiezen"
+msgstr ""
+
+#: lang.js:37
+msgid "kijken"
+msgstr ""
+
+#: lang.js:38
+msgid "kind"
+msgstr ""
+
+#: lang.js:39
+msgid "kip"
+msgstr ""
+
+#: lang.js:40
+msgid "kist"
+msgstr ""
+
+#: lang.js:41
+msgid "klaar"
+msgstr ""
+
+#: lang.js:42
+msgid "klas"
+msgstr ""
+
+#: lang.js:43
+msgid "klasse"
+msgstr ""
+
+#: lang.js:44
+msgid "kleden"
+msgstr ""
+
+#: lang.js:45
+msgid "klein"
+msgstr ""
+
+#: lang.js:46
+msgid "kleren"
+msgstr ""
+
+#: lang.js:47
+msgid "kleur"
+msgstr ""
+
+#: lang.js:48
+msgid "klimmen"
+msgstr ""
+
+#: lang.js:49
+msgid "klok"
+msgstr ""
+
+#: lang.js:50
+msgid "kloppen"
+msgstr ""
+
+#: lang.js:51
+msgid "klopt"
+msgstr ""
+
+#: lang.js:52
+msgid "knie"
+msgstr ""
+
+#: lang.js:53
+msgid "knippen"
+msgstr ""
+
+#: lang.js:54
+msgid "koers"
+msgstr ""
+
+#: lang.js:55
+msgid "koffer"
+msgstr ""
+
+#: lang.js:56
+msgid "koffie"
+msgstr ""
+
+#: lang.js:57
+msgid "kok"
+msgstr ""
+
+#: lang.js:58
+msgid "koken"
+msgstr ""
+
+#: lang.js:59
+msgid "kom"
+msgstr ""
+
+#: lang.js:60
+msgid "komen"
+msgstr ""
+
+#: lang.js:61
+msgid "koning"
+msgstr ""
+
+#: lang.js:62
+msgid "koningin"
+msgstr ""
+
+#: lang.js:63
+msgid "koorts"
+msgstr ""
+
+#: lang.js:64
+msgid "kop"
+msgstr ""
+
+#: lang.js:65
+msgid "kopen"
+msgstr ""
+
+#: lang.js:66
+msgid "kort"
+msgstr ""
+
+#: lang.js:67
+msgid "kost"
+msgstr ""
+
+#: lang.js:68
+msgid "kosten"
+msgstr ""
+
+#: lang.js:69
+msgid "koud"
+msgstr ""
+
+#: lang.js:70
+msgid "kraam"
+msgstr ""
+
+#: lang.js:71
+msgid "kracht"
+msgstr ""
+
+#: lang.js:72
+msgid "krant"
+msgstr ""
+
+#: lang.js:73
+msgid "krijgen"
+msgstr ""
+
+#: lang.js:74
+msgid "kruis"
+msgstr ""
+
+#: lang.js:75
+msgid "kuil"
+msgstr ""
+
+#: lang.js:76
+msgid "kunnen"
+msgstr ""
+
+#: lang.js:77
+msgid "kunst"
+msgstr ""
+
+#: lang.js:78 lang.js:79
+msgid "Start de praatbox"
+msgstr ""
+
+#: lang.js:80
+msgid "www.coronadenktank.be"
+msgstr ""
+
+#: lang.js:81
+msgid "Vul op www.praatbox.be"
+msgstr ""
+
+#: lang.js:82
+msgid "in om mee te doen."
+msgstr ""
+
+#: lang.js:83
+msgid "Kopieer link"
+msgstr ""
+
+#: lang.js:84
+msgid "Whatsapp"
+msgstr ""
+
+#: lang.js:85
+msgid "Veelgestelde vragen"
+msgstr ""
+
+#: lang.js:86
+msgid "Wat gebeurt er als ik geen paswoord instel?"
+msgstr ""
+
+#: lang.js:87
+msgid ""
+"Indien je geen paswoord instelt kan iedereen ter wereld het videogesprek "
+"bijwonen. Het is alsof de virtuele voordeur openstaat en iedereen plots in "
+"een gesprek kan inspringen. Dit kan soms verschieten zijn, dus we raden "
+"sterk aan om een paswoord in te stellen (ook voor privacy redenen kan dit "
+"noodzakelijk zijn)."
+msgstr ""
+
+#: lang.js:88
+msgid "Hoe kan ik een paswoord toevoegen aan het kanaal?"
+msgstr ""
+
+#: lang.js:89
+msgid ""
+"De eerste persoon die het kanaal opstart kan een paswoord toe voegen door:"
+msgstr ""
+
+#: lang.js:90
+msgid ""
+"* te klikken op <i class=\"fas fa-info-circle\"></i> (rechts onderaan in je "
+"scherm te vinden)"
+msgstr ""
+
+#: lang.js:91
+msgid ""
+"* vervolgens op “Add password” klikken. Typ een sterk paswoord in het veld "
+"en druk op enter."
+msgstr ""
+
+#: lang.js:92
+msgid ""
+"Het paswoord is pas actief als je de tekst “cancel password” niet meer "
+"ziet, of ook als je de tekst “remove password” ziet. "
+msgstr ""
+
+#: lang.js:93 lang.js:110 lang.js:120 lang.js:131 lang.js:134
+msgid "Beeld: Screenshot"
+msgstr ""
+
+#: lang.js:94
+msgid "Kan ik een paswoord terug verwijderen?"
+msgstr ""
+
+#: lang.js:95
+msgid ""
+"Ja, de eerste persoon (laptop / computer) die het videogesprek aangemaakt "
+"heeft kan een paswoord verwijderen door te klikken op “remove password”."
+msgstr ""
+
+#: lang.js:96
+msgid "Wat is een sterk paswoord?"
+msgstr ""
+
+#: lang.js:97
+msgid ""
+"Minstens 8 karakters, liefst een mix van letters en cijfers. Nog sterker is "
+"om een leesteken toe te voegen, maar dat is niet noodzakelijk."
+msgstr ""
+
+#: lang.js:98
+msgid ""
+"Is het mogelijk om per bewoner een babbelbox sessie op te zetten, enkel "
+"voor zijn/haar familie?"
+msgstr ""
+
+#: lang.js:99
+msgid ""
+"Door slim om te gaan met het laatste keuzewoord, kan je zelf een schema "
+"opstellen wanneer welke bewoner een babbelbox contactmoment heeft met enkel "
+"zijn/haar familie. "
+msgstr ""
+
+#: lang.js:100
+msgid "Voorbeeld: "
+msgstr ""
+
+#: lang.js:101
+msgid "Eerste woord: naam van je WZC"
+msgstr ""
+
+#: lang.js:102
+msgid "Tweede woord: gemeente of iets anders"
+msgstr ""
+
+#: lang.js:103
+msgid "Derde woord: dit kies je op voorhand voor elke bewoner. "
+msgstr ""
+
+#: lang.js:104
+msgid "Je spreekt dan bijvoorbeeld een schema af"
+msgstr ""
+
+#: lang.js:105
+msgid "14:00 Bewoner Anna, derde woord is kip"
+msgstr ""
+
+#: lang.js:106
+msgid "14:30 Bewoner Bert, derde woord is kat"
+msgstr ""
+
+#: lang.js:107
+msgid "Ik krijg geen beeld te zien en/of mensen horen me niet"
+msgstr ""
+
+#: lang.js:108
+msgid ""
+"Bij het openen van het videogesprek vraagt je internetbrowser om toegang "
+"tot je microfoon en camera. Druk hier steeds op toestaan (allow). Het "
+"popupvenster dat je hiervoor te zien krijgt ziet er verschillend uit "
+"afhankelijk van je internet browser of besturingssysteem."
+msgstr ""
+
+#: lang.js:109
+msgid "Enkele voorbeelden:"
+msgstr ""
+
+#: lang.js:111
+msgid ""
+"Indien het niet lukt, probeer dan een andere internetbrowser om het "
+"videogesprek te openen."
+msgstr ""
+
+#: lang.js:112
+msgid ""
+"Google Chrome (https://www.google.com/intl/nl/chrome/) geeft (doorgaans) "
+"het minste"
+msgstr ""
+
+#: lang.js:113
+msgid ""
+"problemen en kan je downloaden via https://www.google.com/intl/nl/chrome/ "
+"(https://www.google.com/intl/nl/chrome/)"
+msgstr ""
+
+#: lang.js:114
+msgid "De Safari browser (standaard op Apple producten) wordt afgeraden."
+msgstr ""
+
+#: lang.js:115
+msgid "Hoe ziet een babbelbox sessie met meerdere deelnemers er uit?"
+msgstr ""
+
+#: lang.js:116
+msgid "De verschillende beelden komen dan naast en onder elkaar te staan:"
+msgstr ""
+
+#: lang.js:117
+msgid "Beeld: Mozaïekbeeld van video's\""
+msgstr ""
+
+#: lang.js:118
+msgid "Hoe stel ik de taal in?"
+msgstr ""
+
+#: lang.js:119
+msgid ""
+"Klik op “Settings” (instellingen), vervolgens op “More” (meer) en in het "
+"Language (taal) menu kan je bijvoorbeeld “Dutch”(nederlands) (of een andere "
+"taal) selecteren. Klik op OK."
+msgstr ""
+
+#: lang.js:121
+msgid "Het beeld hapert soms"
+msgstr ""
+
+#: lang.js:122
+msgid "Verlaag de kwaliteit van de video."
+msgstr ""
+
+#: lang.js:123
+msgid ""
+"Bij laptop of computer met echt toetsenbord: Druk op A en verlaag de "
+"kwaliteit tot lage resolutie."
+msgstr ""
+
+#: lang.js:124
+msgid ""
+"Bij mobiele toestellen: druk op de 3 puntjes, kies voor modus “Alleen "
+"audio” inschakelen (dan is er geen video voor deze mobiele deelnemer)."
+msgstr ""
+
+#: lang.js:125
+msgid "Wat zijn de minimum specificaties?"
+msgstr ""
+
+#: lang.js:126
+msgid ""
+"De app “Jitsi Meet” heeft op Apple iPad of iPhone toestellen minimum iOS "
+"11.0 of hoger nodig: https://itunes.apple.com/us/app/jitsi-meet/"
+"id1165103905 (https://itunes.apple.com/us/app/jitsi-meet/id1165103905)."
+msgstr ""
+
+#: lang.js:127
+msgid ""
+"op Android toestellen heeft de app minimum Android 5.0 of hoger nodig. "
+"https://play.google.com/store/apps/details?id=org.jitsi.meet (https://play."
+"google.com/store/apps/details?id=org.jitsi.meet)."
+msgstr ""
+
+#: lang.js:128
+msgid ""
+"Op een gewone laptop of PC gebruik je best een recente versie van Google "
+"Chrome (https://www.google.com/intl/nl/chrome/)."
+msgstr ""
+
+#: lang.js:129
+msgid ""
+"Ik krijg in de Chrome browser een venster rechts boven, wat moet ik doen?"
+msgstr ""
+
+#: lang.js:130
+msgid ""
+"Klik op het vakje naast “Don’t show me this again” en vervolgens op het "
+"kruisje rechtsboven. Dit hoef je niet te installeren."
+msgstr ""
+
+#: lang.js:132
+msgid ""
+"Ik krijg in Chrome de meldingen “error obtaining microphone permission” en "
+"“Error obtaining camera permission”"
+msgstr ""
+
+#: lang.js:133
+msgid ""
+"Klik op het slotje naast de url “praatbox.be” en kies voor zowel de "
+"microfoon als camera voor toestaan. Klik op het kruisje om de popup te "
+"sluiten. Klik op “opnieuw laden”."
+msgstr ""

@@ -16,6 +16,10 @@ $(document).ready(function () {
 
 	const domain = "meet.jit.si";
 	var room = getParameterByName("kamer");
+	
+	if ('fr' !== lang) {
+		lang = 'nl';
+	}
 	if (room) {
 		$("body").addClass("fullscreen");
 		$("#chan").removeClass("hidden");
@@ -46,18 +50,18 @@ $(document).ready(function () {
 	DetectRTC.load(function () {
 
 		if (false === DetectRTC.isWebRTCSupported) {
-			alerts.push('Je browser ondersteunt videobellen niet. Je gebruikt best Chrome voor Praatbox.');
+			alerts.push(_('Je browser ondersteunt videobellen niet. Je gebruikt best Chrome voor Praatbox.'));
 		} else {
 			if ('chrome' === detectBrowser()) {
 				if (0 === DetectRTC.videoInputDevices.length) {
-					alerts.push('Praatbox kan geen camera (webcam) vinden. Je hebt een camera nodig om Praatbox te gebruiken.');
+					alerts.push(_('Praatbox kan geen camera (webcam) vinden. Je hebt een camera nodig om Praatbox te gebruiken.'));
 				}
 
 				if (0 === DetectRTC.audioInputDevices.length) {
-					alerts.push('Praatbox kan geen microfoon vinden. Je hebt een microfoon nodig om Praatbox te gebruiken.');
+					alerts.push(_('Praatbox kan geen microfoon vinden. Je hebt een microfoon nodig om Praatbox te gebruiken.'));
 				}
 			} else {
-				alerts.push('Je gebruikt een andere webbrowser dan <a href="https://www.google.com/intl/nl/chrome/">Chrome</a>. Praatbox werkt het best in <a href="https://www.google.com/intl/nl/chrome/">Chrome</a>.');
+				alerts.push(_('Je gebruikt een andere webbrowser dan <a href="https://www.google.com/intl/nl/chrome/">Chrome</a>. Praatbox werkt het best in <a href="https://www.google.com/intl/nl/chrome/">Chrome</a>.'));
 			}
 		}
 
@@ -65,19 +69,19 @@ $(document).ready(function () {
 
 	// Nakijken of we mobiel bezig zijn, en indien het Android of iOS is, meteen de juiste downloadlink meegeven.
 	if(isMobile.any()) {
-		var mobileWarning = 'Het lijkt erop dat je op een <strong>mobiel toestel</strong> werkt. Gelieve eerst te controleren of je de applicatie al ge&iuml;nstalleerd hebt.';
+		var mobileWarning = _('Het lijkt erop dat je op een <strong>mobiel toestel</strong> werkt. Gelieve eerst te controleren of je de applicatie al ge&iuml;nstalleerd hebt.');
 		
 		mobileWarning += isMobile.Android() ?
-			'<p class="my-2"><a class="btn btn-info" href="https://play.google.com/store/apps/details?id=org.jitsi.meet&hl=nl" target="_blank" rel="noopener nofollow">Installeer de app</a></p>' :
+			'<p class="my-2"><a class="btn btn-info" href="https://play.google.com/store/apps/details?id=org.jitsi.meet&hl=nl" target="_blank" rel="noopener nofollow">' + _('Installeer de app') + '</a></p>' :
 			isMobile.iOS() ?
-			'<p class="my-2"><a class="btn btn-info" href="https://apps.apple.com/be/app/jitsi-meet/id1165103905?l=nl" target="_blank" rel="noopener nofollow">Installeer de app</a></p>' :
+			'<p class="my-2"><a class="btn btn-info" href="https://apps.apple.com/be/app/jitsi-meet/id1165103905?l=nl" target="_blank" rel="noopener nofollow">' + _('Installeer de app') + '</a></p>' :
 			''
 		;
 		
 		alerts.push(mobileWarning);
 	}
 
-	let alerttext = '<p>Je praatbox werkt mogelijk niet goed:</p>';
+	let alerttext = '<p>' + _('Je praatbox werkt mogelijk niet goed:') + '</p>';
 
 	if (alerts.length > 0) {
 		alerttext += '<ul>';
@@ -166,7 +170,7 @@ $("#linkbtn").click(
 		document.body.removeChild(el);
 
 		$(this).addClass("clicked");
-		$(this).html("Link gekopieerd");
+		$(this).html(_("Link gekopieerd"));
 	}
 );
 
@@ -230,11 +234,11 @@ function checkIfInput(hasWarnings){
 	let location = $('#b').val();
 	// values too long
 	if (name.length + location.length > 200){
-		showError('<p>Gelieve de naam en locatie van je praatbox te beperken tot maximaal 100 letters of cijfers.</p>', hasWarnings)
+		showError('<p>'+_('Gelieve de naam en locatie van je praatbox te beperken tot maximaal 100 letters of cijfers.')+'</p>', hasWarnings)
 	}
 	// name too short
 	else if (name.length < 5 && location.length){
-		showError('<p>Gelieve voor de naam van je praatbox minstens 5 letters of cijfers te voorzien.</p>', hasWarnings)
+		showError('<p>'+_('Gelieve voor de naam van je praatbox minstens 5 letters of cijfers te voorzien.')+'</p>', hasWarnings)
 	}
 	// incomplete
 	else if (!name.length || !location.length) {
@@ -262,7 +266,7 @@ function autoToggleButtons(hasWarnings) {
 
 }
 
-function sendWhatsapp(){
+function sendWhatsapp() {
 	let link = "https://www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"));
 	window.open("https://api.whatsapp.com/send?text="+escape(link), '_blank');
 }

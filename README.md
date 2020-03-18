@@ -26,3 +26,8 @@ De praatbox is vervolgens bereikbaar op `http://localhost:8000`
 
 ## met docker
 Gebruik de `Dockerfile` om een image te builden. Zie `docker-run.sh` voor een voorbeeld van hoe het in productie wordt gedraaid. Hiervoor gebruiken we een set-up met Traefik, voor de config, zie de repository van [solidariteitsnetwerk](https://github.com/MakeInBelgium/solidariteitsnetwerk/tree/master/deployment).
+
+# Vertalen
+Alle tekst die gebruikt wordt, zit in `praatbox.pot`. Dit is een standaard bestandtype voor vertalingen. Met het gratis programma [POedit]() kan je op basis hiervan een vertaling maken. Deze sla je dan op als [isocode].po, bvb `fr.po`
+
+Voor de teksten die door Javascript gegenereerd worden (in ./assets/app.js staan), zullen we de weergave automatiseren, voor de teksten die in HTML staan, is dit een manueel proces obv de voorziene .po files.
