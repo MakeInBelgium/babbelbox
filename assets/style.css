@@ -1,97 +1,157 @@
 html, 
 body {
     height: 100%;
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #E5E5E5;
+    height: 100vh;
+}
+h2{
+    text-align: center;
+    font-size: 1.6em;
+    margin-top:40px;
+    margin-bottom:40px;
+    font-weight: bold;
+}
+ol li{
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    list-style-position: outside;
+    
+}
+ol{
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: solid #000;
+}
+
+.opgelet{
+    font-weight: bold;
+    color: #F06363;
+    margin-bottom: -50px;
+}
+.opgelet span{
+   font-weight: 300!important;
+}
+
+.input-group-text{
+    background-color: #003E9A;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+}
+
+input-group > input{
+    
+}
+.form-control{
+    font-size: 15px;
+    padding: 22px
 }
 body {
-	height: 100vh;
+  padding: 1rem;
+  font-family: sans-serif;
 }
 
 .fullscreen {
-	overflow:hidden;
+    overflow:hidden;
+    padding: 0;
+    background-color: white;
+}
+.container{
+    background-color:#fff;
+}
+.card{
+    border: none;
 }
 
 .bb-logo {
-	height:8vw;
+	height:10vw;
 	max-height: 80px;
 	width:auto;
 	margin-top:10px;
 	margin-bottom: 10px;
 }
 
+#intro{
+    text-align: center;
+    line-height: 1.5em;
+}
 .meethead {
-	display: grid;
-	grid-template-columns: 120px auto;
+    display: grid;
+    grid-template-columns: 120px auto;
 }
-
 .meethead__logo {
-	padding:2px;
+    padding:2px;
 }
-
 .meethead__logoimg {
-	width: 100%;
-	max-height: 30px;
-	height: auto;
+    width: 100%;
+    max-height: 30px;
+    height: auto;
 }
-
 .meethead__body {
-	padding:2px;
+    padding:2px;
 }
-
 #chan {
-	display: flex;
-	align-items: stretch;
-	flex-direction: column;
-	height: 100%;
-	width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
-
 .meet {
-	flex-grow: 1;
+    flex-grow: 1;
 }
-
 #chan.hidden {
-	display: none;
+    display: none;
 }
-
 .hidden {
-	display: none;
+    display: none;
 }
-
 .wrd_disp {
-	display: inline-block;
-	background-color: rgb(255,255,100);
-	padding: 2px;
-	padding-left: 5px;
-	padding-right: 5px;
-	border-radius: 2px;
+    display: inline-block;
+    background-color: rgb(255,255,100);
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 2px;
 }
-
 .version {
-	text-align: right;
-	font-size: 10px;
-	color:rgb(150,150,150)
+    text-align: right;
+    font-size: 10px;
+    color:rgb(150,150,150)
+}
+.btn-primary{
+    background-color: #43CA69;
+    border-color: #43CA69;
+    float: right;
+    padding: 15px;
+    width: 250px;
 }
 
+.custom-select {
+    height: auto!important;
+}
+
+.btn-primary:hover{
+   background-color: #25AB4B;
+    border-color: #25AB4B;
+}
 .btn-whatsapp::before {
-	font-family: "Font Awesome 5 Brands"; 
-	font-weight: 900; 
-	content:"\f232";
-	margin-right:5px;
+    font-family: "Font Awesome 5 Brands"; 
+    font-weight: 900; 
+    content:"\f232";
+    margin-right:5px;
 }
-
 .btn-copy::before {
-	font-family: "Font Awesome 5 Free"; 
-	font-weight: 900; 
-	content:"\f0ea";
-	margin-right:5px;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content:"\f0ea";
+    margin-right:5px;
 }
-
 .btn-copy.clicked::before {
-	content: "\f00c";
+    content: "\f00c";
 }
-
 .summary {
 	font-weight: bold;
 	font-size: 1.2em;
