@@ -12,7 +12,11 @@ Neem dan deel aan de conversatie op de Slack workspace van de Corona-denktank Ma
 Zelf een lokale server opzetten? Dat kan op verschillende manieren!
 
 ## met python
-Eenvoudig lokaal previewen met het terminal-commando: `python3 -m http.server 8000` (of `python -m http.server 8000` als python 3 je standaardpython is)
+Eenvoudig lokaal previewen met een van onderstaande terminal-commando's: 
+
+* `python3 -m http.server 8000` of (`python -m http.server 8000` als python 3 je standaardpython is)
+* `python -m SimpleHTTPServer`
+
 De praatbox is vervolgens bereikbaar op `http://localhost:8000`
 
 ## met php
