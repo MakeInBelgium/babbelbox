@@ -92,6 +92,12 @@ body {
 .meethead__body {
     padding:2px;
 }
+.meethead__body a {
+    color: #000000;
+}
+.meethead__body a:hover {
+    text-decoration: none;
+}
 #chan {
     display: flex;
     align-items: stretch;
