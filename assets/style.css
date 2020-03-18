@@ -133,26 +133,6 @@ body {
     height: auto!important;
 }
 
-<<<<<<< HEAD
-.btn-reload::before {
-	/* font-family: "Font Awesome 5 Brands"; 
-	font-weight: 900; 
-	content:"\f2f1";  
-	margin-right:5px; */
-}
-
-=======
-.btn-primary:hover{
-   background-color: #25AB4B;
-    border-color: #25AB4B;
-}
-.btn-whatsapp::before {
-    font-family: "Font Awesome 5 Brands"; 
-    font-weight: 900; 
-    content:"\f232";
-    margin-right:5px;
-}
->>>>>>> 14a355f5123273c55f62cc3ecbcab905c62848fc
 .btn-copy::before {
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900; 
