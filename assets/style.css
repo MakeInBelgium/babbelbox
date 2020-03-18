@@ -13,7 +13,8 @@ body {
 }
 
 .bb-logo {
-	height:80px;
+	height:8vw;
+	max-height: 80px;
 	width:auto;
 	margin-top:10px;
 	margin-bottom: 10px;
@@ -89,4 +90,18 @@ body {
 
 .btn-copy.clicked::before {
 	content: "\f00c";
+}
+
+.summary {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.topnav__logoimg {
+	height:7vw;
+	max-height: 30px;
+}
+
+.responsive-h1 {
+	font-size: calc( 1.5rem + 1vw ) ;
 }
