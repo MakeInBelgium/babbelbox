@@ -50,9 +50,9 @@
         <div class="card-body">
           <h1 class="display-4"><img src="./assets/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
           </h1>
-          <p>Met Praatbox kan je videobellen met iemand waar je geen fysiek contact mee mag hebben.</p>
+          <p id="intro">Met Praatbox kan je videobellen met iemand waar je geen fysiek contact mee mag hebben.</p>
           <h2>Hoe gebruik je de Praatbox?</h2>
-          <ol>
+          <ol class="steps">
             <li>Geef je praatbox een naam. Bedenk een naam en vul die in het eerste veld in, of vul de naam in die je hebt gekregen.</li>
             <li>Geef je praatbox een locatie. Vul dit in het tweede veld in, of vul hier de locatie in die je hebt gekregen.</li>
             <li>Kies een willekeurig woord, of hou de automatisch gemaakte keuze. Wil je deelnemen aan een bestaande Praatbox, kies dan het woord dat je hebt gekregen.</li>
@@ -60,14 +60,15 @@
             <li>De praatbox start op! <br/>(Daarna kan je eventueel je praatbox beveiligen met een paswoord. Zie <i class="fas fa-info-circle"></i> rechts onderaan)</li>
             <li>Je kan deze praatbox nu delen op allerlei verschillende manieren, het enige wat je moet doen is de link kopiëren. </li>
           </ol>
-          <p>Opgelet!</p>
-          <ul>
-            <li>Gebruik enkel cijfers en letters in de velden</li>
-          </ul>
+        <h2>Start een Praatbox</h2>
+         <div class="opgelet">
+          <p>Opgelet! <br><span>Gebruik enkel cijfers en letters in de velden</span></p>
+</div>
         </div>
       </div>
     </div>
   </div>
+   <div class="card-body">
     <div id="alert_rtc" class="row my-md-1 hidden">
       <div class="col-lg-8 mx-auto">
         <div class="alert alert-warning hidden" role="alert">
@@ -101,7 +102,7 @@
             <label class="input-group-text" id="basic-addon1" for="b">Locatie van je praatbox</label>
           </div>
           <input type="text" class="form-control" id="b"
-            placeholder="Je gemeente of een andere verwijzing naar je locatie" aria-label="Username"
+            placeholder="Verwijzing naar je locatie" aria-label="Username"
             aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
             title="bv.: Sint-Niklaas, Gent,  ..." required>
         </div>
@@ -210,6 +211,7 @@
     </div>
     <div class="meet" id="meet"></div>
   </div>
+    </div>
   <!-- jQuery JavaScript -->
   <script src="./vendor/jquery/jquery.slim.min.js"></script>
   <!-- Bootstrap core JavaScript -->
