@@ -171,7 +171,7 @@ $("#linkbtn").click(
 );
 
 function generateName(firstInputField, secondInputField, thirdInputField) {
-	let rawname = firstInputField + secondInputField + thirdInputField;
+	let rawname = firstInputField.toLowerCase() + secondInputField.toLowerCase() + thirdInputField.toLowerCase();
 	return cleanInput( rawname );
 }
 
@@ -182,6 +182,7 @@ function cleanInput(inputValue) {
 }
 
 function removeCharacters(inputField) {
+	inputField = inputField.toLowerCase();
 	return encodeURIComponent(inputField.trim());
 }
 
