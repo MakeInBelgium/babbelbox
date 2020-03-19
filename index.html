@@ -51,6 +51,8 @@
             <h1 class="display-4"><img src="./assets/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
             </h1>
             <p id="intro">Met Praatbox kan je videobellen met iemand waar je geen fysiek contact mee mag hebben.</p>
+
+          <div class="collapse" id="uitleg">
             <h2>Hoe gebruik je de Praatbox?</h2>
             <ol class="steps">
               <li>Geef je praatbox een naam. Bedenk een naam en vul die in het eerste veld in, of vul de naam in die je
@@ -66,6 +68,8 @@
                 link kopiëren. </li>
             </ol>
             <p>Heb je nog vragen? Misschien vind je ze terug bij de <a href="/vragen.html">veelgestelde vragen</a>.</p>
+
+          </div>
 
             <h2>Start een Praatbox</h2>
             <div class="opgelet">
@@ -187,14 +191,22 @@
             class="enableOnInput btn btn-primary mb-2 hidden">Start de
             praatbox</button>
         </div>
-      </div>
-      <div class="row my-md-1">
+      </div> 
 
+      <div class="row my-md-1">
+        <div class="col-lg-8 mx-auto d-flex justify-content-between">
+          <p><a href="#uitleg" data-toggle="collapse">Hoe gebruik je de Praatbox?</a></p>
+          <p><a href="/vragen.html">veelgestelde vragen</a></p>          
+        </div>               
+      </div>   
+      
+      <div class="row my-md-1">
         <div class="col-lg-8 mx-auto d-flex justify-content-between">
           <p><a href="https://www.coronadenktank.be/" target="_blank" rel="noopener">www.coronadenktank.be</a></p>
           <p class="version">v. {VERSION}</p>
         </div>
       </div>
+      <hr/>
     </div>
   </div>
 
@@ -226,6 +238,12 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52249571-4"></script>
   <script>
+
+  // Tonen of verbergen uitleg hoe praatbox gebruiken.
+	if (document.cookie.indexOf('_ga') < 0 ) {
+    $('#uitleg').addClass('show');
+  }
+  
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
