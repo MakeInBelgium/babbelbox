@@ -170,6 +170,7 @@ $("#linkbtn").click(
 	}
 );
 
+
 function generateName(firstInputField, secondInputField, thirdInputField) {
 	let rawname = firstInputField + secondInputField + thirdInputField;
 	return cleanInput( rawname );
