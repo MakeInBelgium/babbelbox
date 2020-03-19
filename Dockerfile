@@ -8,9 +8,11 @@ ENV vcsref=$vcsref
 ARG DOMAIN=www.praatbox.be
 ENV DOMAIN=$DOMAIN
 
-COPY . /usr/share/nginx/html
+COPY ./_site /usr/share/nginx/html
 
 WORKDIR /usr/share/nginx/html
 
 RUN sed -i "s|{VERSION}|$vcsref|g" index.html
 RUN sed -i "s|www.praatbox.be|$DOMAIN|g" index.html
+RUN sed -i "s|{VERSION}|$vcsref|g" vragen.html
+RUN sed -i "s|www.praatbox.be|$DOMAIN|g" vragen.html

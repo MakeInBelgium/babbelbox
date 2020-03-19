@@ -41,6 +41,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 exclude:
   - praatbox.pot
   - README.md
+  - Dockerfile
+  - docker-run.sh
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
