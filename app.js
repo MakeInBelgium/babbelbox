@@ -18,6 +18,13 @@ $(document).ready(function () {
 
 	const domain = "meet.jit.si";
 	var room = getParameterByName("kamer");
+
+	if ( 'fr' !== lang ) {
+		lang = 'nl';
+	}
+
+	console.log( lang );
+
 	if (room) {
 		$("body").addClass("fullscreen");
 		$("#chan").removeClass("hidden");

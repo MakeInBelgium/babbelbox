@@ -264,20 +264,23 @@
   <!-- Detect RTC -->
   <script src="./vendor/detectrtc/DetectRTC.js"></script>
   <!-- Praatbox script -->
+  <script>
+  	var lang = "nl";
+  </script>
   <script src="./app.js?v{VERSION}"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52249571-4"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+  	window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+  	function gtag() {
+  		dataLayer.push(arguments);
+  	}
+  	gtag('js', new Date());
 
-    gtag('config', 'UA-52249571-4');
+  	gtag('config', 'UA-52249571-4');
   </script>
-</body>
+  </body>
 
-</html>
+  </html>
