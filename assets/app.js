@@ -171,7 +171,7 @@ $("#linkbtn").click(
 );
 
 function generateName(firstInputField, secondInputField, thirdInputField) {
-	let rawname = firstInputField.toLowerCase() + secondInputField.toLowerCase() + thirdInputField.toLowerCase();
+	let rawname = firstInputField + secondInputField + thirdInputField;
 	return cleanInput( rawname );
 }
 
