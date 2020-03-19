@@ -100,6 +100,12 @@ $(document).ready(function () {
 	}
 	autoToggleButtons(alerts.length > 0);
 
+
+	// Tonen of verbergen uitleg hoe praatbox gebruiken.
+	if (document.cookie.indexOf('_ga') >= 0 ) {
+		$('.hide-for-old-visitors').addClass('hidden');
+	}
+
 });
 
 function detectBrowser() {

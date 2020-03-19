@@ -6,7 +6,7 @@ ol li { line-height: 1.5em; margin-bottom: 15px; list-style-position: outside; }
 
 ol { margin-bottom: 50px; padding-bottom: 40px; border-bottom: solid #000; }
 
-.opgelet { font-weight: bold; color: #F06363; margin-bottom: -50px; }
+.opgelet { font-weight: bold; color: #F06363; }
 
 .opgelet span { font-weight: 300 !important; }
 
