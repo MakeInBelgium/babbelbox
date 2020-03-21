@@ -262,9 +262,18 @@ function autoToggleButtons(hasWarnings) {
 
 }
 
+function getLink(){
+	return "https://www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"));
+}
+
 function sendWhatsapp(){
-	let link = "https://www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"));
+	let link = getLink();
 	window.open("https://api.whatsapp.com/send?text="+escape(link), '_blank');
+}
+
+function sendMail(){
+	let link = getLink();
+	window.open("mailto:?body=" + escape(link), '_blank');
 }
 
 function reloadPraatbox(){
