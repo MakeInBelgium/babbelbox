@@ -267,13 +267,11 @@ function getLink(){
 }
 
 function sendWhatsapp(){
-	let link = getLink();
-	window.open("https://api.whatsapp.com/send?text="+escape(link), '_blank');
+	window.open("https://api.whatsapp.com/send?text="+escape(getLink()), '_blank');
 }
 
 function sendMail(){
-	let link = getLink();
-	window.open("mailto:?body=" + escape(link), '_blank');
+	window.open("mailto:?body=" + escape(getLink()), '_blank');
 }
 
 function reloadPraatbox(){
