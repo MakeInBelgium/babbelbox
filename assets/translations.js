@@ -124,8 +124,8 @@ var translations = {
         'en': "Praatbox could not find a microphone. You need a microphone if you want to use Praatbox."
     },
     'no_chrome': {
-        'nl': 'Je gebruikt een andere webbrowser dan <a href=""https://www.google.com/intl/nl/chrome/"">Chrome</a>. Praatbox werkt het best in <a href=""https://www.google.com/intl/nl/chrome/"">Chrome</a>.',
-        'en': 'You are using a different webbrowser than <a href=""https://www.google.com/intl/nl/chrome/"">Chrome</a>. Praatbox works best with <a href=""https://www.google.com/intl/nl/chrome/"">Chrome</a>.',
+        'nl': 'Je gebruikt een andere webbrowser dan <a href="https://www.google.com/intl/nl/chrome/">Chrome</a>. Praatbox werkt het best in <a href="https://www.google.com/intl/nl/chrome/">Chrome</a>.',
+        'en': 'You are using a different webbrowser than <a href="https://www.google.com/intl/nl/chrome/">Chrome</a>. Praatbox works best with <a href="https://www.google.com/intl/nl/chrome/">Chrome</a>.',
     },
     'mobile': {
         'nl': 'Het lijkt erop dat je op een <strong>mobiel toestel</strong> werkt. Gelieve eerst te controleren of je de applicatie al hebt geïnstalleerd.',
@@ -222,8 +222,8 @@ var translations = {
         'en': 'A few examples:'
     },
     'faq_6_a_end': {
-        'nl': 'Indien het niet lukt, probeer dan een andere internetbrowser om het videogesprek te openen. <br/><a href="https://www.google.com/intl/nl/chrome/">Google Chrome</a> geeft (doorgaans) het minste problemen en kan je downloaden via https://www.google.com/intl/nl/chrome/ (https://www.google.com/intl/nl/chrome/).<br/>De Safari browser (standaard op Apple producten) wordt afgeraden.',
-        'en': 'In case it is not working, try a different internetbrowser. <br/>Google Chrome (https://www.google.com/intl/nl/chrome/) is recommended. You can download it at https://www.google.com/intl/nl/chrome/ (https://www.google.com/intl/nl/chrome/).<br/>The Safari browser (standard on Apple products) is not recommended.'
+        'nl': 'Indien het niet lukt, probeer dan een andere internetbrowser om het videogesprek te openen. <br/><a href="https://www.google.com/intl/nl/chrome/">Google Chrome</a> geeft (doorgaans) het minste problemen en kan je downloaden via <a href="https://www.google.com/intl/nl/chrome/">https://www.google.com/intl/nl/chrome/</a>.<br/>De Safari browser (standaard op Apple producten) wordt afgeraden.',
+        'en': 'In case it is not working, try a different internetbrowser. <br/><a href="https://www.google.com/intl/nl/chrome/">Google Chrome</a> is recommended. You can download it at <a href="https://www.google.com/intl/nl/chrome/">https://www.google.com/intl/nl/chrome/</a>.<br/>The Safari browser (standard on Apple products) is not recommended.'
     },
     'faq_7': {
         'nl': 'Hoe ziet een Praatbox sessie met meerdere deelnemers er uit?',
@@ -258,8 +258,8 @@ var translations = {
         'en': "What are the minimum requirements?"
     },
     'faq_10_a': {
-        'nl': 'De app "Jitsi Meet" heeft op Apple iPad of iPhone toestellen minimum iOS 11.0 of hoger nodig: https://itunes.apple.com/us/app/jitsi-meet/id1165103905 (https://itunes.apple.com/us/app/jitsi-meet/id1165103905).<br/>op Android toestellen heeft de app minimum Android 5.0 of hoger nodig. https://play.google.com/store/apps/details?id=org.jitsi.meet (https://play.google.com/store/apps/details?id=org.jitsi.meet).<br/>Op een gewone laptop of PC gebruik je best een recente versie van Google Chrome (https://www.google.com/intl/nl/chrome/).',
-        'en': 'The app "Jitsi Meet" for Apple iPad or iPhone needs at least iOS 11.0 or higher: https://itunes.apple.com/us/app/jitsi-meet/id1165103905 (https://itunes.apple.com/us/app/jitsi-meet/id1165103905).<br/> For Android deviced the app needs Android 5.0 or higher. https://play.google.com/store/apps/details?id=org.jitsi.meet (https://play.google.com/store/apps/details?id=org.jitsi.meet).<br/>On laptop or desktop we recommend the latest version of Google Chrome (https://www.google.com/intl/nl/chrome/).'
+        'nl': 'De app "Jitsi Meet" heeft op Apple iPad of iPhone toestellen minimum iOS 11.0 of hoger nodig: <a href="https://itunes.apple.com/us/app/jitsi-meet/id1165103905">https://itunes.apple.com/us/app/jitsi-meet/id1165103905</a>.<br/>op Android toestellen heeft de app minimum Android 5.0 of hoger nodig. <a href="https://play.google.com/store/apps/details?id=org.jitsi.meet">https://play.google.com/store/apps/details?id=org.jitsi.meet</a>.<br/>Op een gewone laptop of PC gebruik je best een recente versie van <a href="https://www.google.com/intl/nl/chrome/">Google Chrome</a>.',
+        'en': 'The app "Jitsi Meet" for Apple iPad or iPhone needs at least iOS 11.0 or higher: <a href="https://itunes.apple.com/us/app/jitsi-meet/id1165103905">https://itunes.apple.com/us/app/jitsi-meet/id1165103905</a>.<br/> For Android deviced the app needs Android 5.0 or higher. <a href="https://play.google.com/store/apps/details?id=org.jitsi.meet">https://play.google.com/store/apps/details?id=org.jitsi.meet</a>.<br/>On laptop or desktop we recommend the latest version of <a href="https://www.google.com/intl/nl/chrome/">Google Chrome</a>.'
     },
     'faq_11': {
         'nl': 'Ik krijg in de Chrome browser een venster rechts boven, wat moet ik doen?',
