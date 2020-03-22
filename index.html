@@ -35,122 +35,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
   <!-- Translations -->
-
-  <script type="text/javascript">
-    var translations = {
-      'javascript-disabled': {
-        'nl': 'Je hebt Javascript uitgeschakeld. Javascript is noodzakelijk voor Praatbox.',
-        'en': 'You have disable Javascript. Javascript is required for Praatbox'
-      },
-      'intro': {
-        'nl': 'Met Praatbox kan je videobellen met iemand waar je geen fysiek contact mee mag hebben.',
-        'en': "Praatbox allows you to videocall someone you can't have physical contact with."
-      },
-      'how-to-use': {
-        'nl': 'Hoe gebruik je de Praatbox?',
-        'en': "How to use Praatbox?"
-      },
-      'steps-1': {
-        'nl': 'Geef je Praatbox een naam. Bedenk een naam en vul die in het eerste veld in, of vul de naam in die je hebt gekregen.',
-        'en': 'Give your Praatbox a name. Make up a name and type it in the first field. <br/>  For an existing Praatbox, fill in the name you got from your contact.'
-      },
-      'steps-2': {
-        'nl': 'Geef je Praatbox een locatie. Vul dit in het tweede veld in, of vul hier de locatie in die je hebt gekregen.',
-        'en': 'Give your Praatbox a location. Type your location into the second field. <br/> For an existing Praatbox, fill in the location you got from your contact.'
-      },
-      'steps-3': {
-        'nl': 'Kies een willekeurig woord, of hou de automatisch gemaakte keuze. Wil je deelnemen aan een bestaande Praatbox, kies dan het woord dat je hebt gekregen.',
-        'en': 'Either choose a random word, or keep the automatically generated one. <br/>  For an existing Praatbox, choose the word you got from your contact.'
-      },
-      'steps-4': {
-        'nl': 'Als je de vorige stappen hebt ondernomen, klik je op "Start de praatbox',
-        'en': 'If you have executed the steps above, click the "Start Praatbox" button'
-      },
-      'steps-5': {
-        'nl': 'De Praatbox start op! <br />(Daarna kan je eventueel je praatbox beveiligen met een paswoord. Zie <i class="fas fa-info-circle"></i> rechts onderaan)',
-        'en': 'The Praatbox is starting! <br />(Afterwards, you can secure it with a password. See <i class="fas fa-info-circle"></i> bottom-right corner)'
-      },
-      'steps-6': {
-        'nl': 'Je kan deze praatbox nu delen op allerlei verschillende manieren, het enige wat je moet doen is de link kopiëren.',
-        'en': 'Je kan deze praatbox nu delen op allerlei verschillende manieren, het enige wat je moet doen is de link kopiëren.'
-      },
-      'steps-more-questions': {
-        'nl': 'Heb je nog vragen? Misschien vind je ze terug bij de <a href="/vragen.html">veelgestelde vragen</a>.'
-      },
-      'start-a-box': {
-        'nl': 'Start een Praatbox',
-        'en': 'Start Praatbox'
-      },
-      'name-limitations': {
-        'nl': 'Opgelet! <br><span>Gebruik enkel cijfers en letters in de velden</span>',
-        'en': 'Beware! <br><span>Only use numbers and letters in the input fields</span>'
-      },
-      'input-too-long': {
-        'nl': 'Input te lang',
-        'en': 'Input is too long',
-      },
-      'praatbox-name': {
-        'nl': 'Naam van je Praatbox',
-        'en': 'Name of your Praatbox',
-      },
-      'praatbox-location': {
-        'nl': 'Locatie van je Praatbox',
-        'en': 'Location of your Praatbox',
-      },
-      'random-word': {
-        'nl': 'Willekeurig woord',
-        'en': 'Random word',
-      },
-      'start-praatbox': {
-        'nl': 'Start de Praatbox',
-        'eb': 'Start the Praatbox',
-      },
-      'how-to-use': {
-        'nl': 'Hoe gebruik je de Praatbox?',
-        'en': 'How do you use the Praatbox?',
-      },
-      'faq': {
-        'nl': 'Veelgestelde vragen',
-        'en': 'Frequently asked questions',
-      },
-      'meeting-header-text': {
-        'nl': 'Vul op <strong><a href="https://www.praatbox.be">www.praatbox.be</a></strong><span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp" id="wrd_disp_c"></span> in om mee te doen.',
-        'en': 'Enter on <strong><a href="https://www.praatbox.be">www.praatbox.be</a></strong><span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp" id="wrd_disp_c"></span> to participate.'
-      },
-      'copy-link': {
-        'nl': 'Kopieer link',
-        'en': 'Copy link',
-      },
-      'reload': {
-        'nl': 'Herladen',
-        'en': 'Reload',
-      }
-
-    };
-
-    // Process translation
-    $(function() {
-      $('.translate').click(function() {
-        let lang = $(this).attr('id');
-        translate(lang);
-      });
-    });
-
-    function translate(lang) {
-      $('[key]').each(function(index, item) {
-        let keyValue = $(this).attr('key');
-        $(this).html(translations[keyValue][lang]);
-      });
-    }
-
-    function translateDutch() {
-      translate('nl');
-    }
-
-    function translateEnglish() {
-      translate('en');
-    }
-  </script>
+  <script src="./assets/translations.js"></script>
 </head>
 
 <body>
@@ -163,8 +48,8 @@
   <!-- Page Content -->
   <div class="container hidden" id="roomdata">
     <div class="row">
-        <button id="nl" class="translate btn" onclick="translateDutch()">Nederlands</button>
-        <button id="en" class="translate btn" onclick="translateEnglish()">English</button>
+        <button id="nl" class="translate btn" onclick="setLanguageDutch()">Nederlands</button>
+        <button id="en" class="translate btn" onclick="setLanguageEnglish()">English</button>
     </div>
     <div class="row my-md-1">
       <div class="col-lg-8 mx-auto">
@@ -369,7 +254,7 @@
     gtag('config', 'UA-52249571-4');
 
     //Set default language
-    translate('nl');
+    setLanguage('nl');
   </script>
 </body>
 
