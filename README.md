@@ -33,8 +33,10 @@ Gebruik de `Dockerfile` om een image te builden. Zie `docker-run.sh` voor een vo
 
 
 # Vertalingen
-Alle teksten die meertalig moeten aangeboden worden zijn terug te vinden in /assets/translations.js.
-Deze file bevat zowel de vertalingen (key:value) als ook enkele functies door op verschillende pagina's en in de app.js gebruikt worden om de juiste vertaling op te halen.
+Alle teksten die meertalig moeten aangeboden worden zijn terug te vinden in /data/translations.json.
+De code die gebruikt is om deze in te laden en de velden in te vullen zit in /assets/translations.js.
+De functies in translations.js worden op verschillende pagina's en in de app.js gebruikt worden om de juiste vertaling op te halen.
 
+De geactiveerde taal zit in in een local variable.
 - In Javascript files: gebruik de getTranslation(key) functie;
 - In HTML files: gebruik een attribuut 'key' met als waarde een vertaalsleutel; De inhoud van het element zal vervangen worden (html, is mogelijk!) ex: <h2 key="start-a-box">NOT_TRANSLATED</h2>
