@@ -2,6 +2,17 @@
 if(!localStorage.getItem('activeLanguage')) {
     localStorage.setItem('activeLanguage','nl');
 }
+let translations = {};
+fetch('./data/translations.json')
+    .then((response) => response.json())
+    .then((data) => {
+        translations = data;
+        //Set default language and reload page
+        setPageLanguage(localStorage.getItem('activeLanguage'));
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 
 function getTranslation(key) {
     let keyValues = translations[key];
@@ -19,7 +30,7 @@ function getTranslation(key) {
 }
 
 // Process translation
-function setLanguage(lang) {
+function setPageLanguage(lang) {
     localStorage.setItem('activeLanguage', lang);
     $('[key]').each(function(index, item) {
         let keyValue = $(this).attr('key');
@@ -28,13 +39,22 @@ function setLanguage(lang) {
 }
 
 function setLanguageDutch() {
-    setLanguage('nl');
+    setPageLanguage('nl');
+}
+
+function setLanguageFromElementId(e) {
+    var language = e.target.id;
+    setPageLanguage(language);
 }
 
 function setLanguageEnglish() {
-    setLanguage('en');
+    setPageLanguage('en');
 }
 
+function setLanguageFrench() {
+    setPageLanguage('fr');
+}
+/*
 var translations = {
     'javascript-disabled': {
         'nl': 'Je hebt Javascript uitgeschakeld. Javascript is noodzakelijk voor Praatbox.',
@@ -295,3 +315,4 @@ var translations = {
 
 
 console.log(JSON.stringify(translations));
+*/
