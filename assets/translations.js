@@ -1,12 +1,26 @@
-var activeLanguage = 'nl';
+// make sure it is always set.
+if(!localStorage.getItem('activeLanguage')) {
+    localStorage.setItem('activeLanguage','nl');
+}
 
 function getTranslation(key) {
-    return translations[key][activeLanguage];
+    let keyValues = translations[key];
+    if(!keyValues) {
+        console.error("KEY '" + key + "' 'not found in translations.");
+        return "";
+    }
+    let activeLanguage = localStorage.getItem('activeLanguage');
+    let translationValue = keyValues[activeLanguage];
+    if(!translationValue) {
+        console.error("No translation found for KEY '" + key + "' and language '" + activeLanguage +"'");
+        return "";
+    }
+    return translationValue;
 }
 
 // Process translation
 function setLanguage(lang) {
-    activeLanguage = lang;
+    localStorage.setItem('activeLanguage', lang);
     $('[key]').each(function(index, item) {
         let keyValue = $(this).attr('key');
         $(this).html(getTranslation(keyValue));
@@ -59,7 +73,8 @@ var translations = {
         'en': 'Je kan deze praatbox nu delen op allerlei verschillende manieren, het enige wat je moet doen is de link kopiëren.'
     },
     'steps-more-questions': {
-        'nl': 'Heb je nog vragen? Misschien vind je ze terug bij de <a href="/vragen.html">veelgestelde vragen</a>.'
+        'nl': 'Heb je nog vragen? Misschien vind je ze terug bij de <a href="/vragen.html">veelgestelde vragen</a>.',
+        'en': 'Got more questions? Maybe you can find an answer in the <a href="/vragen.html">frequently asked questions</a>.'
     },
     'start-a-box': {
         'nl': 'Start een Praatbox',
@@ -87,7 +102,7 @@ var translations = {
     },
     'start-praatbox': {
         'nl': 'Start de Praatbox',
-        'eb': 'Start the Praatbox',
+        'en': 'Start the Praatbox',
     },
     'how-to-use': {
         'nl': 'Hoe gebruik je de Praatbox?',
