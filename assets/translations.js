@@ -44,10 +44,6 @@ var translations = {
         'nl': 'Met Praatbox kan je videobellen met iemand waar je geen fysiek contact mee mag hebben.',
         'en': "Praatbox allows you to videocall someone you can't have physical contact with."
     },
-    'how-to-use': {
-        'nl': 'Hoe gebruik je de Praatbox?',
-        'en': "How to use Praatbox?"
-    },
     'steps-1': {
         'nl': 'Geef je Praatbox een naam. Bedenk een naam en vul die in het eerste veld in, of vul de naam in die je hebt gekregen.',
         'en': 'Give your Praatbox a name. Make up a name and type it in the first field. <br/>  For an existing Praatbox, fill in the name you got from your contact.'
@@ -285,7 +281,7 @@ var translations = {
         'en': "Click \"Don't show me this again\" and close the window. You don't need to install anything."
     },
     'faq_12': {
-        'nl': 'ik krijg in Chrome de meldingen “error obtaining microphone permission" en "Error obtaining camera permission"',
+        'nl': 'Ik krijg in Chrome de meldingen “error obtaining microphone permission" en "Error obtaining camera permission"',
         'en': "In Chrome I get the messages “error obtaining microphone permission\" and \"Error obtaining camera permission\""
     },
     'faq_12_a': {
@@ -296,3 +292,6 @@ var translations = {
 
 
 };
+
+
+console.log(JSON.stringify(translations));
