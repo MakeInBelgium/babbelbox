@@ -16,6 +16,13 @@ $(document).ready(function () {
 
 	const domain = "meet.jit.si";
 	var room = getParameterByName("kamer");
+
+	if ( 'fr' !== lang ) {
+		lang = 'nl';
+	}
+
+	console.log( lang );
+
 	if (room) {
 		$("body").addClass("fullscreen");
 		$("#chan").removeClass("hidden");
@@ -90,6 +97,12 @@ $(document).ready(function () {
 		$("#alert_rtc").removeClass("hidden");
 	}
 	autoToggleButtons(alerts.length > 0);
+
+
+	// Tonen of verbergen uitleg hoe praatbox gebruiken.
+	if (document.cookie.indexOf('_ga') >= 0 ) {
+		$('.hide-for-old-visitors').addClass('hidden');
+	}
 
 });
 

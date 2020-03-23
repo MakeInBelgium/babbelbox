@@ -8,25 +8,10 @@ Bijdrage leveren? Dat kan!
 Neem dan deel aan de conversatie op de Slack workspace van de Corona-denktank Make in Belgium: https://join.coronadenktank.be (Kanaal: #corona-babbelbox).
 
 
-# local server
-Zelf een lokale server opzetten? Dat kan op verschillende manieren!
+# Jekyll
+Praatbox gebruikt Jekyll om obv templates een statische site te genereren. Instructies om Jekyll te installeren op jouw systeem, lees je op https://jekyllrb.com/docs/
 
-## met python
-Eenvoudig lokaal previewen met een van onderstaande terminal-commando's: 
+Eens Jekyll geïnstalleerd, doe je `bundle exec jekyll serve` in de root van het project (waar deze readme staat) en dan kan je de site previewen op `http://localhost:4000`.
 
-* `python3 -m http.server 8000` of (`python -m http.server 8000` als python 3 je standaardpython is)
-* `python -m SimpleHTTPServer`
-
-De praatbox is vervolgens bereikbaar op `http://localhost:8000`
-
-## met php
-Heb je php op je computer geïnstalleerd? Gebruik dan de PHP built-in webserver:
-
-```
-$> php -S 0.0.0.0:8000
-```
-
-De praatbox is vervolgens bereikbaar op `http://localhost:8000`
-
-## met docker
-Gebruik de `Dockerfile` om een image te builden. Zie `docker-run.sh` voor een voorbeeld van hoe het in productie wordt gedraaid. Hiervoor gebruiken we een set-up met Traefik, voor de config, zie de repository van [solidariteitsnetwerk](https://github.com/MakeInBelgium/solidariteitsnetwerk/tree/master/deployment).
+# Vertalen
+In `_data` vind je `translation.csv`. In die file kan je ontbrekende tekst/talen toevoegen.
