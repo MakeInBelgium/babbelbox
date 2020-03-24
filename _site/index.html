@@ -42,81 +42,62 @@
   </div>
   <!-- Page Content -->
   <div class="container hidden" id="roomdata">
+    <div class="row">
+	<button id="nl" class="translate btn" onclick="setLanguageDutch()">Nederlands</button>
+	<button id="en" class="translate btn" onclick="setLanguageEnglish()">English</button>
+	<button id="fr" class="translate btn" onclick="setLanguageFrench()">Français</button>
+</div>
     <div class="row my-md-1">
       <div class="col-lg-8 mx-auto">
 
         <div class="card mb-5">
           <div class="card-body">
-            <h1 class="display-4"><img src="./praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
+            <h1 class="display-4"><img src="./assets/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
             </h1>
-            <p id="intro">Met Praatbox kan je videobellen met iemand waar je geen fysiek contact mee mag hebben.</p>
-          <div class="collapse hide-for-old-visitors" id="uitleg">
-            <h2>Hoe gebruik je de Praatbox?</h2>
+            <p id="intro" key="intro">NOT_TRANSLATED</p>
+
+          <div class="collapse" id="uitleg">
+            <h2 key="how-to-use">Hoe gebruik je de Praatbox?</h2>
             <ol class="steps">
-              <li>Geef je praatbox een naam. Bedenk een naam en vul die in het eerste veld in, of vul de naam in die je
-                hebt gekregen.</li>
-              <li>Geef je praatbox een locatie. Vul dit in het tweede veld in, of vul hier de locatie in die je hebt
-                gekregen.</li>
-              <li>Kies een willekeurig woord, of hou de automatisch gemaakte keuze. Wil je deelnemen aan een bestaande
-                Praatbox, kies dan het woord dat je hebt gekregen.</li>
-              <li>Als je de vorige stappen hebt ondernomen, klik je op "Start de praatbox"</li>
-              <li>De praatbox start op! <br />(Daarna kan je eventueel je praatbox beveiligen met een paswoord. Zie <i
-                  class="fas fa-info-circle"></i> rechts onderaan)</li>
-              <li>Je kan deze praatbox nu delen op allerlei verschillende manieren, het enige wat je moet doen is de
-                link kopiëren. </li>
+              <li key="steps-1">NOT_TRANSLATED</li>
+              <li key="steps-2">NOT_TRANSLATED</li>
+              <li key="steps-3">NOT_TRANSLATED</li>
+              <li key="steps-4">NOT_TRANSLATED</li>
+              <li key="steps-5">NOT_TRANSLATED</li>
+              <li key="steps-6">NOT_TRANSLATED</li>
             </ol>
+            <p key="steps-more-questions">NOT_TRANSLATED</p>
+
           </div>
 
-           
+            <h2 key="start-a-box">NOT_TRANSLATED</h2>
+            <div class="opgelet">
+              <p key="name-limitations">NOT_TRANSLATED</p>
+            </div>
 
           </div>
         </div>
       </div>
     </div>
-
-      <div class="row my-md-1">
-        <div class="col-lg-8 mx-auto d-flex justify-content-between">
-          <p><a href="#uitleg" data-toggle="collapse">Hoe gebruik je de Praatbox?</a></p>
-          <p><a href="/vragen.html">veelgestelde vragen</a></p>          
-        </div>               
-      </div>   
-
-
-
-
     <div class="card-body">
       <div id="alert_rtc" class="row my-md-1 hidden">
         <div class="col-lg-8 mx-auto">
           <div class="alert alert-warning hidden" role="alert">            
           </div>
           <div class="alert alert-danger hidden" role="alert">
-            <p>Input te lang</p>
+            <p key="input-too-long">NOT_TRANSLATED</p>
           </div>
         </div>
       </div>
-
       <div class="row my-md-1">
         <div class="col-lg-8 mx-auto">
-            <h2>Start een Praatbox</h2>
-        </div>
-      </div>
-      <div class="row my-md-1">
-        <div class="col-lg-8 mx-auto">
-           <div class="opgelet">
-              <p>Opgelet! <br><span>Gebruik enkel cijfers en letters in de velden</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="row my-md-1">
-        <div class="col-lg-8 mx-auto">
-
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="a">Naam van je praatbox</label>
+              <label class="input-group-text" id="basic-addon1" for="a" key="praatbox-name">NOT_TRANSLATED</label>
             </div>
             <input type="text" class="form-control" id="a" placeholder="Deze naam kan je helemaal zelf kiezen"
               aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
-              onkeyup="return this.value = this.value.toLowerCase();" title="bv.: Oma-Gent" required>
+              title="bv.: Oma-Gent" required>
           </div>
         </div>
       </div>
@@ -124,11 +105,11 @@
         <div class="col-lg-8 mx-auto">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="b">Locatie van je praatbox</label>
+              <label class="input-group-text" id="basic-addon1" for="b" key="praatbox-location">NOT_TRANSLATED</label>
             </div>
             <input type="text" class="form-control" id="b" placeholder="Verwijzing naar je locatie"
               aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
-              onkeyup="return this.value = this.value.toLowerCase();" title="bv.: Sint-Niklaas, Gent,  ..." required>
+              title="bv.: Sint-Niklaas, Gent,  ..." required>
           </div>
         </div>
       </div>
@@ -137,7 +118,7 @@
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" for="c">Willekeurig woord</label>
+              <label class="input-group-text" for="c" key="random-word">NOT_TRANSLATED</label>
             </div>
             <select class="custom-select" id="c">
               <option value=""></option>
@@ -206,17 +187,24 @@
 
         <div class="col-lg-8 mx-auto">
           <button onclick="redirectToRoom()" value="Start de praatbox"
-            class="enableOnInput btn btn-primary mb-2 hidden">Start de
-            praatbox</button>
+            class="enableOnInput btn btn-primary mb-2 hidden" key="start-praatbox">NOT_TRANSLATED</button>
         </div>
-      </div>
-      <div class="row my-md-1">
+      </div> 
 
+      <div class="row my-md-1">
+        <div class="col-lg-8 mx-auto d-flex justify-content-between">
+          <p><a href="#uitleg" data-toggle="collapse" key="how-to-use">NOT_TRANSLATED</a></p>
+          <p><a href="/vragen.html" key="faq">NOT_TRANSLATED</a></p>
+        </div>               
+      </div>   
+      
+      <div class="row my-md-1">
         <div class="col-lg-8 mx-auto d-flex justify-content-between">
           <p><a href="https://www.coronadenktank.be/" target="_blank" rel="noopener">www.coronadenktank.be</a></p>
           <p class="version">v. {VERSION}</p>
         </div>
       </div>
+      <hr/>
     </div>
   </div>
 
@@ -226,40 +214,49 @@
         <img src="./praatbox_logo.svg" class="meethead__logoimg" alt="Praatbox">
       </div>
       <div class="meethead__body">
-          Vul op <strong><a href="https://www.praatbox.be">www.praatbox.be</a></strong>
-        <span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span
-          class="wrd_disp" id="wrd_disp_c"></span> in om mee te doen.
-        <button class="btn btn-sm btn-copy btn-info mb-2" id="linkbtn">Kopieer link</button>
+        <div id="meeting-text" key="meeting-header-text">NOT_TRANSLATED</div>
+        <button class="btn btn-sm btn-copy btn-info mb-2" id="linkbtn" key="copy-link">NOT_TRANSLATED</button>
         <button onclick="sendWhatsapp()" class="btn btn-sm btn-whatsapp btn-info mb-2">Whatsapp</button>
-        <button onclick="reloadPraatbox()" class="btn btn-sm btn-info mb-2"><i class="fas fa-sync-alt"></i> Herladen</button>
+        <button onclick="reloadPraatbox()" class="btn btn-sm btn-info mb-2"><i class="fas fa-sync-alt"></i> <span key="reload">NOT_TRANSLATED</span></button>
       </div>
     </div>
     <div class="meet" id="meet"></div>
   </div>
-  <!-- jQuery JavaScript -->
-  <script src="./vendor/jquery/jquery.slim.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Detect RTC -->
-  <script src="./vendor/detectrtc/DetectRTC.js"></script>
-  <!-- Praatbox script -->
-  <script>
-  	var lang = "nl";
-  </script>
-  <script src="./app.js?v{VERSION}"></script>
+<!-- JQuery -->
+<script src="./vendor/jquery/jquery.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Detect RTC -->
+<script src="./vendor/detectrtc/DetectRTC.js"></script>
+<!-- Praatbox script -->
+<script>
+  lang='nl'
+</script>
+<script src="./app.js?v{VERSION}"></script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52249571-4"></script>
-  <script>
-  	window.dataLayer = window.dataLayer || [];
+<!-- Translations -->
+<script src="./translations.js"></script>
 
-  	function gtag() {
-  		dataLayer.push(arguments);
-  	}
-  	gtag('js', new Date());
+<script>
+  setLanguageDutch();
+</script>
 
-  	gtag('config', 'UA-52249571-4');
-  </script>
-  </body>
 
-  </html>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-52249571-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-52249571-4');
+
+  // Loads multi language
+  fillPageContent();
+</script>
+</body>
+
+</html>
