@@ -5,6 +5,23 @@ $(document).ready(function () {
 	$("#roomdata").removeClass("hidden");
 	let alerts = [];
 
+	let lang = '';
+
+	if(!localStorage.getItem('activeLanguage')) {
+		localStorage.setItem('activeLanguage','nl');
+		lang = 'nl'
+	} else {
+		lang = localStorage.getItem('activeLanguage');
+	}
+
+	if ( 'fr' !== lang && 'en' !== lang && 'nl' !== lang ) {
+		lang='nl';
+	} else {
+		localStorage.setItem('activeLanguage',lang);
+	}
+	
+	console.log( lang );
+
 	if (
 		location.protocol !== "https:" &&
 		location.hostname !== "localhost" &&
@@ -18,12 +35,6 @@ $(document).ready(function () {
 
 	const domain = "meet.jit.si";
 	var room = getParameterByName("kamer");
-
-	if ( 'fr' !== lang ) {
-		lang = 'nl';
-	}
-
-	console.log( lang );
 
 	if (room) {
 		$("body").addClass("fullscreen");

@@ -1,27 +1,46 @@
-  <!-- jQuery JavaScript -->
-  <script src="./vendor/jquery/jquery.slim.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Detect RTC -->
-  <script src="./vendor/detectrtc/DetectRTC.js"></script>
-  <!-- Praatbox script -->
-  <script>
-  	var lang = "{{ page.lang }}";
-  </script>
-  <script src="./app.js?v{VERSION}"></script>
+<!-- JQuery -->
+<script src="./vendor/jquery/jquery.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Detect RTC -->
+<script src="./vendor/detectrtc/DetectRTC.js"></script>
+<!-- Praatbox script -->
+<script>
+  lang='{{ page.lang }}'
+</script>
+<script src="./app.js?v{VERSION}"></script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52249571-4"></script>
-  <script>
-  	window.dataLayer = window.dataLayer || [];
+<!-- Translations -->
+<script src="./translations.js"></script>
+{% if page.lang == "en" %}
+<script>
+  setLanguageEnglish();
+</script>
+{% elsif page.lang == "fr" %}
+<script>
+  setLanguageFrench();
+</script>
+{% else %}
+<script>
+  setLanguageDutch();
+</script>
+{% endif %}
 
-  	function gtag() {
-  		dataLayer.push(arguments);
-  	}
-  	gtag('js', new Date());
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-52249571-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
 
-  	gtag('config', 'UA-52249571-4');
-  </script>
-  </body>
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
 
-  </html>
+  gtag('config', 'UA-52249571-4');
+
+  // Loads multi language
+  fillPageContent();
+</script>
+</body>
+
+</html>
