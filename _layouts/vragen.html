@@ -2,19 +2,19 @@
 <body>
 	<!-- Nav -->
 	<div class="container sticky-top bg-white topnav pt-2 border-bottom mb-3" id="pageheader">
-		{% include set_language.html %}
+		{% include language-switch.html %}
 		<div class="row justify-content-sm-center my-md-1">
 			<div class="col-6 col-lg-4">
-				<a href="/" class="btn btn-sm btn-outline-primary">&larr; Terug</a>
+				<a href="/" class="btn btn-sm btn-outline-primary">&larr; {{translate.go-back[page.lang]}}</a>
 			</div>
 			<div class="col-6 col-lg-4 text-right text-md-left">
-				<a href="/"><img src="./praatbox_logo.svg" class="topnav__logoimg float-right"
+				<a href="/"><img src="/praatbox_logo.svg" class="topnav__logoimg float-right"
 						alt="Praatbox"></a>
 			</div>
 		</div>
 		<div class="row my-md-1">
 			<div class="col-lg-8 mx-auto">
-				<h1 class="responsive-h1 mt-2" key="faq">NOT_TRANSLATED</h1>
+				<h1 class="responsive-h1 mt-2">{{translate.faq[page.lang]}}</h1>
 			</div>
 		</div>
 	</div>
@@ -28,8 +28,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_1">NOT_TRANSLATED</summary>
-							<p key="faq_1_a">NOT_TRANSLATED</p>
+							<summary class="summary">{{translate.faq_1[page.lang]}}</summary>
+							<p>{{translate.faq_1_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -38,14 +38,14 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_2">NOT_TRANSLATED</summary>
-							<p key="faq_2_a">NOT_TRANSLATED</p>
+							<summary class="summary">{{translate.faq_2[page.lang]}}</summary>
+							<p>{{translate.faq_2_a[page.lang]}}</p>
 							<ol>
-								<li key="faq_2_a_li_1">NOT_TRANSLATED</li>
-								<li key="faq_2_a_li_2">NOT_TRANSLATED</li>
-								<p key="faq_2_a_end">NOT_TRANSLATED</p>
+								<li>{{translate.faq_2_a_li_1[page.lang]}}</li>
+								<li>{{translate.faq_2_a_li_2[page.lang]}}</li>
+								<p>{{translate.faq_2_a_end[page.lang]}}</p>
 							</ol>
-							<img src="./img/faq/Picture2.png" class="img-fluid" alt="Screenshot">
+							<img src="/img/faq/Picture2.png" class="img-fluid" alt="Screenshot">
 						</details>
 					</div>
 				</div>
@@ -54,8 +54,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_3">NOT_TRANSLATED</summary>
-							<p key="faq_3_a">NOT_TRANSLATED</p>
+							<summary class="summary">{{translate.faq_3[page.lang]}}</summary>
+							<p>{{translate.faq_3_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -64,8 +64,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_4">NOT_TRANSLATED</summary>
-							<p key="faq_4_a">NOT_TRANSLATED</p>
+							<summary class="summary">{{translate.faq_4[page.lang]}}</summary>
+							<p>{{translate.faq_4_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -74,8 +74,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_5">NOT_TRANSLATED</summary>
-							<p key="faq_5_a">NOT_TRANSLATED</p>
+							<summary class="summary">{{translate.faq_5[page.lang]}}</summary>
+							<p>{{translate.faq_5_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -84,11 +84,11 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_6">NOT_TRANSLATED</summary>
-							<p key="faq_6_a">NOT_TRANSLATED</p>
-							<p key="faq_6_ttl_img">NOT_TRANSLATED</p>
-							<img src="./img/faq/Picture3.png" class="img-fluid mb-4" alt="Screenshot">
-							<p key="faq_6_a_end">NOT_TRANSLATED</p>
+							<summary class="summary">{{translate.faq_6[page.lang]}}</summary>
+							<p>{{translate.faq_6_a[page.lang]}}</p>
+							<p>{{translate.faq_6_ttl_img[page.lang]}}</p>
+							<img src="/img/faq/Picture3.png" class="img-fluid mb-4" alt="Screenshot">
+							<p>{{translate.faq_6_a_end[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -97,9 +97,9 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_7">NOT_TRANSLATED</summary>
-							<p key="faq_7_a">NOT_TRANSLATED</p>
-							<img src="./img/faq/Picture4.png" alt="Mozaïekbeeld van video's" />
+							<summary class="summary">{{translate.faq_7[page.lang]}}</summary>
+							<p>{{translate.faq_7_a[page.lang]}}</p>
+							<img src="/img/faq/Picture4.png" alt="Mozaïekbeeld van video's" />
 						</details>
 					</div>
 				</div>
@@ -108,9 +108,9 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_8">NOT_TRANSLATED</summary>
-							<p key="faq_8_a">NOT_TRANSLATED</p>
-							<img src="./img/faq/Picture5.png" alt="Screenshot" />
+							<summary class="summary">{{translate.faq_8[page.lang]}}</summary>
+							<p>{{translate.faq_8_a[page.lang]}}</p>
+							<img src="/img/faq/Picture5.png" alt="Screenshot" />
 						</details>
 					</div>
 				</div>
@@ -119,8 +119,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_9">NOT_TRANSLATED</summary>
-							<p key="faq_9_a">NOT_TRANSLATED</p>
+							<summary class="summary">{{translate.faq_9[page.lang]}}</summary>
+							<p>{{translate.faq_9_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -129,8 +129,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_10">NOT_TRANSLATED</summary>
-							<p key="faq_10_a">NOT_TRANSLATED</p>
+							<summary class="summary">{{translate.faq_10[page.lang]}}</summary>
+							<p>{{translate.faq_10_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -139,9 +139,9 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_11">NOT_TRANSLATED</summary>
-							<p key="faq_11_a">NOT_TRANSLATED</p>
-							<img src="./img/faq/Picture6.png" alt="Screenshot" />
+							<summary class="summary">{{translate.faq_11[page.lang]}}</summary>
+							<p>{{translate.faq_11_a[page.lang]}}</p>
+							<img src="/img/faq/Picture6.png" alt="Screenshot" />
 						</details>
 					</div>
 				</div>
@@ -150,9 +150,9 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary" key="faq_12">NOT_TRANSLATED</summary>
-							<p key="faq_12_a">NOT_TRANSLATED</p>
-							<img src="./img/faq/Picture7.png" alt="Screenshot" />
+							<summary class="summary">{{translate.faq_12[page.lang]}}</summary>
+							<p>{{translate.faq_12_a[page.lang]}}</p>
+							<img src="/img/faq/Picture7.png" alt="Screenshot" />
 						</details>
 					</div>
 				</div>

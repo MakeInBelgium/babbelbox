@@ -243,7 +243,6 @@
     "nl": "Indien het niet lukt, probeer dan een andere internetbrowser om het videogesprek te openen. <br/><a href=\"https://www.google.com/intl/nl/chrome/\">Google Chrome</a> geeft (doorgaans) het minste problemen en kan je downloaden via <a href=\"https://www.google.com/intl/nl/chrome/\">https://www.google.com/intl/nl/chrome/</a>.<br/>De Safari browser (standaard op Apple producten) wordt afgeraden.",
     "en": "In case it is not working, try a different internetbrowser. <br/><a href=\"https://www.google.com/intl/nl/chrome/\">Google Chrome</a> is recommended. You can download it at <a href=\"https://www.google.com/intl/nl/chrome/\">https://www.google.com/intl/nl/chrome/</a>.<br/>The Safari browser (standard on Apple products) is not recommended.",
     "fr": "Si cela ne fonctionne pas, essayez un autre navigateur internet pour ouvrir l'appel vidéo. <br/><a href=\"https://www.google.com/intl/nl/chrome/\">Google Chrome</a> donne (généralement) le moins de problèmes et peut être téléchargé à partir de <a href=\"https://www.google.com/intl/nl/chrome/\">https://www.google.com/intl/nl/chrome/</a>.<br/>Le navigateur Safari (standard sur les produits Apple) n'est pas recommandé."
-
   },
   "faq_7": {
     "nl": "Hoe ziet een Praatbox sessie met meerdere deelnemers er uit?",
@@ -309,5 +308,20 @@
     "nl": "Klik op het slotje naast de url \"praatbox.be\" en kies voor zowel de microfoon als camera voor toestaan. Klik op het kruisje om de popup te sluiten. Klik op “opnieuw laden”.",
     "en": "Click the lock icon next to the url \"praatbox.be\" and choose to allow both your microphone and camera. Close the popup. Click “reload”.",
     "fr": "Cliquez sur le cadenas à côté de l'url \"praatbox.be\" et choisissez à la fois le microphone et la caméra pour autoriser l'accès. Cliquez sur la croix pour fermer le popup. Cliquez sur \"recharger\"."
-  } 
+  },
+  "placeholder-name": {
+    "nl": "Deze naam kan je helemaal zelf kiezen",
+    "en": "You can choose this name yourself",
+    "fr": "Vous pouvez choisir ce nom tout seul"
+  },
+  "placeholder-location": {
+    "nl": "Verwijzing naar je locatie",
+    "en": "Reference to your location",
+    "fr": "Référence à votre lieu de résidence"
+  },
+  "go-back": {
+    "nl": "Terug",
+    "en": "Back",
+    "fr": "Retourner"
+  }
 }

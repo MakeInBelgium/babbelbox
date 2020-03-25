@@ -4,26 +4,16 @@ if(!localStorage.getItem('activeLanguage')) {
 }
 let translations;
 
-function fillPageContent() {
+function init() {
     //Fetch will use caching
-    fetch('./translation.json')
+    fetch('./languages.json')
         .then((response) => response.json())
         .then((data) => {
             translations = data;
-            // Replace existing text with text for the newly selected language
-            replaceContent();
         })
         .catch((error) => {
             console.error('Error:', error);
         });
-}
-
-function replaceContent() {
-    // Will find each element with the "key" attribute and will replace the HTML content with the translated value.
-    $('[key]').each(function(index, item) {
-        let keyValue = $(this).attr('key');
-        $(this).html(getTranslation(keyValue));
-    });
 }
 
 function getTranslation(key) {
@@ -47,18 +37,6 @@ function getTranslation(key) {
 
 // Process translation
 function setPageLanguage(lang) {
+    init();
     localStorage.setItem('activeLanguage', lang);
-    fillPageContent();
-}
-
-function setLanguageDutch() {
-    setPageLanguage('nl');
-}
-
-function setLanguageEnglish() {
-    setPageLanguage('en');
-}
-
-function setLanguageFrench() {
-    setPageLanguage('fr');
 }

@@ -9,32 +9,33 @@
   </div>
   <!-- Page Content -->
   <div class="container hidden" id="roomdata">
-    {% include set_language.html %}
+    {% include language-switch.html %}
     <div class="row my-md-1">
       <div class="col-lg-8 mx-auto">
 
         <div class="card mb-5">
           <div class="card-body">
-            <h1 class="display-4"><img src="./assets/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
+            <h1 class="display-4"><img src="/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
             </h1>
-            <<p id="intro" key="intro">NOT_TRANSLATED</p>
-            <div class="collapse hide-for-old-visitors" id="uitleg">
-              <h2 key="how-to-use">Hoe gebruik je de Praatbox?</h2>
+            <p id="intro">{{translate.intro[page.lang]}}</p>
+
+          <div class="collapse hide-for-old-visitors" id="uitleg">
+            <h2 key="how-to-use">{{translate.how-to-use[page.lang]}}</h2>
             <ol class="steps">
-              <li key="steps-1">NOT_TRANSLATED</li>
-              <li key="steps-2">NOT_TRANSLATED</li>
-              <li key="steps-3">NOT_TRANSLATED</li>
-              <li key="steps-4">NOT_TRANSLATED</li>
-              <li key="steps-5">NOT_TRANSLATED</li>
-              <li key="steps-6">NOT_TRANSLATED</li>
+              <li>{{translate.steps-1[page.lang]}}</li>
+              <li>{{translate.steps-2[page.lang]}}</li>
+              <li>{{translate.steps-3[page.lang]}}</li>
+              <li>{{translate.steps-4[page.lang]}}</li>
+              <li>{{translate.steps-5[page.lang]}}</li>
+              <li>{{translate.steps-6[page.lang]}}</li>
             </ol>
-            <p key="steps-more-questions">NOT_TRANSLATED</p>
+            <p>{{translate.steps-more-questions[page.lang]}}</p>
 
           </div>
 
-            <h2 key="start-a-box">NOT_TRANSLATED</h2>
+            <h2>{{translate.start-a-box[page.lang]}}</h2>
             <div class="opgelet">
-              <p key="name-limitations">NOT_TRANSLATED</p>
+              <p>{{translate.name-limitations[page.lang]}}</p>
             </div>
 
           </div>
@@ -53,7 +54,7 @@
           <div class="alert alert-warning hidden" role="alert">            
           </div>
           <div class="alert alert-danger hidden" role="alert">
-            <p key="input-too-long">NOT_TRANSLATED</p>
+            <p>{{translate.input-too-long[page.lang]}}</p>
           </div>
         </div>
       </div>
@@ -61,9 +62,9 @@
         <div class="col-lg-8 mx-auto">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="a" key="praatbox-name">NOT_TRANSLATED</label>
+              <label class="input-group-text" id="basic-addon1" for="a">{{translate.praatbox-name[page.lang]}}</label>
             </div>
-            <input type="text" class="form-control" id="a" placeholder="Deze naam kan je helemaal zelf kiezen"
+            <input type="text" class="form-control" id="a" placeholder="{{translate.placeholder-name[page.lang]}}"
               aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
               title="bv.: Oma-Gent" required>
           </div>
@@ -73,9 +74,9 @@
         <div class="col-lg-8 mx-auto">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="b" key="praatbox-location">NOT_TRANSLATED</label>
+              <label class="input-group-text" id="basic-addon1" for="b">{{translate.praatbox-location[page.lang]}}</label>
             </div>
-            <input type="text" class="form-control" id="b" placeholder="Verwijzing naar je locatie"
+            <input type="text" class="form-control" id="b" placeholder="{{translate.placeholder-location[page.lang]}}"
               aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
               title="bv.: Sint-Niklaas, Gent,  ..." required>
           </div>
@@ -86,7 +87,7 @@
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" for="c" key="random-word">NOT_TRANSLATED</label>
+              <label class="input-group-text" for="c">{{translate.random-word[page.lang]}}</label>
             </div>
             <select class="custom-select" id="c">
               <option value=""></option>
@@ -155,17 +156,17 @@
 
         <div class="col-lg-8 mx-auto">
           <button onclick="redirectToRoom()" value="Start de praatbox"
-            class="enableOnInput btn btn-primary mb-2 hidden" key="start-praatbox">NOT_TRANSLATED</button>
+            class="enableOnInput btn btn-primary mb-2 hidden">{{translate.start-praatbox[page.lang]}}</button>
         </div>
       </div>
 
       <div class="row my-md-1">
         <div class="col-lg-8 mx-auto d-flex justify-content-between">
-          <p><a href="#uitleg" data-toggle="collapse" key="how-to-use">NOT_TRANSLATED</a></p>
-          <p><a href="/vragen.html" key="faq">NOT_TRANSLATED</a></p>
-        </div>
-      </div>
-
+          <p><a href="#uitleg" data-toggle="collapse" data-target="#uitleg">{{translate.how-to-use[page.lang]}}</a></p>
+          <p><a href="/pages/{page.lang}/vragen.html">{{translate.faq[page.lang]}}</a></p>
+        </div>               
+      </div>   
+      
       <div class="row my-md-1">
         <div class="col-lg-8 mx-auto d-flex justify-content-between">
           <p><a href="https://www.coronadenktank.be/" target="_blank" rel="noopener">www.coronadenktank.be</a></p>
@@ -179,13 +180,13 @@
   <div id="chan" class="hidden">
     <div class="meethead">
       <div class="meethead__logo">
-        <img src="./praatbox_logo.svg" class="meethead__logoimg" alt="Praatbox">
+        <img src="/praatbox_logo.svg" class="meethead__logoimg" alt="Praatbox">
       </div>
       <div class="meethead__body">
-        <div id="meeting-text" key="meeting-header-text">NOT_TRANSLATED</div>
-        <button class="btn btn-sm btn-copy btn-info mb-2" id="linkbtn" key="copy-link">NOT_TRANSLATED</button>
+        <div id="meeting-text">{{translate.meeting-header-text[page.lang]}}</div>
+        <button class="btn btn-sm btn-copy btn-info mb-2" id="linkbtn">{{translate.copy-link[page.lang]}}</button>
         <button onclick="sendWhatsapp()" class="btn btn-sm btn-whatsapp btn-info mb-2">Whatsapp</button>
-        <button onclick="reloadPraatbox()" class="btn btn-sm btn-info mb-2"><i class="fas fa-sync-alt"></i> <span key="reload">NOT_TRANSLATED</span></button>
+        <button onclick="reloadPraatbox()" class="btn btn-sm btn-info mb-2"><i class="fas fa-sync-alt"></i> <span>{{translate.reload[page.lang]}}</span></button>
       </div>
     </div>
     <div class="meet" id="meet"></div>
