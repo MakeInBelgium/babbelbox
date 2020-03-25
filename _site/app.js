@@ -100,8 +100,9 @@ $(document).ready(function () {
 
 
 	// Tonen of verbergen uitleg hoe praatbox gebruiken.
-	if (document.cookie.indexOf('_ga') >= 0 ) {
-		$('.hide-for-old-visitors').addClass('hidden');
+	if (document.cookie.indexOf('_ga') < 0 ) {
+        $('.hide-for-old-visitors').removeClass('collapse');
+        $('.hide-for-old-visitors').addClass('collapse-show');
 	}
 
 });
