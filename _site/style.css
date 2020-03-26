@@ -1,5 +1,7 @@
 html, body { height: 100%; padding: 0; margin: 0; background-color: #E5E5E5; height: 100vh; }
 
+nav { font-size: 1.6em; margin: 20px; }
+
 h2 { text-align: center; font-size: 1.6em; margin-top: 40px; margin-bottom: 40px; font-weight: bold; }
 
 ol li { line-height: 1.5em; margin-bottom: 15px; list-style-position: outside; }

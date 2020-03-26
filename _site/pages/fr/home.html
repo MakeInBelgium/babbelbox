@@ -1,4 +1,40 @@
-{% include head.html %}
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Primary Meta Tags -->
+	<title>Praatbox.be</title>
+	<meta name="title" content="Praatbox.be">
+	<meta name="description" content="Eenvoudig, snel &eacute;n veilig beeldbellen voor iedereen!">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.praatbox.be/">
+	<meta property="og:title" content="Praatbox.be">
+	<meta property="og:description" content="Eenvoudig, snel &eacute;n veilig beeldbellen voor iedereen!">
+	<meta property="og:image" content="https://www.praatbox.be/praatbox-og.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://www.praatbox.be/">
+	<meta property="twitter:title" content="Praatbox.be">
+	<meta property="twitter:description" content="Eenvoudig, snel &eacute;n veilig beeldbellen voor iedereen!">
+	<meta property="twitter:image" content="https://www.praatbox.be/praatbox-og.jpg">
+
+	<!-- Bootstrap core CSS -->
+	<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+		integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<link href="/style.css?v{VERSION}" rel="stylesheet">
+
+	
+	
+
+</head>
 <body>
   <script src="https://meet.jit.si/external_api.js"></script>
   <!-- sanity check -->
@@ -9,7 +45,11 @@
   </div>
   <!-- Page Content -->
   <div class="container hidden" id="roomdata">
-    {% include language-switch.html %}
+    <nav>
+    <a href="/pages/nl/home"><span id="nl" class="badge badge-info">Nederlands</span></a>
+    <a href="/pages/en/home"><span id="en" class="badge badge-info">English</span></a>
+    <a href="/pages/fr/home"><span id="fr" class="badge badge-info">Français</span></a>
+</nav>
     <div class="row my-md-1">
       <div class="col-lg-8 mx-auto">
 
@@ -17,25 +57,25 @@
           <div class="card-body">
             <h1 class="display-4"><img src="/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
             </h1>
-            <p id="intro">{{translate.intro[page.lang]}}</p>
+            <p id="intro">Avec Praatbox, vous pouvez passer des appels vidéo à une personne avec laquelle vous n'êtes pas autorisé à avoir un contact physique.</p>
 
           <div class="collapse" id="uitleg">
-            <h2 key="how-to-use">{{translate.how-to-use[page.lang]}}</h2>
+            <h2 key="how-to-use">Comment utiliser la Praatbox?</h2>
             <ol class="steps">
-              <li>{{translate.steps-1[page.lang]}}</li>
-              <li>{{translate.steps-2[page.lang]}}</li>
-              <li>{{translate.steps-3[page.lang]}}</li>
-              <li>{{translate.steps-4[page.lang]}}</li>
-              <li>{{translate.steps-5[page.lang]}}</li>
-              <li>{{translate.steps-6[page.lang]}}</li>
+              <li>Donnez un nom à votre Praatbox. Trouvez un nom et saisissez-le dans le premier champ, ou saisissez le nom que quelqu'un vous a donné.</li>
+              <li>Donnez une localisation à votre Praatbox. Tapez votre localisation dans le deuxième champ. Pour une Praatbox existante, indiquez la localisation que vous avez obtenu de votre contact.</li>
+              <li>Choisissez un mot au hasard ou conservez celui qui est généré automatiquement. Pour une Praatbox existante, choisissez le mot que vous avez obtenu de votre contact.</li>
+              <li>Si vous avez exécuté les étapes ci-dessus, cliquez sur le bouton "Start Praatbox".</li>
+              <li>Le Praatbox commence ! <br />(Ensuite, vous pouvez la sécuriser avec un mot de passe. Voir <i class="fas fa-info-circle"></i> coin inférieur droit)</li>
+              <li>Vous pouvez maintenant partager cette praatbox de différentes manières, la seule chose à faire est de copier le lien</li>
             </ol>
-            <p>{{translate.steps-more-questions[page.lang]}}</p>
+            <p>Vous avez d'autres questions ? Vous trouverez peut-être une réponse dans la <a href="/vragen.html">foire aux questions</a>.</p>
 
           </div>
 
-            <h2>{{translate.start-a-box[page.lang]}}</h2>
+            <h2>Démarrez un Praatbox</h2>
             <div class="opgelet">
-              <p>{{translate.name-limitations[page.lang]}}</p>
+              <p>Attention ! <br><span>Utilisez uniquement des chiffres et des lettres dans les champs</span></p>
             </div>
 
           </div>
@@ -48,7 +88,7 @@
           <div class="alert alert-warning hidden" role="alert">
           </div>
           <div class="alert alert-danger hidden" role="alert">
-            <p>{{translate.input-too-long[page.lang]}}</p>
+            <p>Entrée trop longue</p>
           </div>
         </div>
       </div>
@@ -56,9 +96,9 @@
         <div class="col-lg-8 mx-auto">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="a">{{translate.praatbox-name[page.lang]}}</label>
+              <label class="input-group-text" id="basic-addon1" for="a">Nom de votre Praatbox</label>
             </div>
-            <input type="text" class="form-control" id="a" placeholder="{{translate.placeholder-name[page.lang]}}"
+            <input type="text" class="form-control" id="a" placeholder="Vous pouvez choisir ce nom tout seul"
               aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
               title="bv.: Oma-Gent" required>
           </div>
@@ -68,9 +108,9 @@
         <div class="col-lg-8 mx-auto">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="b">{{translate.praatbox-location[page.lang]}}</label>
+              <label class="input-group-text" id="basic-addon1" for="b">Localisation de votre Praatbox</label>
             </div>
-            <input type="text" class="form-control" id="b" placeholder="{{translate.placeholder-location[page.lang]}}"
+            <input type="text" class="form-control" id="b" placeholder="Référence à votre lieu de résidence"
               aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
               title="bv.: Sint-Niklaas, Gent,  ..." required>
           </div>
@@ -81,7 +121,7 @@
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" for="c">{{translate.random-word[page.lang]}}</label>
+              <label class="input-group-text" for="c">Mot aléatoire</label>
             </div>
             <select class="custom-select" id="c">
               <option value=""></option>
@@ -150,14 +190,14 @@
 
         <div class="col-lg-8 mx-auto">
           <button onclick="redirectToRoom()" value="Start de praatbox"
-            class="enableOnInput btn btn-primary mb-2 hidden">{{translate.start-praatbox[page.lang]}}</button>
+            class="enableOnInput btn btn-primary mb-2 hidden">Démarrez la Praatbox</button>
         </div>
       </div>
 
       <div class="row my-md-1">
         <div class="col-lg-8 mx-auto d-flex justify-content-between">
-          <p><a href="#uitleg" data-toggle="collapse">{{translate.how-to-use[page.lang]}}</a></p>
-          <p><a href="/pages/{{page.lang}}/vragen">{{translate.faq[page.lang]}}</a></p>
+          <p><a href="#uitleg" data-toggle="collapse">Comment utiliser la Praatbox?</a></p>
+          <p><a href="/pages/fr/vragen">Foire aux questions</a></p>
         </div>
       </div>
 
@@ -177,12 +217,40 @@
         <img src="/praatbox_logo.svg" class="meethead__logoimg" alt="Praatbox">
       </div>
       <div class="meethead__body">
-        <div id="meeting-text">{{translate.meeting-header-text[page.lang]}}</div>
-        <button class="btn btn-sm btn-copy btn-info mb-2" id="linkbtn">{{translate.copy-link[page.lang]}}</button>
+        <div id="meeting-text">Remplissez sur <strong><a href="https://www.praatbox.be">www.praatbox.be</a></strong><span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp" id="wrd_disp_c"></span> pour participer</div>
+        <button class="btn btn-sm btn-copy btn-info mb-2" id="linkbtn">Copier le lien</button>
         <button onclick="sendWhatsapp()" class="btn btn-sm btn-whatsapp btn-info mb-2">Whatsapp</button>
-        <button onclick="reloadPraatbox()" class="btn btn-sm btn-info mb-2"><i class="fas fa-sync-alt"></i> <span>{{translate.reload[page.lang]}}</span></button>
+        <button onclick="reloadPraatbox()" class="btn btn-sm btn-info mb-2"><i class="fas fa-sync-alt"></i> <span>Rafraîchir</span></button>
       </div>
     </div>
     <div class="meet" id="meet"></div>
   </div>
-{% include footer.html %}
+<!-- JQuery -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Detect RTC -->
+<script src="/vendor/detectrtc/DetectRTC.js"></script>
+<!-- Praatbox script -->
+<script>
+  lang='fr'
+</script>
+<script src="/app.js?v{VERSION}"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-52249571-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-52249571-4');
+
+  setPageLanguage('fr');
+</script>
+</body>
+
+</html>
