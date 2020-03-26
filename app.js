@@ -118,6 +118,20 @@ $(document).ready(function () {
         $('.hide-for-old-visitors').addClass('collapse-show');
 	}
 
+	$("#btn_whatsapp").click(function(e){
+		e.preventDefault();
+		sendWhatsapp();
+	});
+
+	$("#btn_mail").click(function(e){
+		e.preventDefault();
+		sendMail();
+	});
+
+	$("#btn_reload").click(function(e){
+		e.preventDefault();
+		reloadPraatbox();
+	});
 });
 
 function detectBrowser() {
@@ -180,7 +194,7 @@ function getParameterByName(name, url) {
 	return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-$("#linkbtn").click(
+$("#btn_copy_link").click(
 	function() {
 		let link = "https://www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"));
 		$("#roomurl").select();
@@ -300,7 +314,7 @@ function sendWhatsapp(){
 
 function sendMail(){
 	let link = getLink();
-	window.open("mailto:?body=" + escape(link), '_blank');
+	window.location.href = "mailto:?body=" + escape(link);
 }
 
 function reloadPraatbox(){

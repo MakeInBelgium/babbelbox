@@ -85,6 +85,11 @@ body {
 .meethead {
     display: grid;
     grid-template-columns: 120px auto;
+    grid-template-rows: auto;
+    @media screen and ( max-width:800px ) { 
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
 }
 .meethead__logo {
     padding:2px;
@@ -96,7 +101,23 @@ body {
 }
 .meethead__body {
     padding:2px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    @media screen and ( max-width:800px ) {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
 }
+
+.meethead__buttons {
+    display: flex;
+    justify-content: flex-end;
+    @media screen and ( max-width:800px ) {
+        justify-content: space-between;
+    }
+}
+
 .meethead__body a {
     color: #000000;
 }

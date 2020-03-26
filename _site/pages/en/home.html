@@ -35,6 +35,7 @@
 	
 
 </head>
+
 <body>
   <script src="https://meet.jit.si/external_api.js"></script>
   <!-- sanity check -->
@@ -59,19 +60,19 @@
             </h1>
             <p id="intro">Praatbox allows you to videocall someone you can't have physical contact with.</p>
 
-          <div class="collapse" id="uitleg">
-            <h2 key="how-to-use">How do you use the Praatbox?</h2>
-            <ol class="steps">
-              <li>Give your Praatbox a name. Make up a name and type it in the first field. <br/>  For an existing Praatbox, fill in the name you got from your contact.</li>
-              <li>Give your Praatbox a location. Type your location into the second field. <br/> For an existing Praatbox, fill in the location you got from your contact.</li>
-              <li>Either choose a random word, or keep the automatically generated one. <br/>  For an existing Praatbox, choose the word you got from your contact.</li>
-              <li>If you have executed the steps above, click the "Start Praatbox" button</li>
-              <li>The Praatbox is starting! <br />(Afterwards, you can secure it with a password. See <i class="fas fa-info-circle"></i> bottom-right corner)</li>
-              <li>You can now share this praatbox in a lot of different ways, the only thing you need to do is copy the link</li>
-            </ol>
-            <p>Got more questions? Maybe you can find an answer in the <a href="/vragen.html">frequently asked questions</a>.</p>
+            <div class="collapse" id="uitleg">
+              <h2 key="how-to-use">How do you use the Praatbox?</h2>
+              <ol class="steps">
+                <li>Give your Praatbox a name. Make up a name and type it in the first field. <br/>  For an existing Praatbox, fill in the name you got from your contact.</li>
+                <li>Give your Praatbox a location. Type your location into the second field. <br/> For an existing Praatbox, fill in the location you got from your contact.</li>
+                <li>Either choose a random word, or keep the automatically generated one. <br/>  For an existing Praatbox, choose the word you got from your contact.</li>
+                <li>If you have executed the steps above, click the "Start Praatbox" button</li>
+                <li>The Praatbox is starting! <br />(Afterwards, you can secure it with a password. See <i class="fas fa-info-circle"></i> bottom-right corner)</li>
+                <li>You can now share this praatbox in a lot of different ways, the only thing you need to do is copy the link</li>
+              </ol>
+              <p>Got more questions? Maybe you can find an answer in the <a href="/vragen.html">frequently asked questions</a>.</p>
 
-          </div>
+            </div>
 
             <h2>Start a Praatbox</h2>
             <div class="opgelet">
@@ -108,7 +109,8 @@
         <div class="col-lg-8 mx-auto">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="b">Location of your Praatbox</label>
+              <label class="input-group-text" id="basic-addon1"
+                for="b">Location of your Praatbox</label>
             </div>
             <input type="text" class="form-control" id="b" placeholder="Reference to your location"
               aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
@@ -207,7 +209,7 @@
           <p class="version">v. {VERSION}</p>
         </div>
       </div>
-      <hr/>
+      <hr />
     </div>
   </div>
 
@@ -218,15 +220,18 @@
       </div>
       <div class="meethead__body">
         <div id="meeting-text">Enter on <strong><a href="https://www.praatbox.be">www.praatbox.be</a></strong><span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp" id="wrd_disp_c"></span> to participate.</div>
-        <button class="btn btn-sm btn-copy btn-info mb-2" id="linkbtn">Copy link</button>
-        <button onclick="sendWhatsapp()" class="btn btn-sm btn-whatsapp btn-info mb-2">Whatsapp</button>
-        <button onclick="sendMail()" class="btn btn-sm btn-whatsapp btn-info mb-2">Mail</button>
-        <button onclick="reloadPraatbox()" class="btn btn-sm btn-info mb-2"><i class="fas fa-sync-alt"></i> <span>Reload</span></button>
+        <div class="meethead__buttons">
+          <button id="btn_copy_link" class="btn btn-sm btn-copy btn-info mb-2 mr-1" id="linkbtn">Copy link</button>
+          <button id="btn_whatsapp" class="btn btn-sm btn-whatsapp btn-info mb-2 mr-1"><i class="fab fa-whatsapp"></i> Whatsapp</button>
+          <button id="btn_mail" class="btn btn-sm btn-whatsapp btn-info mb-2 mr-1"><i class="far fa-envelope"></i> Mail</button>
+          <button id="btn_reload" class="btn btn-sm btn-info mb-2 mr-1"><i class="fas fa-sync-alt"></i>
+            <span>Reload</span></button>
+        </div>
       </div>
     </div>
     <div class="meet" id="meet"></div>
   </div>
-<!-- JQuery -->
+  <!-- JQuery -->
 <script src="/vendor/jquery/jquery.min.js"></script>
 <!-- Bootstrap core JavaScript -->
 <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

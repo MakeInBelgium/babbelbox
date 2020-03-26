@@ -28,13 +28,21 @@ body { padding: 1rem; font-family: sans-serif; }
 
 #intro { text-align: center; line-height: 1.5em; }
 
-.meethead { display: grid; grid-template-columns: 120px auto; }
+.meethead { display: grid; grid-template-columns: 120px auto; grid-template-rows: auto; }
+
+@media screen and (max-width: 800px) { .meethead { grid-template-rows: auto auto; grid-template-columns: auto; } }
 
 .meethead__logo { padding: 2px; }
 
 .meethead__logoimg { width: 100%; max-height: 30px; height: auto; }
 
-.meethead__body { padding: 2px; }
+.meethead__body { padding: 2px; display: grid; grid-template-columns: auto auto; grid-template-rows: auto; }
+
+@media screen and (max-width: 800px) { .meethead__body { grid-template-columns: auto; grid-template-rows: auto auto; } }
+
+.meethead__buttons { display: flex; justify-content: flex-end; }
+
+@media screen and (max-width: 800px) { .meethead__buttons { justify-content: space-between; } }
 
 .meethead__body a { color: #000000; }
 
