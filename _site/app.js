@@ -40,7 +40,8 @@ $(document).ready(function () {
 		$("#roomdata").addClass("hidden");
 		const options = {
 			roomName: room,
-			parentNode: document.getElementById("meet")
+			parentNode: document.getElementById("meet"),
+			configOverwrite: { defaultLanguage: lang }
 		};
 
 		$("#wrd_disp_a").html(getParameterByName("wrd_a"));
