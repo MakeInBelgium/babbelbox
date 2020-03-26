@@ -9,8 +9,7 @@
   </div>
   <!-- Page Content -->
   <div class="container hidden" id="roomdata">
-    <div class="row">{% include language-switch.html %}</div>
-
+    {% include language-switch.html %}
     <div class="row my-md-1">
       <div class="col-lg-8 mx-auto">
 
@@ -20,7 +19,7 @@
             </h1>
             <p id="intro">{{translate.intro[page.lang]}}</p>
 
-          <div class="collapse hide-for-old-visitors" id="uitleg">
+          <div class="collapse" id="uitleg">
             <h2 key="how-to-use">{{translate.how-to-use[page.lang]}}</h2>
             <ol class="steps">
               <li>{{translate.steps-1[page.lang]}}</li>
@@ -43,16 +42,10 @@
         </div>
       </div>
     </div>
-    <div class="row my-md-1">
-      <div class="col-lg-8 mx-auto d-flex justify-content-between">
-        <p><a href="#uitleg" data-toggle="collapse" data-target="#uitleg">Hoe gebruik je de Praatbox?</a></p>
-        <p><a href="/vragen.html">veelgestelde vragen</a></p>
-      </div>
-    </div>
     <div class="card-body">
       <div id="alert_rtc" class="row my-md-1 hidden">
         <div class="col-lg-8 mx-auto">
-          <div class="alert alert-warning hidden" role="alert">            
+          <div class="alert alert-warning hidden" role="alert">
           </div>
           <div class="alert alert-danger hidden" role="alert">
             <p>{{translate.input-too-long[page.lang]}}</p>
@@ -163,11 +156,11 @@
 
       <div class="row my-md-1">
         <div class="col-lg-8 mx-auto d-flex justify-content-between">
-          <p><a href="#uitleg" data-toggle="collapse" data-target="#uitleg">{{translate.how-to-use[page.lang]}}</a></p>
+          <p><a href="#uitleg" data-toggle="collapse">{{translate.how-to-use[page.lang]}}</a></p>
           <p><a href="/pages/{page.lang}/vragen.html">{{translate.faq[page.lang]}}</a></p>
-        </div>               
-      </div>   
-      
+        </div>
+      </div>
+
       <div class="row my-md-1">
         <div class="col-lg-8 mx-auto d-flex justify-content-between">
           <p><a href="https://www.coronadenktank.be/" target="_blank" rel="noopener">www.coronadenktank.be</a></p>
