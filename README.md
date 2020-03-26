@@ -12,6 +12,3 @@ Neem dan deel aan de conversatie op de Slack workspace van de Corona-denktank Ma
 Praatbox gebruikt Jekyll om obv templates een statische site te genereren. Instructies om Jekyll te installeren op jouw systeem, lees je op https://jekyllrb.com/docs/
 
 Eens Jekyll geïnstalleerd, doe je `bundle exec jekyll serve` in de root van het project (waar deze readme staat) en dan kan je de site previewen op `http://localhost:4000`.
-
-# Vertalen
-In `_data` vind je `translation.csv`. In die file kan je ontbrekende tekst/talen toevoegen.

@@ -232,7 +232,7 @@ function generatePraatboxURL(a,b,c){
 		c !== null
 	) {
 		const roomName = generateName(a, b, c);
-		return "?kamer=" + roomName + "&wrd_a=" + removeCharacters(a) + "&wrd_b=" + removeCharacters(b) + "&wrd_c=" + removeCharacters(c);
+		return "pages/" + getActiveLanguage() + "/home.html?kamer=" + roomName + "&wrd_a=" + removeCharacters(a) + "&wrd_b=" + removeCharacters(b) + "&wrd_c=" + removeCharacters(c);
 	}
 }
 
@@ -350,4 +350,12 @@ function getTranslation(key) {
 // Process translation
 function setPageLanguage(lang) {
 	localStorage.setItem('activeLanguage', lang);
+}
+
+function getActiveLanguage() {
+	let lang = localStorage.getItem('activeLanguage')
+	if ( ! ['nl','fr','en'].includes( lang ) ) {
+		return 'nl';
+	}
+	return lang;
 }
