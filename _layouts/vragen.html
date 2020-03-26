@@ -2,18 +2,21 @@
 <body>
 	<!-- Nav -->
 	<div class="container sticky-top bg-white topnav pt-2 border-bottom mb-3" id="pageheader">
+		<div class="row">
+			{% include language-switch.html %}
+		</div>
 		<div class="row justify-content-sm-center my-md-1">
 			<div class="col-6 col-lg-4">
-				<a href="/" class="btn btn-sm btn-outline-primary">&larr; Terug</a>
+				<a href="/pages/{{page.lang}}/home" class="btn btn-sm btn-outline-primary">&larr; {{translate.go-back[page.lang]}}</a>
 			</div>
 			<div class="col-6 col-lg-4 text-right text-md-left">
-				<a href="/"><img src="./praatbox_logo.svg" class="topnav__logoimg float-right"
+				<a href="/pages/{{page.lang}}/home"><img src="/praatbox_logo.svg" class="topnav__logoimg float-right"
 						alt="Praatbox"></a>
 			</div>
 		</div>
 		<div class="row my-md-1">
 			<div class="col-lg-8 mx-auto">
-				<h1 class="responsive-h1 mt-2">Veelgestelde vragen</h1>
+				<h1 class="responsive-h1 mt-2">{{translate.faq[page.lang]}}</h1>
 			</div>
 		</div>
 	</div>
@@ -27,13 +30,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Wat gebeurt er als ik geen paswoord instel?</summary>
-							<p>Indien je geen paswoord instelt kan iedereen ter wereld het videogesprek bijwonen. Het is
-								alsof
-								de virtuele voordeur openstaat en iedereen plots in een gesprek kan inspringen.</p>
-							<p>Dit kan soms verschieten zijn, dus we raden sterk aan om een paswoord in te stellen (ook
-								voor
-								privacy redenen kan dit noodzakelijk zijn).</p>
+							<summary class="summary">{{translate.faq_1[page.lang]}}</summary>
+							<p>{{translate.faq_1_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -42,21 +40,14 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Hoe kan ik een paswoord toevoegen aan het kanaal?
-							</summary>
-							<p>De eerste persoon die het kanaal opstart kan een paswoord toe voegen door:</p>
+							<summary class="summary">{{translate.faq_2[page.lang]}}</summary>
+							<p>{{translate.faq_2_a[page.lang]}}</p>
 							<ol>
-								<li>te klikken op <i class="fas fa-info-circle"></i> (rechts onderaan in je scherm te
-									vinden)
-								</li>
-								<li>vervolgens op “Add password” klikken. Typ een sterk paswoord in het veld en druk op
-									enter.
-									Het paswoord is pas actief als je de tekst “cancel password” niet meer ziet, of ook
-									als
-									je
-									de tekst “remove password” ziet.</li>
+								<li>{{translate.faq_2_a_li_1[page.lang]}}</li>
+								<li>{{translate.faq_2_a_li_2[page.lang]}}</li>
+								<p>{{translate.faq_2_a_end[page.lang]}}</p>
 							</ol>
-							<img src="./img/faq/Picture2.png" class="img-fluid" alt="Screenshot">
+							<img src="/img/faq/Picture2.png" class="img-fluid" alt="Screenshot">
 						</details>
 					</div>
 				</div>
@@ -65,10 +56,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Kan ik een paswoord terug verwijderen?</summary>
-							<p>Ja, de eerste persoon (laptop / computer) die het videogesprek aangemaakt heeft kan een
-								paswoord
-								verwijderen door te klikken op “remove password”.</p>
+							<summary class="summary">{{translate.faq_3[page.lang]}}</summary>
+							<p>{{translate.faq_3_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -77,11 +66,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Wat is een sterk paswoord?</summary>
-							<p>Minstens 8 karakters, liefst een mix van letters en cijfers. Nog sterker is om een
-								leesteken
-								toe
-								te voegen, maar dat is niet noodzakelijk.</p>
+							<summary class="summary">{{translate.faq_4[page.lang]}}</summary>
+							<p>{{translate.faq_4_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -90,18 +76,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Is het mogelijk om per bewoner een babbelbox sessie op te zetten,
-								enkel voor zijn/haar familie?
-							</summary>
-							<p>Door slim om te gaan met het laatste keuzewoord, kan je zelf een schema opstellen wanneer
-								welke bewoner een babbelbox contactmoment heeft met enkel zijn/haar familie. </p>
-							<p>Voorbeeld: Eerste woord: naam van je WZC<br />
-								Tweede woord: gemeente of iets anders<br />
-								Derde woord: dit kies je op voorhand voor elke bewoner. <br />
-								Je spreekt dan bijvoorbeeld een schema af<br />
-								14:00 Bewoner Anna, derde woord is kip<br />
-								14:30 Bewoner Bert, derde woord is kat
-							</p>
+							<summary class="summary">{{translate.faq_5[page.lang]}}</summary>
+							<p>{{translate.faq_5_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -110,22 +86,11 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Ik krijg geen beeld te zien en/of mensen horen me niet
-							</summary>
-							<p>Bij het openen van het videogesprek vraagt je internetbrowser om toegang tot je microfoon
-								en
-								camera. Druk hier steeds op toestaan (allow). Het popupvenster dat je hiervoor te zien
-								krijgt
-								ziet er verschillend uit afhankelijk van je internet browser of besturingssysteem.<br />
-								Enkele voorbeelden:</p>
-							<img src="./img/faq/Picture3.png" class="img-fluid mb-4" alt="Screenshot">
-							<p>Indien het niet lukt, probeer dan een andere internetbrowser om het videogesprek te
-								openen.
-								<a href="https://www.google.com/intl/nl/chrome/">Google Chrome</a> geeft (doorgaans) het
-								minste
-								problemen en kan je downloaden via <a
-									href="https://www.google.com/intl/nl/chrome/">https://www.google.com/intl/nl/chrome/</a><br />
-								De Safari browser (standaard op Apple producten) wordt afgeraden.</p>
+							<summary class="summary">{{translate.faq_6[page.lang]}}</summary>
+							<p>{{translate.faq_6_a[page.lang]}}</p>
+							<p>{{translate.faq_6_ttl_img[page.lang]}}</p>
+							<img src="/img/faq/Picture3.png" class="img-fluid mb-4" alt="Screenshot">
+							<p>{{translate.faq_6_a_end[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -134,10 +99,9 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Hoe ziet een babbelbox sessie met meerdere deelnemers er uit?
-							</summary>
-							<p>De verschillende beelden komen dan naast en onder elkaar te staan:</p>
-							<img src="./img/faq/Picture4.png" alt="Mozaïekbeeld van video's" />
+							<summary class="summary">{{translate.faq_7[page.lang]}}</summary>
+							<p>{{translate.faq_7_a[page.lang]}}</p>
+							<img src="/img/faq/Picture4.png" alt="Mozaïekbeeld van video's" />
 						</details>
 					</div>
 				</div>
@@ -146,13 +110,9 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Hoe stel ik de taal in?
-							</summary>
-							<p>Klik op “Settings” (instellingen), vervolgens op “More” (meer) en in het Language (taal)
-								menu
-								kan je bijvoorbeeld “Dutch”(nederlands) (of een andere taal) selecteren. Klik op OK.
-							</p>
-							<img src="./img/faq/Picture5.png" alt="Screenshot" />
+							<summary class="summary">{{translate.faq_8[page.lang]}}</summary>
+							<p>{{translate.faq_8_a[page.lang]}}</p>
+							<img src="/img/faq/Picture5.png" alt="Screenshot" />
 						</details>
 					</div>
 				</div>
@@ -161,14 +121,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Het beeld hapert soms
-							</summary>
-							<p>Verlaag de kwaliteit van de video.</p>
-							<p>Bij laptop of computer met echt toetsenbord: Druk op A en verlaag de kwaliteit tot lage
-								resolutie.</p>
-							<p>Bij mobiele toestellen: druk op de 3 puntjes, kies voor modus “Alleen audio” inschakelen
-								(dan is er geen video voor deze mobiele deelnemer).
-							</p>
+							<summary class="summary">{{translate.faq_9[page.lang]}}</summary>
+							<p>{{translate.faq_9_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -177,17 +131,8 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Wat zijn de minimum specificaties?
-							</summary>
-							<p>De app “Jitsi Meet” heeft
-								op Apple iPad of iPhone toestellen minimum iOS 11.0 of hoger nodig: <a
-									href="https://itunes.apple.com/us/app/jitsi-meet/id1165103905">https://itunes.apple.com/us/app/jitsi-meet/id1165103905</a>.
-							</p>
-							<p>op Android toestellen heeft de app minimum Android 5.0 of hoger nodig. <a
-									href="https://play.google.com/store/apps/details?id=org.jitsi.meet">https://play.google.com/store/apps/details?id=org.jitsi.meet</a>.
-							</p>
-							<p>Op een gewone laptop of PC gebruik je best een recente versie van <a
-									href="https://www.google.com/intl/nl/chrome/">Google Chrome</a>.</p>
+							<summary class="summary">{{translate.faq_10[page.lang]}}</summary>
+							<p>{{translate.faq_10_a[page.lang]}}</p>
 						</details>
 					</div>
 				</div>
@@ -196,11 +141,9 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Ik krijg in de Chrome browser een venster rechts boven, wat moet ik
-								doen?</summary>
-							<p>Klik op het vakje naast “Don’t show me this again” en vervolgens op het kruisje rechts
-								boven. Dit hoef je niet te installeren.</p>
-							<img src="./img/faq/Picture6.png" alt="Screenshot" />
+							<summary class="summary">{{translate.faq_11[page.lang]}}</summary>
+							<p>{{translate.faq_11_a[page.lang]}}</p>
+							<img src="/img/faq/Picture6.png" alt="Screenshot" />
 						</details>
 					</div>
 				</div>
@@ -209,11 +152,9 @@
 				<div class="card">
 					<div class="card-body">
 						<details>
-							<summary class="summary">Ik krijg in Chrome de meldingen “error obtaining microphone
-								permission” en “Error obtaining camera permission”</summary>
-							<p>Klik op het slotje naast de url “praatbox.be” en kies voor zowel de microfoon als camera
-								voor toestaan. Klik op het kruisje om de popup te sluiten. Klik op “opnieuw laden”.</p>
-							<img src="./img/faq/Picture7.png" alt="Screenshot" />
+							<summary class="summary">{{translate.faq_12[page.lang]}}</summary>
+							<p>{{translate.faq_12_a[page.lang]}}</p>
+							<img src="/img/faq/Picture7.png" alt="Screenshot" />
 						</details>
 					</div>
 				</div>

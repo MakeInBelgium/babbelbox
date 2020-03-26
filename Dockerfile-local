@@ -1,0 +1,10 @@
+FROM jekyll/jekyll
+
+COPY Gemfile .
+COPY Gemfile.lock .
+
+RUN bundle install
+
+COPY . /srv/jekyll
+
+CMD ["jekyll","serve"]
