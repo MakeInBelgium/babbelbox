@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="de">
 
 <head>
 	<meta charset="utf-8" />
@@ -59,25 +59,25 @@
           <div class="card-body">
             <h1 class="display-4"><img src="/praatbox_logo.svg" class="mx-auto d-block bb-logo" alt="Praatbox">
             </h1>
-            <p id="intro">Avec Praatbox, vous pouvez passer des appels vidéo à une personne avec laquelle vous n'êtes pas autorisé à avoir un contact physique.</p>
+            <p id="intro">Mit Praatbox können Sie Videogespräche mit jemandem führen, mit dem Sie keinen physischen Kontakt haben dürfen.</p>
 
             <div class="collapse" id="uitleg">
-              <h2 key="how-to-use">Comment utiliser la Praatbox?</h2>
+              <h2 key="how-to-use">Wie verwenden Sie die Praatbox?</h2>
               <ol class="steps">
-                <li>Donnez un nom à votre Praatbox. Trouvez un nom et saisissez-le dans le premier champ, ou saisissez le nom que quelqu'un vous a donné.</li>
-                <li>Donnez une localisation à votre Praatbox. Tapez votre localisation dans le deuxième champ. Pour une Praatbox existante, indiquez la localisation que vous avez obtenu de votre contact.</li>
-                <li>Choisissez un mot au hasard ou conservez celui qui est généré automatiquement. Pour une Praatbox existante, choisissez le mot que vous avez obtenu de votre contact.</li>
-                <li>Si vous avez exécuté les étapes ci-dessus, cliquez sur le bouton "Start Praatbox".</li>
-                <li>Le Praatbox commence ! <br />(Ensuite, vous pouvez la sécuriser avec un mot de passe. Voir <i class="fas fa-info-circle"></i> coin inférieur droit)</li>
-                <li>Vous pouvez maintenant partager cette praatbox de différentes manières, la seule chose à faire est de copier le lien</li>
+                <li>Geben Sie Ihrer Praatbox einen Namen. Suchen Sie einen Namen und geben Sie ihn in das erste Feld ein, oder geben Sie den Namen ein, den Ihnen jemand gegeben hat.</li>
+                <li>Geben Sie Ihrer Praatbox einen Standort. Geben Sie Ihren Standort in das zweite Feld ein. Geben Sie für eine bestehende Praatbox den Standort ein, den Sie von Ihrem Ansprechpartner erhalten haben.</li>
+                <li>Wählen Sie ein Wort nach dem Zufallsprinzip aus oder behalten Sie das automatisch generierte Wort. Wählen Sie für eine bestehende Praatbox das Wort, das Sie von Ihrem Ansprechpartner erhalten haben.</li>
+                <li>Wenn Sie die vorhergehenden Schritte abgeschlossen haben, klicken Sie auf "Start der Praatbox".</li>
+                <li>Die Praatbox beginnt! <br />(Nachher können Sie Ihre Chatbox mit einem Passwort schützen. Siehe <i class="fas fa-info-circle"></i> rechts unten )</li>
+                <li>Sie können diese Praatbox nun auf verschiedene Weise teilen, Sie brauchen nur noch den Link zu kopieren</li>
               </ol>
-              <p>Vous avez d'autres questions ? Vous trouverez peut-être une réponse dans la <a href="/vragen.html">foire aux questions</a>.</p>
+              <p>Haben Sie noch weitere Fragen? Eine Antwort finden Sie vielleicht in den <a href="/vragen.html">Häufig gestellte Fragen</a>.</p>
 
             </div>
 
-            <h2>Démarrez un Praatbox</h2>
+            <h2>Starten Sie eine Praatbox</h2>
             <div class="opgelet">
-              <p>Attention ! <br><span>Utilisez uniquement des chiffres et des lettres dans les champs</span></p>
+              <p>Achtung: <br><<span>Verwenden Sie nur Zahlen und Buchstaben in den Feldern </span>.</p>
             </div>
 
           </div>
@@ -90,7 +90,7 @@
           <div class="alert alert-warning hidden" role="alert">
           </div>
           <div class="alert alert-danger hidden" role="alert">
-            <p>Entrée trop longue</p>
+            <p>Eingabe zu lange</p>
           </div>
         </div>
       </div>
@@ -98,9 +98,9 @@
         <div class="col-lg-8 mx-auto">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="a">Nom de votre Praatbox</label>
+              <label class="input-group-text" id="basic-addon1" for="a">Name Ihrer Praatbox</label>
             </div>
-            <input type="text" class="form-control" id="a" placeholder="Vous pouvez choisir ce nom tout seul"
+            <input type="text" class="form-control" id="a" placeholder="Sie können diesen Namen selbst wählen"
               aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
               title="bv.: Oma-Gent" required>
           </div>
@@ -111,9 +111,9 @@
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <label class="input-group-text" id="basic-addon1"
-                for="b">Localisation de votre Praatbox</label>
+                for="b">Standort Ihrer Praatbox</label>
             </div>
-            <input type="text" class="form-control" id="b" placeholder="Référence à votre lieu de résidence"
+            <input type="text" class="form-control" id="b" placeholder="Hinweis auf Ihren Standort"
               aria-label="Username" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="bottom"
               title="bv.: Sint-Niklaas, Gent,  ..." required>
           </div>
@@ -124,7 +124,7 @@
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" for="c">Mot aléatoire</label>
+              <label class="input-group-text" for="c">Zufallswort</label>
             </div>
             <select class="custom-select" id="c">
               <option value=""></option>
@@ -193,14 +193,14 @@
 
         <div class="col-lg-8 mx-auto">
           <button onclick="redirectToRoom()" value="Start de praatbox"
-            class="enableOnInput btn btn-primary mb-2 hidden">Démarrez la Praatbox</button>
+            class="enableOnInput btn btn-primary mb-2 hidden">Starten Sie die Praatbox</button>
         </div>
       </div>
 
       <div class="row my-md-1">
         <div class="col-lg-8 mx-auto d-flex justify-content-between">
-          <p><a href="#uitleg" data-toggle="collapse">Comment utiliser la Praatbox?</a></p>
-          <p><a href="/pages/fr/vragen.html">Foire aux questions</a></p>
+          <p><a href="#uitleg" data-toggle="collapse">Wie verwenden Sie die Praatbox?</a></p>
+          <p><a href="/pages/de/vragen.html">Häufig gestellte Fragen</a></p>
         </div>
       </div>
 
@@ -220,13 +220,13 @@
         <img src="/praatbox_logo.svg" class="meethead__logoimg" alt="Praatbox">
       </div>
       <div class="meethead__body">
-        <div id="meeting-text">Remplissez sur <strong><a href="https://www.praatbox.be">www.praatbox.be</a></strong><span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp" id="wrd_disp_c"></span> pour participer</div>
+        <div id="meeting-text">Geben Sie auf <strong><a href="https://www.praatbox.be">www.praatbox.be</a></strong><span class="wrd_disp" id="wrd_disp_a"></span> <span class="wrd_disp" id="wrd_disp_b"></span> <span class="wrd_disp" id="wrd_disp_c"></span> ein, um teilzunehmen.</div>
         <div class="meethead__buttons">
-          <button id="btn_copy_link" class="btn btn-sm btn-copy btn-info mb-2 mr-1" id="linkbtn">Copier le lien</button>
+          <button id="btn_copy_link" class="btn btn-sm btn-copy btn-info mb-2 mr-1" id="linkbtn">Link kopieren</button>
           <button id="btn_whatsapp" class="btn btn-sm btn-whatsapp btn-info mb-2 mr-1"><i class="fab fa-whatsapp"></i> WhatsApp</button>
           <button id="btn_mail" class="btn btn-sm btn-whatsapp btn-info mb-2 mr-1"><i class="far fa-envelope"></i> Mail</button>
           <button id="btn_reload" class="btn btn-sm btn-info mb-2 mr-1"><i class="fas fa-sync-alt"></i>
-            <span>Rafraîchir</span></button>
+            <span>Aktualisieren Sie</span></button>
         </div>
       </div>
     </div>
@@ -240,7 +240,7 @@
 <script src="/vendor/detectrtc/DetectRTC.js"></script>
 <!-- Praatbox script -->
 <script>
-  lang='fr'
+  lang='de'
 </script>
 <script src="/app.js?v{VERSION}"></script>
 
@@ -256,7 +256,7 @@
 
   gtag('config', 'UA-52249571-4');
 
-  setPageLanguage('fr');
+  setPageLanguage('de');
 </script>
 </body>
 

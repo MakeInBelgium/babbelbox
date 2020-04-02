@@ -14,7 +14,7 @@ $(document).ready(function () {
 		lang = localStorage.getItem('activeLanguage');
 	}
 
-	if ( 'fr' !== lang && 'en' !== lang && 'nl' !== lang ) {
+	if ( 'fr' !== lang && 'en' !== lang && 'nl' !== lang && 'de' !== lang ) {
 		lang='nl';
 	} else {
 		localStorage.setItem('activeLanguage',lang);
@@ -356,7 +356,7 @@ function setPageLanguage(lang) {
 
 function getActiveLanguage() {
 	let lang = localStorage.getItem('activeLanguage')
-	if ( ! ['nl','fr','en'].includes( lang ) ) {
+	if ( ! ['nl','fr','de','en'].includes( lang ) ) {
 		return 'nl';
 	}
 	return lang;
