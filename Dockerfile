@@ -1,7 +1,6 @@
 FROM nginx:alpine
 
-# build with this cmd: 
-# docker build -t babbelbox --build-arg vcsref=$(git rev-parse --short HEAD) .
+# See docker-run.sh for instructions on how to build.
 ARG vcsref=0
 ENV vcsref=$vcsref
 
@@ -12,7 +11,5 @@ COPY ./_site /usr/share/nginx/html
 
 WORKDIR /usr/share/nginx/html
 
-RUN sed -i "s|{VERSION}|$vcsref|g" index.html
-RUN sed -i "s|www.praatbox.be|$DOMAIN|g" index.html
-RUN sed -i "s|{VERSION}|$vcsref|g" vragen.html
-RUN sed -i "s|www.praatbox.be|$DOMAIN|g" vragen.html
+RUN sed -i "s|{VERSION}|$vcsref|g" *.html pages/*/*.html
+RUN sed -i "s|www.praatbox.be|$DOMAIN|g" *.html pages/*/*.html
