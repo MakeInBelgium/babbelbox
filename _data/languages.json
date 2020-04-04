@@ -69,7 +69,7 @@
         "nl": "Opgelet! <br><span>Gebruik enkel cijfers en letters in de velden</span>",
         "en": "Beware! <br><span>Only use numbers and letters in the input fields</span>",
         "fr": "Attention ! <br><span>Utilisez uniquement des chiffres et des lettres dans les champs</span>",
-        "de": "Achtung: <br><<span>Verwenden Sie nur Zahlen und Buchstaben in den Feldern </span>."
+        "de": "Achtung: <br><span>Verwenden Sie nur Zahlen und Buchstaben in den Feldern</span>"
     },
     "input-too-long": {
         "nl": "Input te lang",
