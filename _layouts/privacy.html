@@ -1,0 +1,40 @@
+{% include head.html %}
+<body>
+	<!-- Nav -->
+	<div class="container sticky-top bg-white topnav pt-2 border-bottom mb-3" id="pageheader">
+		<div class="row">
+			{% include language-switch.html %}
+		</div>
+		<div class="row justify-content-sm-center my-md-1">
+			<div class="col-6 col-lg-4">
+				<a href="/pages/{{page.lang}}/home.html" class="btn btn-sm btn-outline-primary">&larr; {{translate.go-back[page.lang]}}</a>
+			</div>
+			<div class="col-6 col-lg-4 text-right text-md-left">
+				<a href="/pages/{{page.lang}}/home.html"><img src="/praatbox_logo.svg" class="topnav__logoimg float-right"
+						alt="Praatbox"></a>
+			</div>
+		</div>
+		<div class="row my-md-1">
+			<div class="col-lg-8 mx-auto">
+				<h1 class="responsive-h1 mt-2">{{translate.privacytitle[page.lang]}}</h1>
+			</div>
+		</div>
+	</div>
+	<!-- /Nav -->
+	<!-- Page Content -->
+	<div class="container" id="BB">
+		<div class="row my-md-1">
+			<div class="col-lg-8 mx-auto">
+				<ol style="margin-bottom: 30px;	padding-bottom: 0px; border-bottom: none">
+					<li><h4>{{translate.privacyT1[page.lang]}}</h4><br>{{translate.privacy1[page.lang]}}</li>
+					<li><h4>{{translate.privacyT2[page.lang]}}</h4><br>{{translate.privacy2[page.lang]}}</li>
+					<li><h4>{{translate.privacyT3[page.lang]}}</h4><br>{{translate.privacy3[page.lang]}}</li>
+					<li><h4>{{translate.privacyT4[page.lang]}}</h4><br>{{translate.privacy4[page.lang]}}</li>
+					<li><h4>{{translate.privacyT5[page.lang]}}</h4><br>{{translate.privacy5[page.lang]}}</li>
+					<li><h4>{{translate.privacyT6[page.lang]}}</h4><br>{{translate.privacy6[page.lang]}}</li>
+				</ol>				
+			</div>	
+		</div>
+	</div>
+	<!-- /Page Content -->
+{% include footer.html %}

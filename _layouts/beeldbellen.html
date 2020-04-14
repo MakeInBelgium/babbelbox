@@ -1,0 +1,61 @@
+{% include head.html %}
+<body>
+	<!-- Nav -->
+	<div class="container sticky-top bg-white topnav pt-2 border-bottom mb-3" id="pageheader">
+		<div class="row">
+			{% include language-switch.html %}
+		</div>
+		<div class="row justify-content-sm-center my-md-1">
+			<div class="col-6 col-lg-4">
+				<a href="/pages/{{page.lang}}/home.html" class="btn btn-sm btn-outline-primary">&larr; {{translate.go-back[page.lang]}}</a>
+			</div>
+			<div class="col-6 col-lg-4 text-right text-md-left">
+				<a href="/pages/{{page.lang}}/home.html"><img src="/praatbox_logo.svg" class="topnav__logoimg float-right"
+						alt="Praatbox"></a>
+			</div>
+		</div>
+		<div class="row my-md-1">
+			<div class="col-lg-8 mx-auto">
+				<h1 class="responsive-h1 mt-2">{{translate.beeldbellenTitel[page.lang]}}</h1>
+			</div>
+		</div>
+	</div>
+	<!-- /Nav -->
+	<!-- Page Content -->
+	<div class="container" id="BB">
+		<div class="row my-md-1">
+			<div class="col-lg-8 mx-auto">
+				<p>{{translate.beeldbellentext[page.lang]}}</p>
+				<h4>{{translate.beeldbellentitel1[page.lang]}}</h4>
+				<ol style="margin-bottom: 30px;	padding-bottom: 0px; border-bottom: none">
+					<li>{{translate.bb1[page.lang]}}</li>
+					<li>{{translate.bb2[page.lang]}}</li>
+					<li>{{translate.bb3[page.lang]}}</li>
+					<li>{{translate.bb4[page.lang]}}</li>
+					<li>{{translate.bb5[page.lang]}}<br/><img src="/img/beeldbellen/Picture1.png" class="img-fluid" alt="Screenshot"></li>
+					<li>{{translate.bb6[page.lang]}}<br/><img src="/img/beeldbellen/Picture2.png" class="img-fluid" alt="Screenshot"></li>
+				</ol>
+				<h4>{{translate.beeldbellentitel2[page.lang]}}</h4>
+				<ol style="margin-bottom: 30px;	padding-bottom: 0px; border-bottom: none">
+					<li value="7">{{translate.bb7[page.lang]}}</li>
+					<li>{{translate.bb8[page.lang]}}</li>
+					<li>{{translate.bb9[page.lang]}}</li>
+				</ol>
+				<h4>{{translate.beeldbellentitel3[page.lang]}}</h4>
+				<ol style="margin-bottom: 30px;	padding-bottom: 0px; border-bottom: none">
+					<li value="10">{{translate.bb10[page.lang]}}</li>
+					<li>{{translate.bb11[page.lang]}}</li>
+					<li>{{translate.bb12[page.lang]}}</li>
+					<li>{{translate.bb13[page.lang]}}</li>
+					<li>{{translate.bb14[page.lang]}}<br/><img src="/img/beeldbellen/Picture3.png" class="img-fluid" alt="Screenshot"></li>
+					<li>{{translate.bb15[page.lang]}}</li>
+					<li>{{translate.bb16[page.lang]}}</li>
+					<li>{{translate.bb17[page.lang]}}</li>
+					<li>{{translate.bb18[page.lang]}}</li>
+				</ol>
+				<small>{{translate.bbdivers[page.lang]}}</small>
+			</div>	
+		</div>
+	</div>
+	<!-- /Page Content -->
+{% include footer.html %}
