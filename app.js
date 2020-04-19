@@ -40,12 +40,22 @@ $(document).ready(function () {
 		$("body").addClass("fullscreen");
 		$("#chan").removeClass("hidden");
 		$("#roomdata").addClass("hidden");
+
+		var viewOnlyMode = getParameterByName("viewOnly");
 		const options = {
+			disableThirdPartyRequests: true,
 			roomName: room,
 			parentNode: document.getElementById("meet"),
-			configOverwrite: { defaultLanguage: lang }
+			configOverwrite: { defaultLanguage: lang, startAudioOnly: viewOnlyMode, startWithAudioMuted:viewOnlyMode },
+			
 		};
-
+		if(viewOnlyMode){
+			options.interfaceConfigOverwrite = {
+				filmStripOnly: true,
+				DISABLE_PRESENCE_STATUS: true,
+				DISABLE_JOIN_LEAVE_NOTIFICATIONS: true,
+			};
+		}
 		$("#wrd_disp_a").html(getParameterByName("wrd_a"));
 		$("#wrd_disp_b").html(getParameterByName("wrd_b"));
 		$("#wrd_disp_c").html(getParameterByName("wrd_c"));
@@ -197,7 +207,7 @@ function getParameterByName(name, url) {
 
 $("#btn_copy_link").click(
 	function() {
-		let link = "https://www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"));
+		let link = "https://www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"), getParameterByName("viewOnly"));
 		$("#roomurl").select();
 
 		const el = document.createElement('textarea');
@@ -227,14 +237,18 @@ function removeCharacters(inputField) {
 	return encodeURIComponent(inputField.trim());
 }
 
-function generatePraatboxURL(a,b,c){
+function generatePraatboxURL(a,b,c, viewOnlyMode){
 	if (
 		a !== null &&
 		b !== null &&
 		c !== null
 	) {
 		const roomName = generateName(a, b, c);
-		return "pages/" + getActiveLanguage() + "/home.html?kamer=" + roomName + "&wrd_a=" + removeCharacters(a) + "&wrd_b=" + removeCharacters(b) + "&wrd_c=" + removeCharacters(c);
+		const constructedURL = "pages/" + getActiveLanguage() + "/home.html?kamer=" + roomName + "&wrd_a=" + removeCharacters(a) + "&wrd_b=" + removeCharacters(b) + "&wrd_c=" + removeCharacters(c);
+		if(viewOnlyMode){
+			constructedURL += "&viewOnly=true"
+		}
+		return constructedURL;
 	}
 }
 
@@ -242,6 +256,7 @@ function redirectToRoom() {
 	var firstInputField = document.getElementById("a").value;
 	var secondInputField = document.getElementById("b").value;
 	var thirdInputField = document.getElementById("c").value;
+	var viewOnlyCheckbox = document.getElementById("viewOnly").checked;
 
 	if (
 		firstInputField !== null &&
@@ -250,7 +265,18 @@ function redirectToRoom() {
 	) {
 		const roomName = generateName(firstInputField, secondInputField, thirdInputField);
 
-		window.location = "?kamer=" + roomName + "&wrd_a=" + removeCharacters(firstInputField) + "&wrd_b=" + removeCharacters(secondInputField) + "&wrd_c=" + removeCharacters(thirdInputField);
+		var newLocation = "?kamer=" +
+		roomName +
+		"&wrd_a=" +
+		removeCharacters(firstInputField) +
+		"&wrd_b=" +
+		removeCharacters(secondInputField) +
+		"&wrd_c=" +
+		removeCharacters(thirdInputField);
+			if(viewOnlyCheckbox){
+				newLocation += "&viewOnly=true"
+			}
+		window.location = newLocation
 
 		$("#chan").removeClass("hidden");
 		$("#roomdata").addClass("hidden");
@@ -305,7 +331,7 @@ function autoToggleButtons(hasWarnings) {
 }
 
 function getLink(){
-	return "https://www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"));
+	return "https://www.praatbox.be/"+generatePraatboxURL(getParameterByName("wrd_a"), getParameterByName("wrd_b"), getParameterByName("wrd_c"), getParameterByName("viewOnly"));
 }
 
 function sendWhatsapp(){
