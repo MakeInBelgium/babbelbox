@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://www.praatbox.be/</loc>
+  <lastmod>2020-08-19T20:28:01+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/nl/home.html</loc>
+  <lastmod>2020-08-19T20:28:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/en/home.html</loc>
+  <lastmod>2020-08-19T20:29:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/fr/home.html</loc>
+  <lastmod>2020-08-19T20:29:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/de/home.html</loc>
+  <lastmod>2020-08-19T20:29:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/vragen.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/nl/beeldbellen.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/nl/vragen.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/nl/privacy.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/en/beeldbellen.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/en/vragen.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/en/privacy.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/fr/beeldbellen.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/fr/vragen.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/fr/privacy.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/de/beeldbellen.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/de/vragen.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.praatbox.be/pages/de/privacy.html</loc>
+  <lastmod>2020-08-19T20:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+</urlset>

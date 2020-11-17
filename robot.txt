@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /*?*
+Disallow: /*?*kamer=
+Sitemap: http://www.praatbox.be/sitemap.xml
